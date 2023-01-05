@@ -10,8 +10,8 @@
     border: 2px solid #ababff;
     border-radius: 50px;
     box-sizing: border-box;
-    font-family: Comic Sans MS;
-    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
     color: #ababff;
     outline: none;
     transition: .8s;
@@ -39,7 +39,7 @@
     cursor: pointer;
     transition: .2s;
 }
-.nilo{ /*animação do x*/
+.closeBtn{ /*animação do x*/
     position: absolute;
     width: 10px;
     height: 3px;
@@ -50,18 +50,18 @@
     transform: translate(-50%,-50%) rotate(45deg);
     transition: .5s;
 }
-.nilo:nth-child(1).click{ /*lado esquerdo do x*/
+.closeBtn:nth-child(1).click{ /*lado esquerdo do x*/
     top: 45%;
     left: 50%;
     background: #a83068;
 }
-.nilo:nth-child(2){ /*lado direito do x*/
+.closeBtn:nth-child(2){ /*lado direito do x*/
     top: 45%;
     left: 50%;
     opacity: 0;
     transition-delay: .2s;
 }
-.nilo:nth-child(2).click{ /*lado direito voltando pra posição de origem*/
+.closeBtn:nth-child(2).click{ /*lado direito voltando pra posição de origem*/
     transform: translate(-50%,-50%) rotate(-45deg);
     opacity: 1;
     background: #a83068;
