@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="logo.png">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 	<script src="https://code.jquery.com/jquery-3.5.1.js" 
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
     crossorigin="anonymous"></script>
@@ -32,7 +32,7 @@
 			--body-color:rgb(0, 0, 0,1);
 		}
 		header{
-			background-color: var(--navbar);
+			background-color: transparent;
 			height: 90px;
 			position: fixed;
 			top: 0;
@@ -41,6 +41,10 @@
 			z-index: 1000;
 			display: flex;
 			justify-content: space-between;
+		}
+		header > section{
+			display: flex;
+			justify-content: flex-end;
 		}
 		a{
 			font-family: var(--text-font);
@@ -121,8 +125,8 @@
 			height: 25vh;
 			width: 100vw;
 			margin-top: 100%;
-			display: flex;
-			justify-content: space-around;
+			display: grid;
+			grid-template-columns: 1fr 5fr;
 		}
 		footer a {
 			text-align: center;
@@ -137,11 +141,12 @@
 		}
 		.copyright{
 			color: var(--text-color);
-			background-color: var(--footer);
-			height: 2vh;
-			width: 100vw;
+			height: 100%;
+			width: 100%;
 			font-size: 0.8rem;
 			color: #999;
+			display: flex;
+			align-items: flex-end;
 		}
 
 		footer ul{
@@ -154,6 +159,26 @@
 			flex-direction: row;
 			align-items: center;
 		}
+
+		/*menu slider*/
+	.container{
+		width: 100%;
+		height:  1040px ;
+		position: relative;
+		display: flex;
+		align-items: center;
+		background-color: var(--body-color);
+		}
+	.container > img{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		z-index: -1;
+	}
+	  
+
 	</style>
 </head>
 <body>
@@ -174,7 +199,7 @@
 			<a href="#">Minha lista</a>
 		</div>
 	</nav>
-	<div style="display: flex; justify-content: flex-end;">
+	<section>
 		<div class="box">
 			<form name="search"> 
 				<input type="text" class="input" name="txt">
@@ -195,11 +220,60 @@
 			<a href="#" class="button">Entrar</a>
 			<a href="#" class="button2">Cadastrar</a>  <!-- código pika -->
 		</div>
-	</div>
+	</section>
 	</header>
 	<main>
+		<section class="menu swiper">
+			<div class="swiper-wrapper">
+			  <div class="swiper-slide container">
+				<img src="banner1.jpg" alt="Venom">
+				<div class="menu-home">
+					<h1 style="color: #0f0f0f;">Venom</h1>
+					<span style="color: #0f0f0f;">Descrição</span>
+					<a href="#" class="info" style="color: #0f0f0f;">More Info</a>
+					<a href="#" class="play" style="color: #0f0f0f;">
+						<i class="ri-play-fill"></i>
+					</a>
+				</div>
+			  </div>
+			  <div class="swiper-slide container">
+				<img src="banner2.jpg" alt="Vingadores Ultimato">
+				<div class="menu-home">
+					<h1 style="color: #ececec;">Vingadores Ultimato</h1>
+					<span style="color: #ececec;">Descrição</span>
+					<a href="#" class="info" style="color: #ececec;">More Info</a>
+					<a href="#" class="play" >
+						<i class="ri-play-fill" style="color: #ececec;"></i>
+					</a>
+				</div>
+			  </div>
+			  <div class="swiper-slide container">
+				<img src="banner3.jpg" alt="Avatar">
+				<div class="menu-home">
+					<h1 style="color: #ececec;">Avatar</h1>
+					<span style="color: #ececec;">Descrição</span>
+					<a href="#" class="info" style="color: #ececec;">More Info</a>
+					<a href="#" class="play" style="color: #ececec;">
+						<i class="ri-play-fill"></i>
+					</a>
+				</div>
+			  </div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</section>
+	  
+		  <!-- Swiper JS -->
+		  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+		  
+		  <!-- Customizar JS-->
+		  <script src="custom.js"></script>
 	</main>
 	<footer>
+		
+		<div class="copyright">
+			<h5>© 2022 KINOPLAY.</h5>
+		</div>
+	
 		<div class="link">
 			<div>
 				<ul>
@@ -230,11 +304,8 @@
 			</ul>
 		</div>
 		</div>
-	</div>
 		
 	</footer>
-	<div class="copyright">
-		<h5>© 2022 KINOPLAY.</h5>
-	</div>
+
 </body>
 </html>
