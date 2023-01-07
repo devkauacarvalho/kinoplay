@@ -163,7 +163,7 @@
 		/*menu slider*/
 	.container{
 		width: 100%;
-		height:  1040px ;
+		height:  550px ;
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -177,13 +177,76 @@
 		object-position: center;
 		z-index: -1;
 	}
-	  
-
+	 .main-scroll-filmes{
+		width: 100%;
+		height: 50%;
+		display: flex;
+		margin-top: 200px;
+		align-items: center;
+		justify-content: space-between;
+	 }
+	 .cover{
+		position: relative;
+		width: 90%;
+		height: 50%
+	 }
+	 .cover::before {
+		position: absolute;
+		content: "";
+		left: 0;
+		top: 0;
+		z-index: 99;
+		height: 100%;
+		width: 150px;
+		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7), transparent);
+	 }
+	 .cover::after {
+		position: absolute;
+		content: "";
+		right: 0;
+		top: 0;
+		z-index: 99;
+		height: 100%;
+		width: 150px;
+		background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.712), transparent);
+	 }
+	 .scroll-images{
+		padding: 50px;
+		width:100%;
+		height: auto;
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		overflow: auto;
+		position: relative;
+		scroll-behavior: smooth;
+	 }
+	 .child {
+		min-width: 200px;
+		height:300px;
+		margin: 1px 10px;
+		cursor: pointer;
+		overflow: hidden;
+	 }
+	 .scroll-images::-webkit-scrollbar{
+		-webkit-appearance: none;
+	 }
+	 .child-img{
+		width: 100%;
+		height: 100%;
+	 }
+	 .icon{
+		color: var(--text-color);
+		background-color: rgba(0, 0, 0, 0.705);
+		font-size: 50px;
+		outline: none;
+		border: none;
+		cursor: pointer;
+	 }
 	</style>
 </head>
 <body>
 	<header>
-		
 		 <nav class="navbar">
 			<div class="logo">
 			<a  href="#" >
@@ -267,8 +330,35 @@
 		  
 		  <!-- Customizar JS-->
 		  <script src="custom.js"></script>
-	</main>
-	<footer>
+
+			<div class="main-scroll-filmes">
+				<button class="icon" onclick="scroll_left()"><i class="ri-arrow-left-s-line"></i></button>
+					<div class="cover">
+						<div class="scroll-images">
+							<div class="child"><img class="child-img" src="img-filmes/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><img class="child-img" src="img-filmes/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><img class="child-img" src="img-filmes/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><img class="child-img" src="img-filmes/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><img class="child-img" src="img-filmes/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><img class="child-img" src="img-filmes/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><img class="child-img" src="img-filmes/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><img class="child-img" src="img-filmes/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+						</div>
+					</div>
+					<button class="icon" onclick="scroll_right()"><i class="ri-arrow-right-s-line"></i></button>
+				</div>
+				<script>
+					function scroll_left(){
+						let left=document.querySelector(".scroll-images");
+						left.scrollBy(-550,0);
+					}
+					function scroll_right(){
+						let right=document.querySelector(".scroll-images");
+						right.scrollBy(550,0);
+					}
+				</script>
+		</main>
+		<footer>
 		
 		<div class="copyright">
 			<h5>© 2022 KINOPLAY.</h5>
