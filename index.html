@@ -123,7 +123,7 @@
 		footer{
 			background-color: var(--footer);
 			height: 25vh;
-			width: 100vw;
+			width: 100%;
 			margin-top: 100%;
 			display: grid;
 			grid-template-columns: 1fr 5fr;
@@ -163,7 +163,7 @@
 		/*menu slider*/
 	.container{
 		width: 100%;
-		height:  550px ;
+		height:  550px;
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -179,51 +179,40 @@
 	}
 	 .main-scroll-filmes{
 		width: 100%;
-		height: 50%;
+		height: 250px;
 		display: flex;
-		margin-top: 200px;
+		position: absolute;
 		align-items: center;
 		justify-content: space-between;
+		
+	 }
+	 .child > .miniTrailer{
+		display: none;
+	 }
+	 .child:hover > .miniTrailer{
+		display: block;
+		z-index: 1000;
 	 }
 	 .cover{
 		position: relative;
-		width: 90%;
-		height: 50%
-	 }
-	 .cover::before {
-		position: absolute;
-		content: "";
-		left: 0;
-		top: 0;
-		z-index: 99;
-		height: 100%;
-		width: 150px;
-		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7), transparent);
-	 }
-	 .cover::after {
-		position: absolute;
-		content: "";
-		right: 0;
-		top: 0;
-		z-index: 99;
-		height: 100%;
-		width: 150px;
-		background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.712), transparent);
+		width: 100%;
+		height: 100%
 	 }
 	 .scroll-images{
+		padding-left: 40px;
 		width:100%;
-		height: auto;
+		height: 100%;
 		display: flex;
 		justify-content: left;
 		align-items: center;
-		overflow: auto;
+		overflow: hidden;
 		position: relative;
 		scroll-behavior: smooth;
 	 }
 	 .child {
-		min-width: 200px;
-		height:300px;
-		margin: 1px 10px;
+		min-width: 190px;
+		height:100%;
+		margin: 1px 8px;
 		cursor: pointer;
 		overflow: hidden;
 	 }
@@ -234,15 +223,68 @@
 		width: 100%;
 		height: 100%;
 	 }
-	 .icon{
-		color: var(--text-color);
-		background-color: rgba(0, 0, 0, 0.705);
+	 .child:hover{
+		zoom: 1.4;
+		border: 2px solid white;
+		border-radius: 5px;
+	 }
+	 .icon1{
+		position: absolute;
+		z-index: 99;
+		color: white;
+		background-color: transparent;
 		font-size: 50px;
+		width: 50px;
+		height: 100%;
 		outline: none;
 		border: none;
 		cursor: pointer;
 	 }
-
+	 .icon2{
+		position: absolute;
+		z-index: 99;
+		right: 0;
+		color: white;
+		background-color: transparent;
+		font-size: 50px;
+		width: 50px;
+		height: 100%;
+		outline: none;
+		border: none;
+		cursor: pointer;
+	 }
+	 .icon1::before{
+		position: absolute;
+		content: "";
+		left: 0;
+		top: 0;
+		z-index: -1;
+		height: 100%;
+		width: 50px;
+		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.705), transparent);
+	 }
+	 .icon2::after{
+		position: absolute;
+		content: "";
+		right: 0;
+		top: 0;
+		z-index: -1;
+		height: 100%;
+		width: 50px;
+		background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.705), transparent);
+	 	}
+	 .main-scroll-filmes > .icon1, .icon2{
+		display: none;
+	 }
+	 .main-scroll-filmes:hover > .icon1{
+		display: block;
+	 }
+	 .main-scroll-filmes:hover > .icon2{
+		display: block;
+	 }
+	 .menu{
+		margin-bottom: 200px;
+	 }
 	.swiper-pagination-bullet{
 		width: 6px;
 		height: 6px;
@@ -393,10 +435,11 @@
 		  <script src="custom.js"></script>
 
 			<div class="main-scroll-filmes">
-				<button class="icon" onclick="scroll_left()"><i class="ri-arrow-left-s-line"></i></button>
+				<button class="icon1" onclick="scroll_left()"><i class="ri-arrow-left-s-line"></i></button>
+				<button class="icon2" onclick="scroll_right()"><i class="ri-arrow-right-s-line"></i></button>
 					<div class="cover">
 						<div class="scroll-images">
-							<div class="child"><img class="child-img" src="img-filmes/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><iframe class="miniTrailer" width="100%" height="100%" src="https://www.youtube.com/embed/1eaXzNukD50?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="autoplay" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><img class="child-img" src="img-filmes/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
 							<div class="child"><img class="child-img" src="img-filmes/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
 							<div class="child"><img class="child-img" src="img-filmes/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
 							<div class="child"><img class="child-img" src="img-filmes/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
@@ -406,7 +449,6 @@
 							<div class="child"><img class="child-img" src="img-filmes/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
 						</div>
 					</div>
-					<button class="icon" onclick="scroll_right()"><i class="ri-arrow-right-s-line"></i></button>
 				</div>
 				<script>
 					function scroll_left(){
