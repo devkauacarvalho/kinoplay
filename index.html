@@ -166,12 +166,14 @@
 		}
 
 		/*menu slider*/
-		.swiper-wrapper{
-			transition-duration: 3s;
-		}
+		
+	.tituloCatalogo > h2{
+		margin-left: 50px;
+		color: var(--text-color);
+	}
 	.container{
 		width: 100%;
-		height:  750px;
+		height:  550px;
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -179,13 +181,16 @@
 		}
 	.container > img{
 		position: absolute;
-		width: 1905px;
+		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
 		z-index: -1;
 	}
-	 .main-scroll-filmes{
+	.main-scroll-emalta, .main-scroll-Fmomento{
+		margin-bottom: 400px;
+	}
+	 .cover1, .cover2, .cover3{
 		width: 100%;
 		height: 250px;
 		display: flex;
@@ -201,12 +206,14 @@
 		display: block;
 		z-index: 1000;
 	 }
-	 .cover{
-		position: relative;
-		width: 100%;
-		height: 100%
+	 .child {
+		min-width: 190px;
+		height:100%;
+		margin: 1px 8px;
+		cursor: pointer;
+		overflow: hidden;
 	 }
-	 .scroll-images{
+	 .scroll-images1{
 		padding-left: 40px;
 		width:100%;
 		height: 100%;
@@ -217,14 +224,38 @@
 		position: relative;
 		scroll-behavior: smooth;
 	 }
-	 .child {
-		min-width: 190px;
-		height:100%;
-		margin: 1px 8px;
-		cursor: pointer;
-		overflow: hidden;
+	 
+	 .scroll-images1::-webkit-scrollbar{
+		-webkit-appearance: none;
 	 }
-	 .scroll-images::-webkit-scrollbar{
+	 .scroll-images2{
+		padding-left: 40px;
+		width:100%;
+		height: 100%;
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		overflow: hidden;
+		position: relative;
+		scroll-behavior: smooth;
+	 }
+	 
+	 .scroll-images2::-webkit-scrollbar{
+		-webkit-appearance: none;
+	 }
+	 .scroll-images3{
+		padding-left: 40px;
+		width:100%;
+		height: 100%;
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		overflow: hidden;
+		position: relative;
+		scroll-behavior: smooth;
+	 }
+	 
+	 .scroll-images3::-webkit-scrollbar{
 		-webkit-appearance: none;
 	 }
 	 .child-img{
@@ -232,7 +263,6 @@
 		height: 100%;
 	 }
 	 .child:hover{
-		zoom: 1.4;
 		border: 2px solid white;
 		border-radius: 5px;
 	 }
@@ -281,13 +311,31 @@
 		width: 50px;
 		background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.705), transparent);
 	 	}
-	 .main-scroll-filmes > .icon1, .icon2{
+	 .cover1 > .icon1, .icon2{
 		display: none;
 	 }
-	 .main-scroll-filmes:hover > .icon1{
+	 .cover1:hover > .icon1{
 		display: block;
 	 }
-	 .main-scroll-filmes:hover > .icon2{
+	 .cover1:hover > .icon2{
+		display: block;
+	 }
+	 .cover2 > .icon1, .icon2{
+		display: none;
+	 }
+	 .cover2:hover > .icon1{
+		display: block;
+	 }
+	 .cover2:hover > .icon2{
+		display: block;
+	 }
+	 .cover3 > .icon1, .icon2{
+		display: none;
+	 }
+	 .cover3:hover > .icon1{
+		display: block;
+	 }
+	 .cover3:hover > .icon2{
 		display: block;
 	 }
 	 .menu{
@@ -323,9 +371,9 @@
 		margin-bottom: 50px;	
 	}
 	.play{
-		position: relative;
-		right: 600px;
-		bottom: 0;
+		position: absolute;
+		right: ;
+		bottom: ;
 	}
 	.play .ri-play-fill{
 		background-color: white;
@@ -340,6 +388,20 @@
 		color: white;
 		transition: 0.2s all linear;
 	}
+	.info{
+		position: relative;
+		top: ;
+		left: ;
+		background-color: #23252b;
+		color: #999;
+		padding: 20px;
+		border-radius: 20px;
+	}
+	.info:hover{
+		background-color: gray;
+		color: black;
+	}
+
 	</style>
 </head>
 <body>
@@ -353,34 +415,21 @@
 		</div>
 		<div class="nav-links">
 			<a href="#">Inicio</a>
-			<a href="#">Séries</a>
 			<a href="#">Filmes</a>
-			<a href="#">Em alta</a>
+			<a href="#">Séries</a>
 			<a href="#">Minha lista</a>
 		</div>
 	</nav>
 	<section>
 		<div class="box">
 			<form name="search"> 
-				<input type="text" class="input" name="txt" placeholder="Pesquisar">
+				<input type="text" class="input" name="txt">
 			</form>
 			<div class="btn" onclick="document.search.txt.value = ''">
 				<span class="closeBtn"></span>
 				<span class="closeBtn"></span>
 			</div>
 		</div>
-		<script>
-		 const desiredElement = document.getElementById("header"); // elemento alvo
-		const pixelsAmount = "50"; // Quantidade de pixels a contar do TOP até definir a cor
-
-	window.addEventListener("scroll", function () {
-  	if (window.scrollY > pixelsAmount) {
-    desiredElement.classList.add(".cor-header"); // adiciona classe "changeColor"
-  } else {
-    desiredElement.classList.remove(".cor-header"); // remove classe "changeColor"
-  }
-});
-		</script>
 	   
 		<script>
 			$(".btn").click(function() {
@@ -402,6 +451,7 @@
 				<div class="menu-home">
 					<h1>Venom</h1>
 					<span>Descrição</span>
+					<a href="#" class="info">More Info</a>
 					<a href="#" class="play">
 						<i class="ri-play-fill"></i>
 					</a>
@@ -412,6 +462,7 @@
 				<div class="menu-home">
 					<h1>Vingadores <br>Ultimato</h1>
 					<span>Descrição</span>
+					<a href="#" class="info">More Info</a>
 					<a href="#" class="play" >
 						<i class="ri-play-fill"></i>
 					</a>
@@ -420,8 +471,9 @@
 			  <div class="swiper-slide container">
 				<img src="banner3.jpg" alt="Avatar">
 				<div class="menu-home">
-					<h1>Avatar 2</h1>
+					<h1>Avatar</h1>
 					<span>Descrição</span>
+					<a href="#" class="info">More Info</a>
 					<a href="#" class="play">
 						<i class="ri-play-fill"></i>
 					</a>
@@ -436,13 +488,23 @@
 		  
 		  <!-- Customizar JS-->
 		  <script src="custom.js"></script>
-
-			<div class="main-scroll-filmes">
-				<button class="icon1" onclick="scroll_left()"><i class="ri-arrow-left-s-line"></i></button>
-				<button class="icon2" onclick="scroll_right()"><i class="ri-arrow-right-s-line"></i></button>
-					<div class="cover">
-						<div class="scroll-images">
-							<div class="child"><iframe class="miniTrailer" width="100%" height="100%" src="https://www.youtube.com/embed/1eaXzNukD50?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="autoplay" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><img class="child-img" src="img-filmes/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+		<section class="catalogos">
+			<div class="main-scroll-emalta">
+				<div class="tituloCatalogo1">
+					<h2>Em Alta</h2>
+					<div class="cover1">
+						<button class="icon1" onclick="scroll_left1()"><i class="ri-arrow-left-s-line"></i></button>
+						<button class="icon2" onclick="scroll_right1()"><i class="ri-arrow-right-s-line"></i></button>
+						<div class="scroll-images1">
+							<div class="child"><img class="child-img" src="img-filmes/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><img class="child-img" src="img-filmes/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><img class="child-img" src="img-filmes/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><img class="child-img" src="img-filmes/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><img class="child-img" src="img-filmes/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><img class="child-img" src="img-filmes/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><img class="child-img" src="img-filmes/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><img class="child-img" src="img-filmes/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+							<div class="child"><img class="child-img" src="img-filmes/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
 							<div class="child"><img class="child-img" src="img-filmes/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
 							<div class="child"><img class="child-img" src="img-filmes/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
 							<div class="child"><img class="child-img" src="img-filmes/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
@@ -453,13 +515,89 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="main-scroll-Fmomento">
+				<div class="tituloCatalogo2">
+					<h2>Em Alta</h2>
+					<div class="cover2">
+						<button class="icon1" onclick="scroll_left2()"><i class="ri-arrow-left-s-line"></i></button>
+						<button class="icon2" onclick="scroll_right2()"><i class="ri-arrow-right-s-line"></i></button>
+						<div class="scroll-images2">
+							<div class="child"><img class="child-img" src="img-filmes/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><img class="child-img" src="img-filmes/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><img class="child-img" src="img-filmes/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><img class="child-img" src="img-filmes/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><img class="child-img" src="img-filmes/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><img class="child-img" src="img-filmes/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><img class="child-img" src="img-filmes/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><img class="child-img" src="img-filmes/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+							<div class="child"><img class="child-img" src="img-filmes/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><img class="child-img" src="img-filmes/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><img class="child-img" src="img-filmes/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><img class="child-img" src="img-filmes/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><img class="child-img" src="img-filmes/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><img class="child-img" src="img-filmes/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><img class="child-img" src="img-filmes/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><img class="child-img" src="img-filmes/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-scroll-Smomento">
+				<div class="tituloCatalogo3">
+					<h2>Em Alta</h2>
+					<div class="cover3">
+						<button class="icon1" onclick="scroll_left3()"><i class="ri-arrow-left-s-line"></i></button>
+						<button class="icon2" onclick="scroll_right3()"><i class="ri-arrow-right-s-line"></i></button>
+						<div class="scroll-images3">
+							<div class="child"><img class="child-img" src="img-filmes/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><img class="child-img" src="img-filmes/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><img class="child-img" src="img-filmes/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><img class="child-img" src="img-filmes/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><img class="child-img" src="img-filmes/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><img class="child-img" src="img-filmes/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><img class="child-img" src="img-filmes/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><img class="child-img" src="img-filmes/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+							<div class="child"><img class="child-img" src="img-filmes/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><img class="child-img" src="img-filmes/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><img class="child-img" src="img-filmes/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><img class="child-img" src="img-filmes/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><img class="child-img" src="img-filmes/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><img class="child-img" src="img-filmes/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><img class="child-img" src="img-filmes/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><img class="child-img" src="img-filmes/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 				<script>
-					function scroll_left(){
-						let left=document.querySelector(".scroll-images");
+					function scroll_left1(){
+						let left=document.querySelector(".scroll-images1");
 						left.scrollBy(-550,0);
 					}
-					function scroll_right(){
-						let right=document.querySelector(".scroll-images");
+					function scroll_right1(){
+						let right=document.querySelector(".scroll-images1");
+						right.scrollBy(550,0);
+					}
+				</script>
+				<script>
+					function scroll_left2(){
+						let left=document.querySelector(".scroll-images2");
+						left.scrollBy(-550,0);
+					}
+					function scroll_right2(){
+						let right=document.querySelector(".scroll-images2");
+						right.scrollBy(550,0);
+					}
+				</script>
+				<script>
+					function scroll_left3(){
+						let left=document.querySelector(".scroll-images3");
+						left.scrollBy(-550,0);
+					}
+					function scroll_right3(){
+						let right=document.querySelector(".scroll-images3");
 						right.scrollBy(550,0);
 					}
 				</script>
