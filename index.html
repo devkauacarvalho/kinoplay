@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" 
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+    crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/cb4778956c.js" crossorigin="anonymous"></script>
+	<title>Kinoplay</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800;900&display=swap');
+
+		*{
+			font-family: Arial, Helvetica, sans-serif;
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+			scroll-behavior: smooth;
+			scroll-padding-top: 2rem;
+		}
+		:root{
+			--text-font:'Lexend', cursive;
+			--footer:#00001f;
+			--navbar:#00001f;
+			--color2:#23252b;
+			--text-color: #ececec;
+			--body-color:rgb(0, 0, 0,1);
+		}
+		header{
+			background-color: ;
+			height: 90px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 1000;
+			display: flex;
+			justify-content: space-between;
+		}
+		.cor-header{
+			background-color: #e20f0f;
+		}
+		header > section{
+			display: flex;
+			justify-content: flex-end;
+		}
+		a{
+			font-family: var(--text-font);
+			text-decoration: none;
+			color: var(--text-color);
+
+		}
+		.logo{
+			margin-left: 20px;
+			align-items: center;
+			display: flex;
+			height: 100%;
+			color: var(--button-color);
+		}
+		.name{
+			margin-left: 10px;
+			color: var(--text-color);
+			font-size: 20px;
+		}
+		.name span{
+			font-family: var(--text-font);
+			color: #F29494;
+			font-size: 20px;
+			text-transform: uppercase;	
+		}
+		.nav-links{
+			justify-content: space-around;
+			display: flex;
+			gap: 40px;
+		}
+		.nav-links a:hover{
+			color: #e20f0f;
+			
+		}
+		.navbar{
+			justify-content: space-around;
+			display: flex;
+			align-items: center;
+			gap: 40px;
+		}
+		.buttons{
+			width:300px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+		}
+		.button{
+			background-color: var(--button-color);
+			color: var(--text-color);
+			font-family: var(--text-font);
+			border: 2px solid white;
+    		border-radius:40px;
+			padding:15px;
+			transition: 0.5s;
+		}
+		.button:hover{
+			color: #F29494;
+		}
+		.button2{
+			background-color:#ff8585;
+			color: black;
+			font-family: var(--text-font);
+    		border-radius:25px;
+			border: none;
+			padding:15px;
+			transition: 0.6s;
+		}
+		.button2:hover{
+			background-color:#ffc2c2
+		}
+		body{
+			background-color: var(--body-color);
+		}
+		main
+		{
+			margin-bottom: 500px;
+		}
+		footer{
+			background-color: var(--footer);
+			height: 25vh;
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1.5fr 5fr;
+		}
+		footer a {
+			text-align: center;
+			color: var(--text-color);
+			text-decoration:none;
+			padding: 0.7em;
+			font-size: 0.9rem;
+			color: #999;
+		}
+		footer a:hover{
+			text-decoration: underline;
+		}
+		.copyright{
+			color: var(--text-color);
+			height: 100%;
+			width: 34%;
+			font-size: 0.8rem;
+			color: #999;
+			display: flex;
+			align-items: flex-end;
+		}
+
+		footer ul{
+			margin: 0 2rem 0 2rem;
+			display: flex;
+			flex-direction: column;
+		}
+		footer > .link{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		/*menu slider*/
+		.swiper-wrapper{
+			transition-duration: 3s;
+		}
+	.container{
+		width: 100%;
+		height:  750px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		background-color: var(--body-color);
+		}
+	.container > img{
+		position: absolute;
+		width: 1905px;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		z-index: -1;
+	}
+	 .main-scroll-filmes{
+		width: 100%;
+		height: 250px;
+		display: flex;
+		position: absolute;
+		align-items: center;
+		justify-content: space-between;
+		
+	 }
+	 .child > .miniTrailer{
+		display: none;
+	 }
+	 .child:hover > .miniTrailer{
+		display: block;
+		z-index: 1000;
+	 }
+	 .cover{
+		position: relative;
+		width: 100%;
+		height: 100%
+	 }
+	 .scroll-images{
+		padding-left: 40px;
+		width:100%;
+		height: 100%;
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		overflow: hidden;
+		position: relative;
+		scroll-behavior: smooth;
+	 }
+	 .child {
+		min-width: 190px;
+		height:100%;
+		margin: 1px 8px;
+		cursor: pointer;
+		overflow: hidden;
+	 }
+	 .scroll-images::-webkit-scrollbar{
+		-webkit-appearance: none;
+	 }
+	 .child-img{
+		width: 100%;
+		height: 100%;
+	 }
+	 .child:hover{
+		zoom: 1.4;
+		border: 2px solid white;
+		border-radius: 5px;
+	 }
+	 .icon1{
+		position: absolute;
+		z-index: 99;
+		color: white;
+		background-color: transparent;
+		font-size: 50px;
+		width: 50px;
+		height: 100%;
+		outline: none;
+		border: none;
+		cursor: pointer;
+	 }
+	 .icon2{
+		position: absolute;
+		z-index: 99;
+		right: 0;
+		color: white;
+		background-color: transparent;
+		font-size: 50px;
+		width: 50px;
+		height: 100%;
+		outline: none;
+		border: none;
+		cursor: pointer;
+	 }
+	 .icon1::before{
+		position: absolute;
+		content: "";
+		left: 0;
+		top: 0;
+		z-index: -1;
+		height: 100%;
+		width: 50px;
+		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.705), transparent);
+	 }
+	 .icon2::after{
+		position: absolute;
+		content: "";
+		right: 0;
+		top: 0;
+		z-index: -1;
+		height: 100%;
+		width: 50px;
+		background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.705), transparent);
+	 	}
+	 .main-scroll-filmes > .icon1, .icon2{
+		display: none;
+	 }
+	 .main-scroll-filmes:hover > .icon1{
+		display: block;
+	 }
+	 .main-scroll-filmes:hover > .icon2{
+		display: block;
+	 }
+	 .menu{
+		margin-bottom: 200px;
+	 }
+	.swiper-pagination-bullet{
+		width: 6px;
+		height: 6px;
+		border-radius: 0.2rem;
+		background-color: gray;
+		opacity: 1;
+		
+	}
+	.swiper-pagination-bullet-active{
+		background-color: white;
+	}
+	.menu-home{
+		z-index: 1000;
+		position: relative;
+		left: 150px;
+		top: 80px;
+	}
+	.menu-home span{
+		color: #00001f;
+		font-weight: 500;
+		text-transform: uppercase;
+		margin-bottom: 10px;	
+	}
+	.menu-home h1{
+		color: #00001f;
+		font-size: 4rem;
+		font-weight: 700;
+		margin-bottom: 50px;	
+	}
+	.play{
+		position: relative;
+		right: 600px;
+		bottom: 0;
+	}
+	.play .ri-play-fill{
+		background-color: white;
+		padding: 10px;
+		font-size: 2rem;
+		border-radius: 50%;
+		border: 4px solid rgb(2,3,7,0.4);
+		color: red;
+	}
+	.play .ri-play-fill:hover{
+		background-color: red;
+		color: white;
+		transition: 0.2s all linear;
+	}
+	</style>
+</head>
+<body>
+	<header>
+		 <nav class="navbar">
+			<div class="logo">
+			<a  href="#" >
+				<img src="logo.png" height="50px"alt="logo">
+			</a>
+			<a class="name">KINO<span>play</span></a>
+		</div>
+		<div class="nav-links">
+			<a href="#">Inicio</a>
+			<a href="#">Séries</a>
+			<a href="#">Filmes</a>
+			<a href="#">Em alta</a>
+			<a href="#">Minha lista</a>
+		</div>
+	</nav>
+	<section>
+		<div class="box">
+			<form name="search"> 
+				<input type="text" class="input" name="txt" placeholder="Pesquisar">
+			</form>
+			<div class="btn" onclick="document.search.txt.value = ''">
+				<span class="closeBtn"></span>
+				<span class="closeBtn"></span>
+			</div>
+		</div>
+		<script>
+		 const desiredElement = document.getElementById("header"); // elemento alvo
+		const pixelsAmount = "50"; // Quantidade de pixels a contar do TOP até definir a cor
+
+	window.addEventListener("scroll", function () {
+  	if (window.scrollY > pixelsAmount) {
+    desiredElement.classList.add(".cor-header"); // adiciona classe "changeColor"
+  } else {
+    desiredElement.classList.remove(".cor-header"); // remove classe "changeColor"
+  }
+});
+		</script>
+	   
+		<script>
+			$(".btn").click(function() {
+				$(".input").toggleClass("click")
+				$("span").toggleClass("click")
+			})
+		</script>
+		<div class="buttons">
+			<a href="#" class="button">Entrar</a>
+			<a href="#" class="button2">Cadastrar</a>  <!-- código pika -->
+		</div>
+	</section>
+	</header>
+	<main>
+		<section class="menu swiper">
+			<div class="swiper-wrapper">
+			  <div class="swiper-slide container">
+				<img src="banner1.jpg" alt="Venom">
+				<div class="menu-home">
+					<h1>Venom</h1>
+					<span>Descrição</span>
+					<a href="#" class="play">
+						<i class="ri-play-fill"></i>
+					</a>
+				</div>
+			  </div>
+			  <div class="swiper-slide container">
+				<img src="banner2.jpg" alt="Vingadores Ultimato">
+				<div class="menu-home">
+					<h1>Vingadores <br>Ultimato</h1>
+					<span>Descrição</span>
+					<a href="#" class="play" >
+						<i class="ri-play-fill"></i>
+					</a>
+				</div>
+			  </div>
+			  <div class="swiper-slide container">
+				<img src="banner3.jpg" alt="Avatar">
+				<div class="menu-home">
+					<h1>Avatar 2</h1>
+					<span>Descrição</span>
+					<a href="#" class="play">
+						<i class="ri-play-fill"></i>
+					</a>
+				</div>
+			  </div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</section>
+	  
+		  <!-- Swiper JS -->
+		  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+		  
+		  <!-- Customizar JS-->
+		  <script src="custom.js"></script>
+
+			<div class="main-scroll-filmes">
+				<button class="icon1" onclick="scroll_left()"><i class="ri-arrow-left-s-line"></i></button>
+				<button class="icon2" onclick="scroll_right()"><i class="ri-arrow-right-s-line"></i></button>
+					<div class="cover">
+						<div class="scroll-images">
+							<div class="child"><iframe class="miniTrailer" width="100%" height="100%" src="https://www.youtube.com/embed/1eaXzNukD50?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="autoplay" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><img class="child-img" src="img-filmes/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><img class="child-img" src="img-filmes/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><img class="child-img" src="img-filmes/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><img class="child-img" src="img-filmes/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><img class="child-img" src="img-filmes/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><img class="child-img" src="img-filmes/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><img class="child-img" src="img-filmes/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><img class="child-img" src="img-filmes/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+						</div>
+					</div>
+				</div>
+				<script>
+					function scroll_left(){
+						let left=document.querySelector(".scroll-images");
+						left.scrollBy(-550,0);
+					}
+					function scroll_right(){
+						let right=document.querySelector(".scroll-images");
+						right.scrollBy(550,0);
+					}
+				</script>
+		</main>
+		<footer>
+		
+		<div class="copyright">
+			<h5>© 2022 KINOPLAY.</h5>
+		</div>
+	
+		<div class="link">
+			<div>
+				<ul>
+					<a href="#">Audiodescrição</a>
+					<a href="#">Cartão pré-pago</a>
+					<a href="#">Relações com investidores</a>
+				</ul>
+			</div>
+		<div>
+			<ul>
+				<a href="#">Avisos legais</a>
+				<a href="#">Termos de Uso</a>
+				<a href="#">Informações corporativas</a>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<a href="#">Imprensa</a>
+				<a href="#">Carreiras</a>
+				<a href="#">Central de Ajuda</a>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<a href="#">Privacidade</a>
+				<a href="#">Entre em contato</a>
+				<a href="#">Preferência de cookies</a>
+			</ul>
+		</div>
+		</div>
+		
+	</footer>
+
+</body>
+</html>

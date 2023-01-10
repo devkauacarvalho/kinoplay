@@ -1,0 +1,68 @@
+.box{
+    position: relative;
+    transform: translate(0%,40%);
+}
+.input { /*cabeça do search*/
+    padding: 7px;
+    width: 1px;
+    height: 1px;
+    background: none;
+    border: 2px solid #ababff;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: #ababff;
+    outline: none;
+    transition: .8s;
+    transition-delay: .2s;
+}
+
+.input.click{ /* barra de pesquisa ao clickar*/
+    padding: 10px;
+    padding-left: 10px;
+    width: 200px;
+    height: 30px;
+    background: #221b3d;
+    border-radius: 10px;
+}
+.btn{  /*perna do botão*/
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    transition: .2s;
+}
+.closeBtn{ /*animação do x*/
+    position: absolute;
+    width: 10px;
+    height: 3px;
+    top: 19px;
+    left: 38px;
+    background: #ababff;
+    border-radius: 50px;
+    transform: translate(-50%,-50%) rotate(45deg);
+    transition: .5s;
+}
+.closeBtn:nth-child(1).click{ /*lado esquerdo do x*/
+    top: 45%;
+    left: 50%;
+    background: #a83068;
+}
+.closeBtn:nth-child(2){ /*lado direito do x*/
+    top: 45%;
+    left: 50%;
+    opacity: 0;
+    transition-delay: .2s;
+}
+.closeBtn:nth-child(2).click{ /*lado direito voltando pra posição de origem*/
+    transform: translate(-50%,-50%) rotate(-45deg);
+    opacity: 1;
+    background: #a83068;
+}
