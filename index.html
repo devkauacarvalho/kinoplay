@@ -30,6 +30,7 @@
 			--color2:#23252b;
 			--text-color: #ececec;
 			--body-color:rgb(0, 0, 0,1);
+			--swiper-theme-color: #fff;
 		}
 		header{
 			background-color: ;
@@ -126,46 +127,7 @@
 		{
 			margin-bottom: 500px;
 		}
-		footer{
-			background-color: var(--footer);
-			height: 25vh;
-			width: 100%;
-			display: grid;
-			grid-template-columns: 1.5fr 5fr;
-		}
-		footer a {
-			text-align: center;
-			color: var(--text-color);
-			text-decoration:none;
-			padding: 0.7em;
-			font-size: 0.9rem;
-			color: #999;
-		}
-		footer a:hover{
-			text-decoration: underline;
-		}
-		.copyright{
-			color: var(--text-color);
-			height: 100%;
-			width: 34%;
-			font-size: 0.8rem;
-			color: #999;
-			display: flex;
-			align-items: flex-end;
-		}
-
-		footer ul{
-			margin: 0 2rem 0 2rem;
-			display: flex;
-			flex-direction: column;
-		}
-		footer > .link{
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-		}
-
-		/*menu slider*/
+				
 		
 	.tituloCatalogo > h2{
 		margin-left: 50px;
@@ -338,70 +300,6 @@
 	 .cover3:hover > .icon2{
 		display: block;
 	 }
-	 .menu{
-		margin-bottom: 200px;
-	 }
-	.swiper-pagination-bullet{
-		width: 6px;
-		height: 6px;
-		border-radius: 0.2rem;
-		background-color: gray;
-		opacity: 1;
-		
-	}
-	.swiper-pagination-bullet-active{
-		background-color: white;
-	}
-	.menu-home{
-		z-index: 1000;
-		position: relative;
-		left: 150px;
-		top: 80px;
-	}
-	.menu-home span{
-		color: #00001f;
-		font-weight: 500;
-		text-transform: uppercase;
-		margin-bottom: 10px;	
-	}
-	.menu-home h1{
-		color: #00001f;
-		font-size: 4rem;
-		font-weight: 700;
-		margin-bottom: 50px;	
-	}
-	.play{
-		position: absolute;
-		right: ;
-		bottom: ;
-	}
-	.play .ri-play-fill{
-		background-color: white;
-		padding: 10px;
-		font-size: 2rem;
-		border-radius: 50%;
-		border: 4px solid rgb(2,3,7,0.4);
-		color: red;
-	}
-	.play .ri-play-fill:hover{
-		background-color: red;
-		color: white;
-		transition: 0.2s all linear;
-	}
-	.info{
-		position: relative;
-		top: ;
-		left: ;
-		background-color: #23252b;
-		color: #999;
-		padding: 20px;
-		border-radius: 20px;
-	}
-	.info:hover{
-		background-color: gray;
-		color: black;
-	}
-
 	</style>
 </head>
 <body>
@@ -450,8 +348,7 @@
 				<img src="banner1.jpg" alt="Venom">
 				<div class="menu-home">
 					<h1>Venom</h1>
-					<span>Descrição</span>
-					<a href="#" class="info">More Info</a>
+					<p>Venom é um simbionte alienígena formado a partir de um líquido,<br> material orgânico de espessura. A característica marcante de Venom,<br> além do uniforme negro, é a desproporcional e assustadora mandíbula,<br> desenhada no traço de Todd MacFarlane.</p>
 					<a href="#" class="play">
 						<i class="ri-play-fill"></i>
 					</a>
@@ -460,9 +357,8 @@
 			  <div class="swiper-slide container">
 				<img src="banner2.jpg" alt="Vingadores Ultimato">
 				<div class="menu-home">
-					<h1>Vingadores <br>Ultimato</h1>
-					<span>Descrição</span>
-					<a href="#" class="info">More Info</a>
+					<h1>Vingadores<br>Ultimato</h1>
+					<p> Após Thanos eliminar metade das criaturas vivas de todo o universo,<br> os heróis sobreviventes precisam lidar com a dor da perda de amigos<br> e seus entes queridos. Com Tony Stark vagando perdido no espaço<br> sem água nem comida, Steve Rogers e Natasha Romanov<br> precisam liderar a resistência contra o titã.</p>
 					<a href="#" class="play" >
 						<i class="ri-play-fill"></i>
 					</a>
@@ -471,9 +367,8 @@
 			  <div class="swiper-slide container">
 				<img src="banner3.jpg" alt="Avatar">
 				<div class="menu-home">
-					<h1>Avatar</h1>
-					<span>Descrição</span>
-					<a href="#" class="info">More Info</a>
+					<h1>Avatar 2</h1>
+					<p>Após formar uma família, Jake Sully e Ney'tiri fazem de tudo<br> para ficarem juntos. No entanto, eles devem sair de casa<br> e explorar as regiões de Pandora quando uma antiga ameaça<br> ressurge, e Jake deve travar uma guerra difícil contra os humanos.</p>
 					<a href="#" class="play">
 						<i class="ri-play-fill"></i>
 					</a>
@@ -602,13 +497,9 @@
 					}
 				</script>
 		</main>
-		<footer>
-		
-		<div class="copyright">
-			<h5>© 2022 KINOPLAY.</h5>
-		</div>
-	
+		<footer>	
 		<div class="link">
+			
 			<div>
 				<ul>
 					<a href="#">Audiodescrição</a>
@@ -638,6 +529,8 @@
 			</ul>
 		</div>
 		</div>
+		
+			<h5>© 2022 KINOPLAY.</h5>
 		
 	</footer>
 
