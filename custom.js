@@ -1,8 +1,8 @@
 var swiper = new Swiper(".menu", {
-    spaceBetween: 30,
+    spaceBetween: 0,
     centeredSlides: true,
     autoplay: {
-      delay: 2500,
+      delay: 5000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -14,3 +14,13 @@ var swiper = new Swiper(".menu", {
       prevEl: ".swiper-button-prev",
     },
   });
+
+  /*scroll menu*/
+
+  const menu = document.querySelector('header');
+
+  function ativarScroll(){
+    menu.classList  .toggle('ativo', scrollY > 400)
+  }
+
+  window.addEventListener('scroll',ativarScroll);
