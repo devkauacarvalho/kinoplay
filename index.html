@@ -25,15 +25,14 @@
 		}
 		:root{
 			--text-font:'Lexend', cursive;
-			--footer:#00001f;
+			--footer:#2f005a;
 			--navbar:#00001f;
 			--color2:#23252b;
 			--text-color: #ececec;
-			--body-color:rgb(0, 0, 0,1);
+			--body-color: ;
 			--swiper-theme-color: #fff;
 		}
 		header{
-			background-color: ;
 			height: 90px;
 			position: fixed;
 			top: 0;
@@ -70,7 +69,7 @@
 		}
 		.name span{
 			font-family: var(--text-font);
-			color: #F29494;
+			color: #8400ff;
 			font-size: 20px;
 			text-transform: uppercase;	
 		}
@@ -80,7 +79,7 @@
 			gap: 40px;
 		}
 		.nav-links a:hover{
-			color: #e20f0f;
+			color: #c300ff;
 			
 		}
 		.navbar{
@@ -106,11 +105,11 @@
 			transition: 0.5s;
 		}
 		.button:hover{
-			color: #F29494;
+			color: #8400ff;
 		}
 		.button2{
-			background-color:#ff8585;
-			color: black;
+			background-color:#6300c0;
+			color: rgb(255, 255, 255);
 			font-family: var(--text-font);
     		border-radius:25px;
 			border: none;
@@ -118,19 +117,20 @@
 			transition: 0.6s;
 		}
 		.button2:hover{
-			background-color:#ffc2c2
+			background-color:#9d00ff
 		}
 		body{
-			background-color: var(--body-color);
+			background: linear-gradient(90deg, rgb(25, 0, 48),rgb(68, 0, 107));
 		}
 		main
 		{
-			margin-bottom: 500px;
+			width: 100%;
+			height: 100%;
 		}
 				
 		
 	.tituloCatalogo > h2{
-		margin-left: 50px;
+		margin: 0 0 10px 50px;
 		color: var(--text-color);
 	}
 	.container{
@@ -149,8 +149,10 @@
 		object-position: center;
 		z-index: -1;
 	}
-	.main-scroll-emalta, .main-scroll-Fmomento{
-		margin-bottom: 400px;
+	.main-scroll-emalta, .main-scroll-Fmomento, .main-scroll-Smomento{
+		width: 100%;
+		height: 300px;
+		margin-bottom: 50px;
 	}
 	 .cover1, .cover2, .cover3{
 		width: 100%;
@@ -161,20 +163,8 @@
 		justify-content: space-between;
 		
 	 }
-	 .child > .miniTrailer{
-		display: none;
-	 }
-	 .child:hover > .miniTrailer{
-		display: block;
-		z-index: 1000;
-	 }
-	 .child {
-		min-width: 190px;
-		height:100%;
-		margin: 1px 8px;
-		cursor: pointer;
-		overflow: hidden;
-	 }
+	 
+	 
 	 .scroll-images1{
 		padding-left: 40px;
 		width:100%;
@@ -220,11 +210,21 @@
 	 .scroll-images3::-webkit-scrollbar{
 		-webkit-appearance: none;
 	 }
+	 .child {
+		filter: brightness(0.8);
+		min-width: 190px;
+		height:100%;
+		margin: 1px 8px;
+		cursor: pointer;
+		overflow: hidden;
+	 }
 	 .child-img{
 		width: 100%;
 		height: 100%;
 	 }
 	 .child:hover{
+		filter: brightness(1);
+		opacity: 100%;
 		border: 2px solid white;
 		border-radius: 5px;
 	 }
@@ -273,7 +273,7 @@
 		width: 50px;
 		background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.705), transparent);
 	 	}
-	 .cover1 > .icon1, .icon2{
+	 .cover1 > .icon1, .icon2{ 
 		display: none;
 	 }
 	 .cover1:hover > .icon1{
@@ -307,7 +307,7 @@
 		 <nav class="navbar">
 			<div class="logo">
 			<a  href="#" >
-				<img src="logo.png" height="50px"alt="logo">
+				<img class="imglogo" src="logo.png" height="50px"alt="logo">
 			</a>
 			<a class="name">KINO<span>play</span></a>
 		</div>
@@ -385,8 +385,8 @@
 		  <script src="custom.js"></script>
 		<section class="catalogos">
 			<div class="main-scroll-emalta">
-				<div class="tituloCatalogo1">
-					<h2>Em Alta</h2>
+				<div class="tituloCatalogo">
+					<h2>Recomendado para você</h2>
 					<div class="cover1">
 						<button class="icon1" onclick="scroll_left1()"><i class="ri-arrow-left-s-line"></i></button>
 						<button class="icon2" onclick="scroll_right1()"><i class="ri-arrow-right-s-line"></i></button>
@@ -412,8 +412,8 @@
 				</div>
 			</div>
 			<div class="main-scroll-Fmomento">
-				<div class="tituloCatalogo2">
-					<h2>Em Alta</h2>
+				<div class="tituloCatalogo">
+					<h2>Filmes Destaque</h2>
 					<div class="cover2">
 						<button class="icon1" onclick="scroll_left2()"><i class="ri-arrow-left-s-line"></i></button>
 						<button class="icon2" onclick="scroll_right2()"><i class="ri-arrow-right-s-line"></i></button>
@@ -439,8 +439,8 @@
 				</div>
 			</div>
 			<div class="main-scroll-Smomento">
-				<div class="tituloCatalogo3">
-					<h2>Em Alta</h2>
+				<div class="tituloCatalogo">
+					<h2>Séries do Momento</h2>
 					<div class="cover3">
 						<button class="icon1" onclick="scroll_left3()"><i class="ri-arrow-left-s-line"></i></button>
 						<button class="icon2" onclick="scroll_right3()"><i class="ri-arrow-right-s-line"></i></button>
@@ -469,31 +469,31 @@
 				<script>
 					function scroll_left1(){
 						let left=document.querySelector(".scroll-images1");
-						left.scrollBy(-550,0);
+						left.scrollBy(-1100,0);
 					}
 					function scroll_right1(){
 						let right=document.querySelector(".scroll-images1");
-						right.scrollBy(550,0);
+						right.scrollBy(1100,0);
 					}
 				</script>
 				<script>
 					function scroll_left2(){
 						let left=document.querySelector(".scroll-images2");
-						left.scrollBy(-550,0);
+						left.scrollBy(-1100,0);
 					}
 					function scroll_right2(){
 						let right=document.querySelector(".scroll-images2");
-						right.scrollBy(550,0);
+						right.scrollBy(1100,0);
 					}
 				</script>
 				<script>
 					function scroll_left3(){
 						let left=document.querySelector(".scroll-images3");
-						left.scrollBy(-550,0);
+						left.scrollBy(-1100,0);
 					}
 					function scroll_right3(){
 						let right=document.querySelector(".scroll-images3");
-						right.scrollBy(550,0);
+						right.scrollBy(1100,0);
 					}
 				</script>
 		</main>

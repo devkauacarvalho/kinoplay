@@ -130,7 +130,6 @@
 footer{
     background-color: var(--footer);
     height: 25vh;
-    width: 99vw;
     display:grid;
     grid-template-rows: 1fr;
     align-items: center;
@@ -141,7 +140,6 @@ footer a{
     text-decoration:none;
     padding: 0.7em;
     font-size: 0.9rem;
-    color: #999;
 }
 footer a:hover{
     text-decoration: underline;
@@ -162,6 +160,5 @@ footer .link{
 
 footer h5{
     color: var(--text-color);
-    font-size: 0.8rem;
-    color: #999;    
+    font-size: 0.8rem; 
 }
