@@ -1,3 +1,4 @@
+/*banner*/
 var swiper = new Swiper(".menu", {
     spaceBetween: 0,
     centeredSlides: true,
@@ -24,3 +25,13 @@ var swiper = new Swiper(".menu", {
   }
 
   window.addEventListener('scroll',ativarScroll);
+
+  const filmes = [
+{
+  id: 1,
+  nome: "Avatar",
+  img: "../banner/banner3.jpg"
+  
+},
+
+  ]
