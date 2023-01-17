@@ -154,7 +154,7 @@
 }
 .play{
     position: absolute;
-    left: 1350px;
+    left: 90%;
     top: 540px;
 }
 .play .ri-play-fill{
@@ -171,31 +171,48 @@
     transition: 0.2s all linear;
 }
 .info{
-    background-color: #b300ff;
-    color: #ffffff;
+    background-color:#b300ff;
     padding: 10px;
     font-size: 2rem;
     border-radius: 20px;
-    border: 1px solid rgb(2,3,7,0.4);
-    width: 250px;
-    position: relative;
-    top: 300px;
+    border: 4px solid rgb(2,3,7,0.4);
+    width: 230px;
+    position: absolute;
+    top: 520px;
     left: 100px;
+    padding-left: 30px;
+    text-align:center;
+    
+}
+.info:hover{
+    background-color: #6300c0;
+    color: #e6e6fa;
+
 }
 .info a{
-    padding: 20px;
-    padding-bottom: 35px;
+    margin-bottom: 10px;
+}
+
+.info a span{
     
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+
+}
+.ri-information-fill{
+    position: absolute;
+    top: 16px;
+    left: 11px;
+    color: #ffffff;
+
 }
 
 
 /*footer*/
 
 footer{
-    position: relative;
-    bottom: 0;
     background-color: var(--footer);
-    width: 100%;
     height: 25vh;
     display:grid;
     grid-template-rows: 1fr;
@@ -240,4 +257,30 @@ html::-webkit-scrollbar{
 html::-webkit-scrollbar-thumb{
     border-radius: 50px;
     background:#155b84; /*cor da barra usada*/
+}
+
+
+/*menu sandwiche*/
+
+.menu-sandwiche{
+    display: none;
+}
+
+@media(max-width: 1080px){
+    .menu-sandwiche{
+        display: block;
+    }
+    header .nav-links{
+        display: none;
+    }
+}
+
+.ri-menu-line{
+    color: #a83068;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (min-width: 1080px) {
+    
 }
