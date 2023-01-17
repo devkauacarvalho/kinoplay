@@ -35,3 +35,13 @@ var swiper = new Swiper(".menu", {
 },
 
   ]
+
+/*menu sandwiche*/
+
+let menu1 = document.querySelector('.menu-sandwiche');
+let navbar = document.querySelector('.navbar');
+
+menu1.onclick = () => {
+	menu1.classList.toggle('bx-x');
+	navbar.classList.toggle('open');
+}
