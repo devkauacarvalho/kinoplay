@@ -1,3 +1,117 @@
+/* Configurações Gerais */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+:root{
+    --text-font:'Lexend', cursive;
+    --footer:#2f005a;
+    --navbar:#00001f;
+    --color2:#23252b;
+    --text-color: #ececec;
+    --body-color: ;
+    --swiper-theme-color: #ffffff  !important;
+}
+
+/* Header */
+header{
+    height: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+}
+header.ativo{
+    background-color: #00001f;
+}
+.cor-header{
+    background-color: #e20f0f;
+}
+header > section{
+    display: flex;
+    justify-content: flex-end;
+}
+a{
+    font-family: var(--text-font);
+    text-decoration: none;
+    color: var(--text-color);
+
+}
+.logo{
+    margin-left: 20px;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    color: var(--button-color);
+}
+.name{
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 20px;
+}
+.name span{
+    font-family: var(--text-font);
+    color: #8400ff;
+    font-size: 20px;
+    text-transform: uppercase;	
+}
+.nav-links{
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+}
+.nav-links a:hover{
+    color: #c300ff;
+    
+}
+.navbar{
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+/* Botões de entrar e Cadastrar */
+.buttons{
+    width:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+/* Botão de Entrar */
+.button{
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-family: var(--text-font);
+    border: 2px solid white;
+    border-radius:40px;
+    padding:15px;
+    transition: 0.5s;
+}
+.button:hover{
+    color: #8400ff;
+}
+/* Botão de Cadastrar */
+.button2{
+    background-color:#6300c0;
+    color: rgb(255, 255, 255);
+    font-family: var(--text-font);
+    border-radius:25px;
+    border: none;
+    padding:15px;
+    transition: 0.6s;
+}
+.button2:hover{
+    background-color:#9d00ff
+}
+/* Barra de pesquisa */
 .box{
     position: relative;
     transform: translate(0%,40%);
@@ -98,7 +212,7 @@
     
 }
 .swiper-pagination-bullet-active{
-    background-color: white;
+    background-color: var(--swiper-theme-color);
 }
 .menu-home{
     z-index: 1000;
@@ -111,8 +225,7 @@
 }
 .menu-home span{
     color: #ffffff;
-    font-weight: 500;
-    text-transform: uppercase;
+    font-weight: 200;
     margin-bottom: 10px;	
 }
 
@@ -136,7 +249,7 @@
     height: 300px;
     top: 200px;
     left: 120px;
-    filter: brightness(0.8);
+    filter: brightness(1.4);
 }
 .menu-home > #venom:hover{
     filter: brightness(1);
@@ -171,11 +284,11 @@
     transition: 0.2s all linear;
 }
 .info{
-    background-color:#b300ff;
+    background-color:transparent;
     padding: 10px;
     font-size: 2rem;
     border-radius: 20px;
-    border: 4px solid rgb(2,3,7,0.4);
+    border: 2px solid white;
     width: 230px;
     position: absolute;
     top: 520px;
@@ -184,18 +297,11 @@
     text-align:center;
     
 }
-.info:hover{
-    background-color: #6300c0;
-    color: #e6e6fa;
 
-}
-.info a{
-    margin-bottom: 10px;
-}
 
 .info a span{
     
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--text-font);
     font-size: 20px;
     color: #ffffff;
 
@@ -237,6 +343,7 @@ footer ul{
 }
 footer .link{
     display: flex;
+    height: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: center ;
@@ -256,7 +363,7 @@ html::-webkit-scrollbar{
 }
 html::-webkit-scrollbar-thumb{
     border-radius: 50px;
-    background:#155b84; /*cor da barra usada*/
+    background:#560a7e; /*cor da barra usada*/
 }
 
 
@@ -266,21 +373,515 @@ html::-webkit-scrollbar-thumb{
     display: none;
 }
 
-@media(max-width: 1080px){
+
+
+@media (min-width:2200px){  
+    .menu-home{
+        height: 1200px;
+    }
+    header{
+        height: 200px;
+    }
+    header.ativo{
+        height: 200px;
+    }
+    .imglogo{
+        height: 100px;
+    }
+    .name{
+        font-size: 40px;
+    }
+    .name span{
+        font-size: 40px;
+    }
+    .nav-links{
+        font-size: 30px;
+    }
+
+    .box{
+        position: relative;
+        transform: translate(0%,40%);
+    }
+    .input { /*cabeça do search*/
+        position: absolute;
+        right: 140px;
+        padding: 20px;
+        width: 1px;
+        height: 1px;
+        background: none;
+        border: 2px solid #ababff;
+        border-radius: 50px;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+        color: #ababff;
+        outline: none;
+        transition: .8s;
+        transition-delay: .2s;
+    }
+    
+    .input.click{ /* barra de pesquisa ao clickar*/
+        padding: 10px;
+        padding-left: 10px;
+        width: 300px;
+        height: 60px;
+        background: #221b3d;
+        border-radius: 70px;
+    }
+
+    .btn{  /*perna do botão*/
+        position: absolute;
+        width: 37px;
+        height: 37px;
+        top: 15px;
+        right: 150px;
+        background: none;
+        border: none;
+        box-sizing: border-box;
+        outline: none;
+        cursor: pointer;
+        transition: .2s;
+    }
+    .closeBtn{ /*animação do x*/
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        top: 33px;
+        left: 47px;
+        background: #ababff;
+        border-radius: 50px;
+        transform: translate(-50%,-50%) rotate(45deg);
+        transition: .5s;
+    }
+    .closeBtn:nth-child(1).click{ /*lado esquerdo do x*/
+        bottom: 300px;
+        left: 50%;
+        background: #a83068;
+    }
+    .closeBtn:nth-child(2){ /*lado direito do x*/
+        top: 45%;
+        left: 50%;
+        opacity: 0;
+        transition-delay: .2s;
+    }
+    .closeBtn:nth-child(2).click{ /*lado direito voltando pra posição de origem*/
+        transform: translate(-50%,-50%) rotate(-45deg);
+        opacity: 1;
+        background: #a83068;
+    }
+
+    .button{
+        background-color: var(--button-color);
+        color: var(--text-color);
+        font-family: var(--text-font);
+        border: 2px solid white;
+        border-radius:50px;
+        transition: 0.5s;
+        height: 80px;
+        width: 120px;
+        position: absolute;
+        right: 260px;
+    }
+    .button2{
+        position: absolute;
+        background-color:#6300c0;
+        color: rgb(255, 255, 255);
+        font-family: var(--text-font);
+        border-radius:50px;
+        border: none;
+        height: 80px;
+        width: 180px;
+        padding:15px;
+        transition: 0.6s;
+        right: 50px;
+    }
+    footer a{
+        font-size: 1.9rem;
+    }
+    footer h5{
+        font-size: 1.5rem;
+    }
+    .buttons a{
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #venom{
+        top: 500px;
+        left: 80px;
+        height: 300px;
+        filter: brightness(0.9);
+    }
+    #vingadores{
+        position: relative;
+        height: 400px;
+        width: 600px;
+        top: 500px;
+        left: 50px;
+        filter: brightness(0.8);
+    }
+    #avatar{
+        position: relative;
+        height: 370px;
+        top: 480px;
+        left: 120px;
+    }
+
+    .info{
+        top: 900px; 
+        font-size: 4rem;
+    }
+    .play{
+        top: 900px;
+    }
+    .play .ri-play-fill{
+        font-size: 4rem;
+
+    }
+    .info a span{    
+        font-size: 25px;
+        position: relative;
+        bottom: 15px;
+        left: 20px;
+    }
+    
+    
+}
+@media (max-width: 1801px) {
+    .menu-home{
+        height: 1200px;
+    }
+    #venom{
+        position: relative;
+        top: 600px;
+        left: 80px;
+        height: 200px;
+        filter: brightness(0.9);
+    }
+    #vingadores{
+        position: relative;
+        height: 300px;
+        width: 500px;
+        top: 550px;
+        left: 50px;
+        filter: brightness(0.8);
+    }
+    #avatar{
+        position: relative;
+        height: 270px;
+        top: 630px;
+        left: 120px;
+    }
+    .info{
+        background-color:transparent;
+        padding: 5px;
+        font-size: 2.4rem;
+        border-radius: 20px;
+        border:2px solid white;
+        width: 215px;
+        position: absolute;
+        top: 940px;
+        left: 100px;
+        padding-left: 80px;
+        text-align:center;
+        justify-content: center;
+        
+    }
+    .play{
+        position: absolute;
+        left: 90%;
+        top: 940px;
+    }
+    .info a span{
+        
+    font-size: 25px;
+    position: relative;
+    bottom: 4px ;
+    right: 19px;
+    }
+    .ri-information-fill{
+        top: 11px;
+    }
+    .play .ri-play-fill{
+    background-color: #b300ff;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 2.4rem;
+    border-radius: 50%;
+    border: 4px solid rgb(2,3,7,0.4);
+    }
+    
+}
+@media(max-width: 1091px){
     .menu-sandwiche{
         display: block;
+        background-color: transparent;
+        border: none;
+        
     }
-    header .nav-links{
+    div.nav-links{
         display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 100%;
+        left: 80%;
+        background-color: #221b3d;
+        height: 300px;
+        width: 20vw;
+        text-align: center;
+        animation-duration: 1s;
+        border-radius: px;
     }
-}
-
 .ri-menu-line{
     color: #a83068;
     font-size: 2rem;
     cursor: pointer;
-}
+    }
+    .info{
+        font-size: 2.4rem;
+        padding: 9px;
+        width: 200px;
+    }
+    .info a span{
+        
+        font-size: 20px;
+        position: relative;
+        bottom: 8px;
+        left: 15px;
+        
+        }
+    .play .ri-play-fill{
+        font-size: 2.4rem;
+    }
+    .play{
+        left: 87%;
+    }
 
-@media (min-width: 1080px) {
     
+    #venom{
+    height: 150px;
+    top: 670px;
+    left: 80px;        
+    }
+
+    #vingadores{
+        height: 200px;
+        width: 350px;
+        top: 650px;
+
+    }
+
+}
+@media(max-width:769px){
+
+    .menu-home{
+        height: 600px;
+    }
+    #venom{
+        top: 280px;
+        left: 50px;
+        height: 100px;
+    }
+    #vingadores{
+        height: 150px;
+        width: 250px;
+        top: 260px;
+        left: 30px;
+    }
+    #avatar{
+        height: 200px;
+        top: 200px;
+        left: 80px;
+    }
+    .info{
+        background-color:transparent;
+        padding: 5px;
+        font-size: 2.4rem;
+        border-radius: 20px;
+        border:2px solid white;
+        width: 175px;
+        position: absolute;
+        top: 420px;
+        left: 50px;
+        padding-left: 80px;
+        text-align:center;
+        justify-content: center;
+        
+    }
+    .ri-information-fill{
+        left: 17px;
+        top: 10px;
+    }
+    .play{
+        position: absolute;
+        left: 85%;
+        top: 420px;
+    }
+    .info a span{
+        
+    font-size: 18px;
+    position: relative;
+    bottom: 7px ;
+    left: -20px;
+    }
+    .play .ri-play-fill{
+    background-color: #b300ff;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 2.3rem;
+    border-radius: 50%;
+    border: 4px solid rgb(2,3,7,0.4);
+    }
+    
+    footer div:nth-child(2){
+       margin-left: 45px;
+       margin-bottom:20px ;
+
+    }
+    footer div:nth-child(3){
+       margin-right: 35px;
+       margin-left: 20px;
+
+    }
+    footer div:nth-child(4){
+       margin-left: 65px;
+       margin-bottom: 20px;
+
+    }
+    footer div.link{
+        flex-wrap: wrap;
+        height: 100%;
+        background-color: var(--footer);
+
+    }
+    footer h5{
+        background-color: var(--footer);
+
+}
+}
+@media(max-width:426px){
+    .menu-home{
+        height: 500px;
+    }
+    #venom{
+        top: 265px;
+        left: 50px;
+        height: 80px;
+    }
+    #vingadores{
+        height: 100px;
+        width: 200px;
+        top: 260px;
+        left: 30px;
+    }
+    #avatar{
+        height: 160px;
+        top: 220px;
+        left: 70px;
+    }
+    .info{
+        background-color:transparent;
+        padding: 5px;
+        font-size: 1.4rem;
+        border-radius: 13px;
+        border:2px solid white;
+        position: absolute;
+        top: 380px;
+        left: 50px;
+        padding-left: 80px;
+        text-align:center;
+        justify-content: center;
+        
+    }
+    .ri-information-fill{
+        left: 17px;
+        top: 8px;
+    }
+    .play{
+        position: absolute;
+        left: 80%;
+        top: 390px;
+    }
+    .info a span{
+        
+    font-size: 18px;
+    position: relative;
+    bottom: 1px ;
+    left: -30px;
+    }
+    .play .ri-play-fill{
+    background-color: #b300ff;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    border: 4px solid rgb(2,3,7,0.4);
+    }
+    
+    footer div:nth-child(1){
+       margin-top: 10px;
+
+    }
+    footer div:nth-child(2){
+       margin-left: 0px;
+       margin-bottom:0px ;
+
+    }
+    footer div:nth-child(3){
+       margin-right: 0px;
+       margin-left: 0px;
+
+    }
+    footer div:nth-child(4){
+       margin-left: 0px;
+       margin-bottom: 10px;
+
+    }
+    footer div.link{
+        flex-wrap: wrap;
+        height: 100%;
+        background-color: var(--footer);
+
+    }
+    footer h5{
+        background-color: var(--footer);
+
+}    
+}
+@media(max-width:376px){
+    #venom{
+        top: 265px;
+        left: 100px;
+        height: 90px;
+    }
+    #vingadores{
+        height: 130px;
+        width: 207px;
+        top: 249px;
+        left: 85px;
+    }
+    #avatar{
+        height: 140px;
+        top: 227px;
+        left: 150px;
+    }
+}
+@media(max-width:321px){
+    #venom{
+        top: 265px;
+        left: 78px;
+        height: 90px;
+    }
+    #vingadores{
+        height: 130px;
+        width: 207px;
+        top: 249px;
+        left: 58px;
+    }
+    #avatar{
+        height: 140px;
+        top: 227px;
+        left: 126px;
+    }
 }
