@@ -182,9 +182,20 @@
 	</section>
 	</header>
 	<main>
-		<div class="favs">
-			<h2>Poxa, você ainda não favoritou nada? :(</h2>
+		<div class="favoritos-container" style="display: flex;margin: 1000px;">
+			
 		</div>
+		<script>
+			const favoritosContainer = document.querySelector('.favoritos-container');
+
+// Recuperando os elementos salvos no localStorage
+const favoritos = localStorage.getItem('favoritos');
+
+if (favoritos) {
+  // Adicionando os elementos recuperados no container de favoritos
+  favoritosContainer.innerHTML = favoritos;
+}
+		</script>
 	</main>
 	<footer>	
 		<div class="link">
