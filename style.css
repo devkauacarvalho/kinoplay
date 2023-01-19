@@ -374,7 +374,6 @@ html::-webkit-scrollbar-thumb{
 }
 
 
-
 @media (min-width:2200px){  
     .menu-home{
         height: 1200px;
@@ -628,9 +627,9 @@ html::-webkit-scrollbar-thumb{
         display: block;
         background-color: transparent;
         border: none;
-        
+        color: white;
     }
-    div.nav-links{
+    .nav-links{
         display: none;
         position: absolute;
         flex-direction: column;
@@ -641,9 +640,11 @@ html::-webkit-scrollbar-thumb{
         width: 20vw;
         text-align: center;
         animation-duration: 1s;
-        border-radius: px;
     }
-.ri-menu-line{
+    .nav-links.active{
+        display: flex;
+    }
+    .ri-menu-line{
     color: #a83068;
     font-size: 2rem;
     cursor: pointer;
