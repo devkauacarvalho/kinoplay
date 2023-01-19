@@ -15,116 +15,6 @@
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800;900&display=swap');
 
-		*{
-			font-family: Arial, Helvetica, sans-serif;
-			margin: 0px;
-			padding: 0px;
-			box-sizing: border-box;
-			scroll-behavior: smooth;
-			scroll-padding-top: 2rem;
-		}
-		:root{
-			--text-font:'Lexend', cursive;
-			--footer:#2f005a;
-			--navbar:#00001f;
-			--color2:#23252b;
-			--text-color: #ececec;
-			--body-color: ;
-			--swiper-theme-color: #fff;
-		}
-		header{
-			height: 90px;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			z-index: 1000;
-			display: flex;
-			justify-content: space-between;
-		}
-		header.ativo{
-			background-color: #00001f;
-		}
-		.cor-header{
-			background-color: #e20f0f;
-		}
-		header > section{
-			display: flex;
-			justify-content: flex-end;
-		}
-		a{
-			font-family: var(--text-font);
-			text-decoration: none;
-			color: var(--text-color);
-
-		}
-		.logo{
-			margin-left: 20px;
-			align-items: center;
-			display: flex;
-			height: 100%;
-			color: var(--button-color);
-		}
-		.name{
-			margin-left: 10px;
-			color: var(--text-color);
-			font-size: 20px;
-		}
-		.name span{
-			font-family: var(--text-font);
-			color: #8400ff;
-			font-size: 20px;
-			text-transform: uppercase;	
-		}
-		.nav-links{
-			justify-content: space-around;
-			display: flex;
-			gap: 40px;
-		}
-		.nav-links a:hover{
-			color: #c300ff;
-			
-		}
-		.films{
-			color: #a600d8;
-		}
-		.navbar{
-			justify-content: space-around;
-			display: flex;
-			align-items: center;
-			gap: 40px;
-		}
-		.buttons{
-			width:300px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 20px;
-		}
-		.button{
-			background-color: var(--button-color);
-			color: var(--text-color);
-			font-family: var(--text-font);
-			border: 2px solid white;
-    		border-radius:40px;
-			padding:15px;
-			transition: 0.5s;
-		}
-		.button:hover{
-			color: #8400ff;
-		}
-		.button2{
-			background-color:#6300c0;
-			color: rgb(255, 255, 255);
-			font-family: var(--text-font);
-    		border-radius:25px;
-			border: none;
-			padding:15px;
-			transition: 0.6s;
-		}
-		.button2:hover{
-			background-color:#9d00ff
-		}
 		body{
 			background: linear-gradient(90deg, rgb(25, 0, 48),rgb(68, 0, 107));
 		}
@@ -262,29 +152,13 @@
 							<div class="child"><a href="#"><i class="heartBtn ri-heart-add-line"></i></a><img class="child-img" src="img/movieCard/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
 							<div class="child"><a href="#"><i class="heartBtn ri-heart-add-line"></i></a><img class="child-img" src="img/movieCard/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
 							<div class="child"><a href="#"><i class="heartBtn ri-heart-add-line"></i></a><img class="child-img" src="img/movieCard/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
-				<script>
-const heartBtns = document.querySelectorAll('.heartBtn');
-
-for (let i = 0; i < heartBtns.length; i++) {
-  heartBtns[i].addEventListener('click', function() {
-    this.classList.toggle('ri-heart-add-line');
-    this.classList.toggle('ri-heart-fill');
-    if (this.classList.contains('ri-heart-fill')) {
-      localStorage.setItem('favoritos', this.parentNode.parentNode.innerHTML);
-    }
-    else {
-      localStorage.removeItem('favoritos');
-    }
-  });
-}
-				</script>
-						</div>
-			</div>
+					</div>
+					<script src="js/favButton.js"></script>
+				</div>
 		</section>
 		</main>
 		<footer>	
 		<div class="link">
-			
 			<div>
 				<ul>
 					<a href="#">Audiodescrição</a>

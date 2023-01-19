@@ -14,132 +14,71 @@
 	<title>Kinoplay</title>
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800;900&display=swap');
-
-		*{
-			font-family: Arial, Helvetica, sans-serif;
-			margin: 0px;
-			padding: 0px;
-			box-sizing: border-box;
-			scroll-behavior: smooth;
-			scroll-padding-top: 2rem;
-		}
-		:root{
-			--text-font:'Lexend', cursive;
-			--footer:#2f005a;
-			--navbar:#00001f;
-			--color2:#23252b;
-			--text-color: #ececec;
-			--body-color: ;
-			--swiper-theme-color: #fff;
-		}
-		header{
-			height: 90px;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			z-index: 1000;
-			display: flex;
-			justify-content: space-between;
-		}
-		header.ativo{
-			background-color: #00001f;
-		}
-		.cor-header{
-			background-color: #e20f0f;
-		}
-		header > section{
-			display: flex;
-			justify-content: flex-end;
-		}
-		a{
-			font-family: var(--text-font);
-			text-decoration: none;
-			color: var(--text-color);
-
-		}
-		.logo{
-			margin-left: 20px;
-			align-items: center;
-			display: flex;
-			height: 100%;
-			color: var(--button-color);
-		}
-		.name{
-			margin-left: 10px;
-			color: var(--text-color);
-			font-size: 20px;
-		}
-		.name span{
-			font-family: var(--text-font);
-			color: #8400ff;
-			font-size: 20px;
-			text-transform: uppercase;	
-		}
-		.nav-links{
-			justify-content: space-around;
-			display: flex;
-			gap: 40px;
-		}
-		.nav-links a:hover{
-			color: #c300ff;
-			
-		}
-		.minhaLista{
-			color: #a600d8;
-		}
-		.navbar{
-			justify-content: space-around;
-			display: flex;
-			align-items: center;
-			gap: 40px;
-		}
-		.buttons{
-			width:300px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 20px;
-		}
-		.button{
-			background-color: var(--button-color);
-			color: var(--text-color);
-			font-family: var(--text-font);
-			border: 2px solid white;
-    		border-radius:40px;
-			padding:15px;
-			transition: 0.5s;
-		}
-		.button:hover{
-			color: #8400ff;
-		}
-		.button2{
-			background-color:#6300c0;
-			color: rgb(255, 255, 255);
-			font-family: var(--text-font);
-    		border-radius:25px;
-			border: none;
-			padding:15px;
-			transition: 0.6s;
-		}
-		.button2:hover{
-			background-color:#9d00ff
-		}
 		body{
 			background: linear-gradient(90deg, rgb(25, 0, 48),rgb(68, 0, 107));
 		}
 		main
 		{
-			text-align: center;
 			width: 100%;
 			height: 100%;
 		}
-		.favs{
-			position: relative;
-			top: 300px;
-			margin-bottom: 700px;
-			color: #bf51ff;
-		}
+				
+		
+	.main-scroll h2{
+		margin: 30px;
+		color: var(--text-color);
+	}
+	.main-scroll{
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		margin-bottom: 50px;
+	}
+	 .scroll-images{
+		
+		justify-content: center;
+		width:100%;
+		height: 100%;
+		display: flex;
+		flex-wrap:wrap;
+		align-items: center;
+		position: relative;
+		scroll-behavior: smooth;
+	 }
+	 
+	 .scroll-images::-webkit-scrollbar{
+		-webkit-appearance: none;
+	 }
+	 .child {
+		position: relative;
+		width: 202px;
+		height:302px;
+		margin: 8px;
+		cursor: pointer;
+		overflow: hidden;
+	 }
+	 .heartBtn {
+		display: none;
+		z-index: 1000;
+		font-size: 40px;
+	  	color: rgb(255, 255, 255);
+	  	position: absolute; /* Estabelece posição absoluta para o elemento filho */
+	  	top: 240px; /* Posiciona o elemento no topo do elemento pai */
+	  	left: 140px; /* Posiciona o elemento à esquerda do elemento pai */
+	}
+	.child:hover .heartBtn{
+		display: block;
+	}
+	 .child-img{
+		filter: brightness(0.8);
+		width: 200px;
+		height: 300px;
+	 }
+	 .child-img:hover{
+		filter: brightness(1);
+		border: 2px solid white;
+		border-radius: 5px;
+	 }
 	</style>
 </head>
 <body>
@@ -186,14 +125,14 @@
 			
 		</div>
 		<script>
-			const favoritosContainer = document.querySelector('.favoritos-container');
+		const favoritosContainer = document.querySelector('.favoritos-container');
 
-// Recuperando os elementos salvos no localStorage
-const favoritos = localStorage.getItem('favoritos');
+const favoritos = JSON.parse(localStorage.getItem('favoritos'));
 
 if (favoritos) {
-  // Adicionando os elementos recuperados no container de favoritos
-  favoritosContainer.innerHTML = favoritos;
+  for (let i = 0; i < favoritos.length; i++) {
+    favoritosContainer.innerHTML += favoritos[i];
+  }
 }
 		</script>
 	</main>
