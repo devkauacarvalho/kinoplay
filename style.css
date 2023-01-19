@@ -548,6 +548,16 @@ html::-webkit-scrollbar-thumb{
     
     
 }
+@media (max-width:2199px){
+    .info{
+        width: 210px;
+    }
+    .info a span{
+        font-size: 25px;
+        position: relative;
+        left: 10px;
+    }
+}
 @media (max-width: 1801px) {
     .menu-home{
         height: 1200px;
@@ -597,8 +607,8 @@ html::-webkit-scrollbar-thumb{
         
     font-size: 25px;
     position: relative;
-    bottom: 4px ;
-    right: 19px;
+    bottom: 5px ;
+    left: -18px;
     }
     .ri-information-fill{
         top: 11px;
