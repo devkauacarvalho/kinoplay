@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/index-main.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 	<script src="https://code.jquery.com/jquery-3.5.1.js" 
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
@@ -13,16 +14,9 @@
 	<script src="https://kit.fontawesome.com/cb4778956c.js" crossorigin="anonymous"></script>
 	<title>Kinoplay</title>
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800;900&display=swap');
-		body{
-			background: linear-gradient(90deg, rgb(25, 0, 48),rgb(68, 0, 107));
-		}
-		main
-		{
-			width: 100%;
-			height: 100%;
-		}
-				
+	.minhaLista{
+    color: #a600d8;
+	}
 		
 	.main-scroll h2{
 		margin: 30px;
@@ -46,18 +40,18 @@
 		scroll-behavior: smooth;
 	 }
 	 
-	 .scroll-images::-webkit-scrollbar{
+	.scroll-images::-webkit-scrollbar{
 		-webkit-appearance: none;
-	 }
-	 .child {
+	}
+	.child {
 		position: relative;
 		width: 202px;
 		height:302px;
 		margin: 8px;
 		cursor: pointer;
 		overflow: hidden;
-	 }
-	 .heartBtn {
+	}
+	.heartBtn {
 		display: none;
 		z-index: 1000;
 		font-size: 40px;
@@ -69,16 +63,16 @@
 	.child:hover .heartBtn{
 		display: block;
 	}
-	 .child-img{
+	.child-img{
 		filter: brightness(0.8);
 		width: 200px;
 		height: 300px;
-	 }
-	 .child-img:hover{
+	}
+	.child-img:hover{
 		filter: brightness(1);
 		border: 2px solid white;
 		border-radius: 5px;
-	 }
+	}
 	</style>
 </head>
 <body>
@@ -86,7 +80,7 @@
 		 <nav class="navbar">
 			<div class="logo">
 			<a  href="#" >
-				<img class="imglogo" src="/img/webSiteLogo/logo.png" height="50px"alt="logo">
+				<img class="imglogo" src="/img/website-logo/logo.png" height="50px"alt="logo">
 			</a>
 			<a class="name">KINO<span>play</span></a>
 		</div>

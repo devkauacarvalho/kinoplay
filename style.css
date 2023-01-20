@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800;900&display=swap');
+
 /* Configurações Gerais */
 *{
     font-family: Arial, Helvetica, sans-serif;
@@ -17,6 +19,14 @@
     --swiper-theme-color: #ffffff  !important;
 }
 
+
+body{
+    background: linear-gradient(90deg, rgb(25, 0, 48),rgb(68, 0, 107));
+}
+main{
+    width: 100%;
+    height: 100%;
+}
 /* Header */
 header{
     height: 90px;
@@ -70,6 +80,9 @@ a{
 .nav-links a:hover{
     color: #c300ff;
     
+}
+.minhalista{
+    color: #a600d8;
 }
 .navbar{
     justify-content: space-around;

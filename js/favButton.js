@@ -7,11 +7,9 @@ for (let i = 0; i < heartBtns.length; i++) {
     this.classList.toggle('ri-heart-fill');
     if (this.classList.contains('ri-heart-fill')) {
       favoritos.push(this.closest('div').innerHTML);
-      localStorage.setItem('favoritos', JSON.stringify(favoritos));
     } else {
       // remover o item do array
       favoritos.splice(favoritos.indexOf(this.closest('div').innerHTML), 1);
-      localStorage.setItem('favoritos', JSON.stringify(favoritos));
     }
   });
 }
