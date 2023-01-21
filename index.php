@@ -1,3 +1,14 @@
+<?php
+require 'reglog/config.php';
+if(!empty($_SESSION["id"])){
+	$id = $_SESSION["id"];
+	$result = mysqli_query($conn, "SELECT * FROM cliente WHERE id = $id");
+	$row = mysqli_fetch_assoc($result);
+}else{
+	header("Location: reglog/login-cadastro.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -57,8 +68,7 @@
 			})
 		</script>
 		<div class="buttons">
-			<a href="#" class="button">Entrar</a>
-			<a href="#" class="button2">Cadastrar</a> 
+			<a href="/reglog/logout.php" class="button2">Sair</a> 
 	</section>
 	</header>
 	<main>

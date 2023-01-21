@@ -31,7 +31,7 @@ if(isset($_POST["enviarlogin"])){
         if($senha == $row["senha"]){
             $_SESSION["login"] = true;
             $_SESSION["id"] = $row["id"];
-            header("Location: index.php");
+            header("Location: ../index.php");
         }
         else{
             echo "<script> alert('Senha incorreta'); </script>";
