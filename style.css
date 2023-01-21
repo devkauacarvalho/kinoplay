@@ -21,7 +21,7 @@
 
 
 body{
-    background: linear-gradient(90deg, rgb(25, 0, 48),rgb(68, 0, 107));
+    background: linear-gradient(to right, rgb(19, 0, 37),rgb(92, 0, 145));
 }
 main{
     width: 100%;
