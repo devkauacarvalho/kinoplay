@@ -68,7 +68,7 @@ if(!empty($_SESSION["id"])){
 			})
 		</script>
 		<div class="buttons">
-			<a href="/reglog/logout.php" class="button2">Sair</a> 
+			<a href=" reglog/logout.php" class="button2">Sair</a> 
 	</section>
 	</header>
 	<main>
