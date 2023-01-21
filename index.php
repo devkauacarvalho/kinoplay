@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/img/website-logo/logo.png">
+	<link rel="shortcut icon" href="img/website-logo/logo.png">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/index-main.css">
@@ -28,15 +28,15 @@
 			</div>
 			<div class="logo">
 			<a  href="#" >
-				<img class="imglogo" src="/img/website-logo/logo.png" height="50px"alt="logo">
+				<img class="imglogo" src="img/website-logo/logo.png" height="50px"alt="logo">
 			</a>
 			<a class="name">KINO<span>play</span></a>
 		</div>
 		<div class="nav-links">
-			<a href="/index.html" class="inicio">Inicio</a>
-			<a href="/filmes.html" class="films">Filmes</a>
-			<a href="/series.html" class="series">Séries</a>
-			<a href="/minhalista.html" class="minhaLista">Minha lista</a>
+			<a href="index.html" class="inicio">Inicio</a>
+			<a href="filmes.html" class="films">Filmes</a>
+			<a href="series.html" class="series">Séries</a>
+			<a href="minhalista.html" class="minhaLista">Minha lista</a>
 		</div>
 	</nav>
 	<section>
@@ -65,7 +65,7 @@
 		<section class="menu swiper">
 			<div class="swiper-wrapper">
 			  <div class="swiper-slide container">
-				<img src="/img/banner-destaque/venom.jpg" alt="Venom">
+				<img src="img/banner-destaque/venom.jpg" alt="Venom">
 				<div class="menu-home">
 					<img src="img/destaque-logo/venom.png" alt="Título" id="venom">
 					<div class="info">
@@ -79,9 +79,9 @@
 				</div>
 			</div>
 			<div class="swiper-slide container">
-				<img src="/img/banner-destaque/avengers.jpg" alt="Vingadores Ultimato">
+				<img src="img/banner-destaque/avengers.jpg" alt="Vingadores Ultimato">
 				<div class="menu-home">
-					<img id="vingadores" src="/img/destaque-logo/avengers.png" alt="vingadores Endgame">
+					<img id="vingadores" src="img/destaque-logo/avengers.png" alt="vingadores Endgame">
 					<div class="info">
 						<a href="#" >
 							<i class="ri-information-fill"></i> <span>more info</span>

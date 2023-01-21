@@ -21,6 +21,26 @@ if(isset($_POST["submit"])){
     }
 }
 
+if(isset($_POST["enviarlogin"])){
+    $usernameemail = $_POST["usernameemail"];
+    $senha = $_POST["senha"];
+    $result = mysqli_query($conn, "SELECT * FROM cliente where username = '$usernameemail' or email = '$usernameemail'");
+    $row = mysqli_fetch_assoc($result);
+    if(mysqli_num_rows($result) > 0){
+
+        if($senha == $row["senha"]){
+            $_SESSION["login"] = true;
+            $_SESSION["id"] = $row["id"];
+            header("Location: index.php");
+        }
+        else{
+            echo "<script> alert('Senha incorreta'); </script>";
+        }
+    }else{
+        echo "<script> alert('Nome de usuário ou email não está cadastrado'); </script>";
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +78,7 @@ if(isset($_POST["submit"])){
                     
                 </div>
                 <div class="input-group">
-                    <input type="password"name="senha" id="senha" required>
+                    <input type="password" name="senha" id="senha" required>
                     <label for="senha">Senha</label>
                 </div>
                 <div class="input-group">
@@ -73,20 +93,20 @@ if(isset($_POST["submit"])){
         </div>
 
         <div class="form-wrapper sign-in">
-            <form action="">
+            <form action="" method="post">
                 <h2>Bem-vindo de volta</h2>
                 <div class="input-group">
-                    <input type="text" required>
-                    <label for="">Nome de Usuário</label>
+                    <input type="text" name="usernameemail" id="usernameemail" required>
+                    <label for="usernameemail">Nome de Usuário ou Email</label>
                 </div>
                 <div class="input-group">
-                    <input type="password" required>
-                    <label for="">Senha</label>
+                    <input type="password" name="senha" id="senha" required>
+                    <label for="senha">Senha</label>
                 </div>
                 <div class="forgot-pass">
                     <a href="#">Esqueceu a senha?</a>
                 </div>
-                <button type="submit" name="submit"class="btn">Entrar</button>
+                <button type="submit" name="enviarlogin" class="btn">Entrar</button>
                 <div class="sign-link">
                     <p>Ainda não tem uma conta? <a href="#" class="signUp-link">Cadastre-se</a></p>
                 </div>
