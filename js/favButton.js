@@ -6,10 +6,9 @@ for (let i = 0; i < heartBtns.length; i++) {
     this.classList.toggle('ri-heart-add-line');
     this.classList.toggle('ri-heart-fill');
     if (this.classList.contains('ri-heart-fill')) {
-      favoritos.push(this.closest('div').innerHTML);
+      this.classList.add('heartAtive');
     } else {
-      // remover o item do array
-      favoritos.splice(favoritos.indexOf(this.closest('div').innerHTML), 1);
+      this.classList.remove('heartAtive');
     }
   });
 }
