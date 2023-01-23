@@ -44,14 +44,11 @@ overflow: hidden;
 display: none;
 z-index: 1000;
 font-size: 40px;
-color: rgb(255, 255, 255);
-position: absolute; /* Estabelece posição absoluta para o elemento filho */
-top: 250px; /* Posiciona o elemento no topo do elemento pai */
-left: 150px; /* Posiciona o elemento à esquerda do elemento pai */
+  color: rgb(255, 255, 255);
+  position: absolute; /* Estabelece posição absoluta para o elemento filho */
+  top: 240px; /* Posiciona o elemento no topo do elemento pai */
+  left: 140px; /* Posiciona o elemento à esquerda do elemento pai */
 }
-.heartAtive{
-    color: red;
- }
 .child:hover .heartBtn{
 display: block;
 }
