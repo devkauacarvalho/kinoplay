@@ -28,12 +28,12 @@ var swiper = new Swiper(".menu", {
 
 /*menu sandwiche*/
 
-const menuSandwiche = document.getElementByClassName('menu-sandwiche');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.responsive');
+const box = document.querySelector('.box');
 
-function toggleMenu() {
-const nav = document.getElementByClassName('nav-links');
-nav.classList.toggle('active');
-
-}
-
-menuSandwiche.addEventListener('click', toggleMenu);
+hamburger.addEventListener('click', () => {
+navLinks.classList.toggle('active');
+box.classList.toggle('active');
+hamburger.classList.toggle('active');
+});

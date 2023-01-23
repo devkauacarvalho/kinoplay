@@ -366,14 +366,6 @@ html::-webkit-scrollbar-thumb{
     background:#560a7e; /*cor da barra usada*/
 }
 
-
-/*menu sandwiche*/
-
-.menu-sandwiche{
-    display: none;
-}
-
-
 @media (min-width:2200px){  
     .menu-home{
         height: 1200px;
@@ -544,8 +536,6 @@ html::-webkit-scrollbar-thumb{
         bottom: 15px;
         left: 20px;
     }
-    
-    
 }
 @media (max-width:2199px){
     .info{
@@ -623,27 +613,92 @@ html::-webkit-scrollbar-thumb{
     
 }
 @media(max-width: 1091px){
-    .menu-sandwiche{
-        display: block;
-        background-color: transparent;
-        border: none;
-        color: white;
-    }
-    .nav-links{
-        display: none;
-        position: absolute;
-        flex-direction: column;
-        top: 100%;
-        left: 80%;
-        background-color: #221b3d;
-        height: 300px;
-        width: 20vw;
-        text-align: center;
-        animation-duration: 1s;
-    }
-    .nav-links.active{
-        display: flex;
-    }
+.nav-links {
+display: none;
+}
+  .buttons{
+    display: none;
+  }
+
+  /* menu-hamburguer */
+    
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 4%;
+  }
+
+  
+  .line {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color: rgb(193, 18, 246);
+    transition: 0.6s;
+  }
+  
+  .responsive {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background-color:#221b3d;
+    width: 20%;
+    height: 350px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 2px solid #ababff; 
+    transition: all 0.6s ease-in-out;
+    transform: translateX(100%);
+    padding-top: 20px;
+    border-radius: 30px 0 0 30px;
+  }
+  .hamburger.active{
+    right: 7.5%;
+    position: fixed;
+  }
+  
+  .responsive.active {
+    transform: translateX(0);
+  }      
+
+  header > section{
+    position: absolute;
+    right: 14%;
+  }
+  .box{
+    top: 28px;
+  }
+  .box.active{
+    right: 100px;
+  }
+  .btn{
+    height: 19px;
+  }
+  .input.click{
+    position: relative;
+    bottom: 8px;
+  }
+   .hamburger.active .line:first-child {
+    transform: rotate(45deg) translate(6px, 6px);
+    background-color: #a83068;
+  }
+  
+   .hamburger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+   .hamburger.active .line:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: #a83068;
+  }
+
+.hamburger.active .line{
+    background-color: #b168f5;
+}
+
     .ri-menu-line{
     color: #a83068;
     font-size: 2rem;
@@ -686,6 +741,12 @@ html::-webkit-scrollbar-thumb{
 }
 @media(max-width:769px){
 
+    .hamburger.active{
+        right: 8.5%;
+      }
+      .responsive{
+        width: 24%;
+      }
     .menu-home{
         height: 600px;
     }
@@ -768,8 +829,10 @@ html::-webkit-scrollbar-thumb{
     }
     footer h5{
         background-color: var(--footer);
-
-}
+    }
+    .box.active{
+        right: 120px;
+    }
 }
 @media(max-width:426px){
     .menu-home{
@@ -857,8 +920,25 @@ html::-webkit-scrollbar-thumb{
     }
     footer h5{
         background-color: var(--footer);
-
 }    
+    .responsive.active{
+        width: 28%;
+    }
+    .hamburger.active{
+        right: 7.5%;
+    }
+    .box{
+        right: 30px;
+    }
+    .box.active{
+        right: 90px;
+    }
+    .input.click{
+        width: 165px;
+    }
+    .name{
+        display: none;
+    }
 }
 @media(max-width:376px){
     #venom{
@@ -877,6 +957,15 @@ html::-webkit-scrollbar-thumb{
         top: 227px;
         left: 150px;
     }
+    .hamburger.active{
+        right: 45px;
+    }
+    .responsive.active{
+        width:37%
+    }
+    .box.active{
+        right: 115px;
+    }
 }
 @media(max-width:321px){
     #venom{
@@ -894,5 +983,26 @@ html::-webkit-scrollbar-thumb{
         height: 140px;
         top: 227px;
         left: 126px;
+    }
+    .hamburger.active{
+        right: 31px;
+    }
+    .responsive.active{
+        width: 35%;
+    }
+    .imglogo{
+        height: 40px;
+    }
+    .input.click{
+        left: 2px;
+    }
+    .box{
+        right: 30px;
+    }
+    .box.active{
+        right: 95px;
+    }
+    .closeBtn:nth-child(2).click,.closeBtn:nth-child(1).click{
+        left: 70%;
     }
 }
