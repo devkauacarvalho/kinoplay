@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -50,7 +50,6 @@
             margin: 10px 30px 0;
         }
         .navbar-brand{
-            color: white;
             margin: 15px 10px 0;
             font-size: 20px;
         }
@@ -58,9 +57,6 @@
             color: #8400ff;
             font-size: 20px;
             text-transform: uppercase;	
-        }
-        .navbar-brand:hover{
-            color: white;
         }
         .form{
             position: absolute;
@@ -83,7 +79,7 @@
 <body>
     <nav class="navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">KINO<span>play</span> | DASHBOARD</a>
+            <a class="navbar-brand text-light" href="#">KINO<span>play</span> | DASHBOARD</a>
         </div>
         <ul>
             <li class="nav-item">
@@ -96,27 +92,36 @@
         <div class="capa">
             <img id="capa-img">
         </div>
-        <form class="form">
+        <form class="form" method="POST" action="config.php">
             <div class="mb-3">
                 <label for="imagem" class="form-label">Link para capa</label>
-                <input type="text" class="form-control" id="imagem" placeholder="https://exemploimagem.com/imagem.png">
+                <input type="text" name="imagem" class="form-control" id="imagem" placeholder="https://exemploimagem.com/imagem.png">
             </div>
             <div class="mb-3">
                 <label for="trailer" class="form-label">Link para trailer</label>
-                <input type="text" class="form-control" id="trailer" placeholder="https://exemplovideo.com/trailer.mp4">
+                <input type="text" name="trailer" class="form-control" id="trailer" placeholder="https://exemplovideo.com/trailer.mp4">
             </div>
             <div class="mb-3">
                 <label for="titulo" class="form-label">Título</label>
-                <input type="text" class="form-control" id="titulo" placeholder="Exemplo: Gato de Botas">
+                <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Exemplo: Gato de Botas">
             </div>
             <div class="mb-3">
                 <label for="sinopse" class="form-label">Sinopse</label>
-                <textarea class="form-control" id="sinopse" rows="3" placeholder="Era uma vez..."></textarea>
+                <textarea class="form-control" name="sinopse" id="sinopse" rows="3" placeholder="Era uma vez..."></textarea>
             </div>
             <div class="mb-3">
                 <label for="anolancamento" class="form-label">Ano de lançamento</label>
-                <input type="number" class="form-control" id="anolancamento" min='1900' max='' placeholder="<script>document.write(ano_atual)</script>">
+                <input type="number" name="anolancamento" class="form-control" id="anolancamento" min='1900' max='' placeholder="<script>document.write(ano_atual)</script>">
             </div>
+            <label for="anolancamento" class="form-label">Classificação indicativa</label>
+            <select class="form-control" name="anolancamento">
+                <option>Livre</option>
+                <option>Não recomendado para menores de 10 anos</option>
+                <option>Não recomendado para menores de 12 anos</option>
+                <option>Não recomendado para menores de 14 anos</option>
+                <option>Não recomendado para menores de 16 anos</option>
+                <option>Não recomendado para menores de 18 anos</option>
+            </select><br>
                 <input type="submit" value="Enviar">
         </form>
     </main>

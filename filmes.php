@@ -35,7 +35,7 @@
 			<div class="line"></div>
 			<div class="line"></div>
 			<div class="line"></div>
-	 </div>
+	 	</div>
 	</nav>
 	<section>
 		<div class="box">
