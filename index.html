@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/img/website-logo/logo.png">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/index-main.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 	<script src="https://code.jquery.com/jquery-3.5.1.js" 
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
@@ -14,171 +16,9 @@
 	<script src="https://kit.fontawesome.com/cb4778956c.js" crossorigin="anonymous"></script>
 	<title>Kinoplay</title>
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800;900&display=swap');
-
-		body{
-			background: linear-gradient(90deg, rgb(25, 0, 48),rgb(68, 0, 107));
+		.inicio{
+    	color: #a600d8;
 		}
-		main
-		{
-			width: 100%;
-			height: 100%;
-		}
-				
-		
-	.tituloCatalogo > h2{
-		margin: 0 0 10px 50px;
-		color: var(--text-color);
-	}
-	.main-scroll-emalta, .main-scroll-Fmomento, .main-scroll-Smomento{
-		width: 100%;
-		height: 300px;
-		margin-bottom: 50px;
-	}
-	 .cover1, .cover2, .cover3{
-		width: 100%;
-		height: 250px;
-		display: flex;
-		position: absolute;
-		align-items: center;
-		justify-content: space-between;
-		
-	 }
-	 .scroll-images1{
-		padding-left: 40px;
-		width:100%;
-		height: 100%;
-		display: flex;
-		justify-content: left;
-		align-items: center;
-		overflow: hidden;
-		position: relative;
-		scroll-behavior: smooth;
-	 }
-	 
-	 .scroll-images1::-webkit-scrollbar{
-		-webkit-appearance: none;
-	 }
-	 .scroll-images2{
-		padding-left: 40px;
-		width:100%;
-		height: 100%;
-		display: flex;
-		justify-content: left;
-		align-items: center;
-		overflow: hidden;
-		position: relative;
-		scroll-behavior: smooth;
-	 }
-	 
-	 .scroll-images2::-webkit-scrollbar{
-		-webkit-appearance: none;
-	 }
-	 .scroll-images3{
-		padding-left: 40px;
-		width:100%;
-		height: 100%;
-		display: flex;
-		justify-content: left;
-		align-items: center;
-		overflow: hidden;
-		position: relative;
-		scroll-behavior: smooth;
-	 }
-	 
-	 .scroll-images3::-webkit-scrollbar{
-		-webkit-appearance: none;
-	 }
-	 .child {
-		filter: brightness(0.8);
-		min-width: 190px;
-		height:100%;
-		margin: 1px 8px;
-		cursor: pointer;
-		overflow: hidden;
-	 }
-	 .child-img{
-		width: 100%;
-		height: 100%;
-	 }
-	 .child:hover{
-		filter: brightness(1);
-		opacity: 100%;
-		border: 2px solid white;
-		border-radius: 5px;
-	 }
-	 .icon1{
-		position: absolute;
-		z-index: 99;
-		color: white;
-		background-color: transparent;
-		font-size: 50px;
-		width: 50px;
-		height: 100%;
-		outline: none;
-		border: none;
-		cursor: pointer;
-	 }
-	 .icon2{
-		position: absolute;
-		z-index: 99;
-		right: 0;
-		color: white;
-		background-color: transparent;
-		font-size: 50px;
-		width: 50px;
-		height: 100%;
-		outline: none;
-		border: none;
-		cursor: pointer;
-	 }
-	 .icon1::before{
-		position: absolute;
-		content: "";
-		left: 0;
-		top: 0;
-		z-index: -1;
-		height: 100%;
-		width: 50px;
-		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.705), transparent);
-	 }
-	 .icon2::after{
-		position: absolute;
-		content: "";
-		right: 0;
-		top: 0;
-		z-index: -1;
-		height: 100%;
-		width: 50px;
-		background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.705), transparent);
-	 	}
-	 .cover1 > .icon1, .icon2{ 
-		display: none;
-	 }
-	 .cover1:hover > .icon1{
-		display: block;
-	 }
-	 .cover1:hover > .icon2{
-		display: block;
-	 }
-	 .cover2 > .icon1, .icon2{
-		display: none;
-	 }
-	 .cover2:hover > .icon1{
-		display: block;
-	 }
-	 .cover2:hover > .icon2{
-		display: block;
-	 }
-	 .cover3 > .icon1, .icon2{
-		display: none;
-	 }
-	 .cover3:hover > .icon1{
-		display: block;
-	 }
-	 .cover3:hover > .icon2{
-		display: block;
-	 }
 	</style>
 </head>
 <body>
@@ -191,7 +31,7 @@
 			<a class="name">KINO<span>play</span></a>
 		</div>
 		<div class="nav-links responsive">
-			<a href="index.html" class="inicio">Inicio</a>
+			<a href="index.php" class="inicio">Inicio</a>
 			<a href="filmes.html" class="films">Filmes</a>
 			<a href="series.html" class="series">Séries</a>
 			<a href="minhalista.html" class="minhaLista">Minha lista</a>
@@ -220,18 +60,18 @@
 			})
 		</script>
 		<div class="buttons">
-			<a href="#" class="button">Entrar</a>
-			<a href="#" class="button2">Cadastrar</a>
+			<a href="https://127.0.0.1:5500/reglog/login-cadastro.php" class="button">Entrar</a>
+			<a href="reglog/login-cadastro.php" class="button2">Cadastrar</a>
 		</div>
-		</section>	
+	</section>
 	</header>
 	<main>
 		<section class="menu swiper">
 			<div class="swiper-wrapper">
 			  <div class="swiper-slide container">
-				<img src="img/Banner/venom.jpg" alt="Venom">
+				<img src="img/banner-destaque/venom.jpg" alt="Venom">
 				<div class="menu-home">
-					<img src="img/bannerLogo/venom.png" alt="Título" id="venom">
+					<img src="img/destaque-logo/venom.png" alt="Título" id="venom">
 					<div class="info">
 					<a href="#" >
 						<i class="ri-information-fill"></i> <span>more info</span>
@@ -243,9 +83,9 @@
 				</div>
 			</div>
 			<div class="swiper-slide container">
-				<img src="img/Banner/avengers.jpg" alt="Vingadores Ultimato">
+				<img src="img/banner-destaque/avengers.jpg" alt="Vingadores Ultimato">
 				<div class="menu-home">
-					<img id="vingadores" src="img/bannerLogo/avengers.png" alt="vingadores Endgame">
+					<img id="vingadores" src="img/destaque-logo/avengers.png" alt="vingadores Endgame">
 					<div class="info">
 						<a href="#" >
 							<i class="ri-information-fill"></i> <span>more info</span>
@@ -257,9 +97,9 @@
 				</div>
 			  </div>
 			  <div class="swiper-slide container">
-				<img src="img/banner/avatar2.jpg" alt="Avatar">
+				<img src="img/banner-destaque/avatar2.jpg" alt="Avatar">
 				<div class="menu-home">
-					<img src="img/bannerLogo/avatar2.png" alt="Título" id="avatar">
+					<img src="img/destaque-logo/avatar2.png" alt="Título" id="avatar">
 					<div class="info">
 						<a href="#" >
 							<i class="ri-information-fill"></i> <span>more info</span>
@@ -284,25 +124,28 @@
 				<div class="tituloCatalogo">
 					<h2>Recomendado para você</h2>
 					<div class="cover1">
-						<button class="icon1" onclick="scroll_left1()"><i class="ri-arrow-left-s-line"></i></button>
-						<button class="icon2" onclick="scroll_right1()"><i class="ri-arrow-right-s-line"></i></button>
-						<div class="scroll-images1">
-							<div class="child"><img class="child-img" src="img/movieCard/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/hancock.jpg" alt="Hancock"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/terrifier-2.jpg" alt="Terrifier 2"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/hancock.jpg" alt="Hancock"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/terrifier-2.jpg" alt="Terrifier 2"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+						<button class="icon1" data-target="list1" onclick="scroll_left(this)"><i class="ri-arrow-left-s-line"></i></button>
+						<button class="icon2" data-target="list1" onclick="scroll_right(this)"><i class="ri-arrow-right-s-line"></i></button>
+						<div class="scroll-images" id="list1">
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<script src="js/favButton.js"></script>
 						</div>
 					</div>
 				</div>
@@ -311,25 +154,25 @@
 				<div class="tituloCatalogo">
 					<h2>Filmes Destaque</h2>
 					<div class="cover2">
-						<button class="icon1" onclick="scroll_left2()"><i class="ri-arrow-left-s-line"></i></button>
-						<button class="icon2" onclick="scroll_right2()"><i class="ri-arrow-right-s-line"></i></button>
-						<div class="scroll-images2">
-							<div class="child"><img class="child-img" src="img/movieCard/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/hancock.jpg" alt="Hancock"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/terrifier-2.jpg" alt="Terrifier 2"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/hancock.jpg" alt="Hancock"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/terrifier-2.jpg" alt="Terrifier 2"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+						<button class="icon1" data-target="list2" onclick="scroll_left(this)"><i class="ri-arrow-left-s-line"></i></button>
+						<button class="icon2" data-target="list2" onclick="scroll_right(this)"><i class="ri-arrow-right-s-line"></i></button>
+						<div class="scroll-images" id="list2">
+							<div class="child"><img class="child-img" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
 						</div>
 					</div>
 				</div>
@@ -338,96 +181,56 @@
 				<div class="tituloCatalogo">
 					<h2>Séries do Momento</h2>
 					<div class="cover3">
-						<button class="icon1" onclick="scroll_left3()"><i class="ri-arrow-left-s-line"></i></button>
-						<button class="icon2" onclick="scroll_right3()"><i class="ri-arrow-right-s-line"></i></button>
-						<div class="scroll-images3">
-							<div class="child"><img class="child-img" src="img/movieCard/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/hancock.jpg" alt="Hancock"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/terrifier-2.jpg" alt="Terrifier 2"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/hancock.jpg" alt="Hancock"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/terrifier-2.jpg" alt="Terrifier 2"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
-							<div class="child"><img class="child-img" src="img/movieCard/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+						<button class="icon1" data-target="list3" onclick="scroll_left(this)"><i class="ri-arrow-left-s-line"></i></button>
+						<button class="icon2" data-target="list3" onclick="scroll_right(this)"><i class="ri-arrow-right-s-line"></i></button>
+						<div class="scroll-images" id="list3">
+							<div class="child"><img class="child-img" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><img class="child-img" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-				<script>
-					function scroll_left1(){
-						let left=document.querySelector(".scroll-images1");
-						left.scrollBy(-1100,0);
-					}
-					function scroll_right1(){
-						let right=document.querySelector(".scroll-images1");
-						right.scrollBy(1100,0);
-					}
-				</script>
-				<script>
-					function scroll_left2(){
-						let left=document.querySelector(".scroll-images2");
-						left.scrollBy(-1100,0);
-					}
-					function scroll_right2(){
-						let right=document.querySelector(".scroll-images2");
-						right.scrollBy(1100,0);
-					}
-				</script>
-				<script>
-					function scroll_left3(){
-						let left=document.querySelector(".scroll-images3");
-						left.scrollBy(-1100,0);
-					}
-					function scroll_right3(){
-						let right=document.querySelector(".scroll-images3");
-						right.scrollBy(1100,0);
-					}
-				</script>
+				<script src="js/scrollScript.js"></script>
 		</main>
 		<footer>	
 		<div class="link">
-			
-			<div>
 				<ul>
-					<a href="#">Audiodescrição</a>
-					<a href="#">Cartão pré-pago</a>
-					<a href="#">Relações com investidores</a>
+					<li><a href="#">Audiodescrição</a></li>
+					<li><a href="#">Relações com investidores</a></li>
+					<li><a href="#">Cartão pré-pago</a></li>
 				</ul>
-			</div>
-		<div>
 			<ul>
-				<a href="#">Avisos legais</a>
-				<a href="#">Termos de Uso</a>
-				<a href="#">Informações corporativas</a>
+				<li><a href="#">Avisos legais</a></li>
+				<li><a href="#">Termos de Uso</a></li>
+				<li><a href="#">Informações corporativas</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Imprensa</a></li>
+				<li><a href="#">Carreiras</a></li>
+				<li><a href="#">Central de Ajuda</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Privacidade</a></li>
+				<li><a href="#">Entre em contato</a></li>
+				<li><a href="#">Preferência de cookies</a></li>
 			</ul>
 		</div>
-		<div>
-			<ul>
-				<a href="#">Imprensa</a>
-				<a href="#">Carreiras</a>
-				<a href="#">Central de Ajuda</a>
-			</ul>
-		</div>
-		<div>
-			<ul>
-				<a href="#">Privacidade</a>
-				<a href="#">Entre em contato</a>
-				<a href="#">Preferência de cookies</a>
-			</ul>
-		</div>
-		</div>
-		
 			<h5>© 2022 KINOPLAY.</h5>
-		
 	</footer>
 
 </body>

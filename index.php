@@ -15,7 +15,7 @@ if(!empty($_SESSION["id"])){
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/img/website-logo/logo.png">
+	<link rel="shortcut icon" href="img/website-logo/logo.png">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/index-main.css">
@@ -35,19 +35,23 @@ if(!empty($_SESSION["id"])){
 <body>
 	<header>
 		 <nav class="navbar">
-			<button class="menu-sandwiche">Menu</button>
-		<div class="logo">
+			<div class="logo">
 			<a  href="#" >
-				<img class="imglogo" src="img/website-logo/logo.png" alt="logo">
+				<img class="imglogo" src="img/website-logo/logo.png" height="50px" alt="logo">
 			</a>
 			<a class="name">KINO<span>play</span></a>
 		</div>
-		<ul class="nav-links">
-			<li><a href="/index.html" class="inicio">Inicio</a></li>
-			<li><a href="/filmes.html" class="films">Filmes</a></li>
-			<li><a href="/series.html" class="series">Séries</a></li>
-			<li><a href="/minhalista.html" class="minhaLista">Minha lista</a></li>
-		</ul>
+		<div class="nav-links responsive">
+		<li><a href="index.php" class="inicio">Inicio</a></li>
+			<li><a href="filmes.php" class="films">Filmes</a></li>
+			<li><a href="series.php" class="series">Séries</a></li>
+			<li><a href="minhalista.php" class="minhaLista">Minha lista</a></li>
+		</div>
+		<div class="hamburger">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+	 </div>
 	</nav>
 	<section>
 		<div class="box">
@@ -67,8 +71,7 @@ if(!empty($_SESSION["id"])){
 			})
 		</script>
 		<div class="buttons">
-			<a href="https://127.0.0.1:5500/reglog/login-cadastro.php" class="button">Entrar</a>
-			<a href="reglog/login-cadastro.php" class="button2">Cadastrar</a>
+			<a href=" reglog/logout.php" class="button2">Sair</a>
 		</div>
 	</section>
 	</header>
@@ -125,7 +128,7 @@ if(!empty($_SESSION["id"])){
 		  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 		  
 		  <!-- Customizar JS-->
-		  <script src="custom.js"></script>
+		  <script src="kinoplay/custom.js"></script>
 		<section class="catalogos">
 			<div class="main-scroll-emalta">
 				<div class="tituloCatalogo">
@@ -239,6 +242,5 @@ if(!empty($_SESSION["id"])){
 		</div>
 			<h5>© 2022 KINOPLAY.</h5>
 	</footer>
-
 </body>
 </html>

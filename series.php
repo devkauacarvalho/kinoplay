@@ -13,79 +13,9 @@
 	<script src="https://kit.fontawesome.com/cb4778956c.js" crossorigin="anonymous"></script>
 	<title>Kinoplay</title>
 	<style>
-<<<<<<< HEAD
-		.films{
+		.series{
 		color: #a600d8;
 		}
-=======
-		@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800;900&display=swap');
-
-		body{
-			background: linear-gradient(90deg, rgb(25, 0, 48),rgb(68, 0, 107));
-		}
-		main
-		{
-			width: 100%;
-			height: 100%;
-		}
-				
-		
-	.main-scroll h2{
-		margin: 30px;
-		color: var(--text-color);
-	}
-	.main-scroll{
-		text-align: center;
-		width: 100%;
-		height: 100%;
-		margin-bottom: 50px;
-	}
-	 .scroll-images{
-		
-		justify-content: center;
-		width:100%;
-		height: 100%;
-		display: flex;
-		flex-wrap:wrap;
-		align-items: center;
-		position: relative;
-		scroll-behavior: smooth;
-	 }
-	 
-	 .scroll-images::-webkit-scrollbar{
-		-webkit-appearance: none;
-	 }
-	 .child {
-		position: relative;
-		width: 202px;
-		height:302px;
-		margin: 8px;
-		cursor: pointer;
-		overflow: hidden;
-	 }
-	 .heartBtn {
-		display: none;
-		z-index: 1000;
-		font-size: 40px;
-	  	color: rgb(255, 255, 255);
-	  	position: absolute; /* Estabelece posição absoluta para o elemento filho */
-	  	top: 240px; /* Posiciona o elemento no topo do elemento pai */
-	  	left: 140px; /* Posiciona o elemento à esquerda do elemento pai */
-	}
-	.child:hover .heartBtn{
-		display: block;
-	}
-	 .child-img{
-		filter: brightness(0.8);
-		width: 200px;
-		height: 300px;
-	 }
-	 .child-img:hover{
-		filter: brightness(1);
-		border: 2px solid white;
-		border-radius: 5px;
-	 }
->>>>>>> origin/master5.1
 	</style>
 </head>
 <body>
@@ -93,16 +23,16 @@
 		 <nav class="navbar">
 			<div class="logo">
 			<a  href="#" >
-				<img class="imglogo" src="/img/website-logo/logo.png" height="50px"alt="logo">
+				<img class="imglogo" src="img/website-logo/logo.png" height="50px" alt="logo">
 			</a>
 			<a class="name">KINO<span>play</span></a>
 		</div>
-		<div class="nav-links responsive">
-			<a href="/index.html" class="inicio">Inicio</a>
-			<a href="/filmes.html" class="films">Filmes</a>
-			<a href="/series.html" class="series">Séries</a>
-			<a href="/minhalista.html" class="minhaLista">Minha lista</a>
-		</div>
+		<ul class="nav-links">
+		<li><a href="index.php" class="inicio">Inicio</a></li>
+			<li><a href="filmes.php" class="films">Filmes</a></li>
+			<li><a href="series.php" class="series">Séries</a></li>
+			<li><a href="minhalista.php" class="minhaLista">Minha lista</a></li>
+		</ul>
 		<div class="hamburger">
 			<div class="line"></div>
 			<div class="line"></div>
@@ -164,46 +94,35 @@
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
-						<script src="js/favButton.js"></script>
-					</div>
+					<script src="js/favButton.js"></script>
 				</div>
+			</div>
 		</section>
 		</main>
 		<footer>	
 		<div class="link">
-			<div>
 				<ul>
-					<a href="#">Audiodescrição</a>
-					<a href="#">Cartão pré-pago</a>
-					<a href="#">Relações com investidores</a>
+					<li><a href="#">Audiodescrição</a></li>
+					<li><a href="#">Relações com investidores</a></li>
+					<li><a href="#">Cartão pré-pago</a></li>
 				</ul>
-			</div>
-		<div>
 			<ul>
-				<a href="#">Avisos legais</a>
-				<a href="#">Termos de Uso</a>
-				<a href="#">Informações corporativas</a>
+				<li><a href="#">Avisos legais</a></li>
+				<li><a href="#">Termos de Uso</a></li>
+				<li><a href="#">Informações corporativas</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Imprensa</a></li>
+				<li><a href="#">Carreiras</a></li>
+				<li><a href="#">Central de Ajuda</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Privacidade</a></li>
+				<li><a href="#">Entre em contato</a></li>
+				<li><a href="#">Preferência de cookies</a></li>
 			</ul>
 		</div>
-		<div>
-			<ul>
-				<a href="#">Imprensa</a>
-				<a href="#">Carreiras</a>
-				<a href="#">Central de Ajuda</a>
-			</ul>
-		</div>
-		<div>
-			<ul>
-				<a href="#">Privacidade</a>
-				<a href="#">Entre em contato</a>
-				<a href="#">Preferência de cookies</a>
-			</ul>
-		</div>
-		</div>
-		
 			<h5>© 2022 KINOPLAY.</h5>
-		
 	</footer>
-
 </body>
 </html>
