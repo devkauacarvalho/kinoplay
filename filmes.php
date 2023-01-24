@@ -9,8 +9,6 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/filmes-series-main.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-	<script src="https://kit.fontawesome.com/cb4778956c.js" crossorigin="anonymous"></script>
 	<title>Kinoplay</title>
 	<style>
 		.films{
@@ -49,13 +47,6 @@
 				<span class="closeBtn"></span>
 			</div>
 		</div>
-	   
-		<script>
-			$(".btn").click(function() {
-				$(".input").toggleClass("click")
-				$("span").toggleClass("click")
-			})
-		</script>
 		<div class="buttons">
 			<a href="#" class="button">Entrar</a>
 			<a href="#" class="button2">Cadastrar</a>
@@ -65,13 +56,6 @@
 	<main>
 		<section class="menu swiper">
 		</section>
-	  
-		  <!-- Swiper JS -->
-		  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-		  
-		  <!-- Customizar JS-->
-		  <script src="custom.js"></script>
-		  
 		<section class="catalogos">
 			<div class="main-scroll">
 					<h2>A escolha é sua!</h2>
@@ -94,7 +78,6 @@
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
-						<script src="js/favButton.js"></script>
 					</div>
 				</div>
 		</section>
@@ -125,4 +108,27 @@
 			<h5>© 2022 KINOPLAY.</h5>
 	</footer>
 </body>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" 
+    		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+    		crossorigin="anonymous"></script>
+
+	<script src="https://kit.fontawesome.com/cb4778956c.js" crossorigin="anonymous"></script>
+
+	<script>
+			$(".btn").click(function() {
+			$(".input").toggleClass("click")
+			$("span").toggleClass("click")
+		})
+	</script>
+	
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Customizar JS-->
+	<script src="js/custom.js"></script>
+
+	<script src="js/favButton.js"></script>
+	
+	<script src="js/scrollScript.js"></script>
+
 </html>

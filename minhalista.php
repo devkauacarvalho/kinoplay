@@ -9,10 +9,6 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/index-main.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-	<script src="https://code.jquery.com/jquery-3.5.1.js" 
-    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
-    crossorigin="anonymous"></script>
-	<script src="https://kit.fontawesome.com/cb4778956c.js" crossorigin="anonymous"></script>
 	<title>Kinoplay</title>
 	<style>
 	.minhaLista{
@@ -107,13 +103,6 @@
 				<span class="closeBtn"></span>
 			</div>
 		</div>
-	   
-		<script>
-			$(".btn").click(function() {
-				$(".input").toggleClass("click")
-				$("span").toggleClass("click")
-			})
-		</script>
 		<div class="buttons">
 			<a href="#" class="button">Entrar</a>
 			<a href="#" class="button2">Cadastrar</a>
@@ -124,18 +113,6 @@
 		<div class="favoritos-container" style="display: flex;margin: 1000px;">
 			
 		</div>
-		<script>
-		const favoritosContainer = document.querySelector('.favoritos-container');
-
-const favoritos = JSON.parse(localStorage.getItem('favoritos'));
-
-if (favoritos) {
-  for (let i = 0; i < favoritos.length; i++) {
-    favoritosContainer.innerHTML += favoritos[i];
-  }
-}
-		</script>
-		<script src="custom.js"></script>
 	</main>
 	<footer>	
 		<div class="link">
@@ -163,4 +140,27 @@ if (favoritos) {
 			<h5>© 2022 KINOPLAY.</h5>
 	</footer>
 </body>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" 
+    		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+    		crossorigin="anonymous"></script>
+
+	<script src="https://kit.fontawesome.com/cb4778956c.js" crossorigin="anonymous"></script>
+
+	<script>
+			$(".btn").click(function() {
+			$(".input").toggleClass("click")
+			$("span").toggleClass("click")
+		})
+	</script>
+	
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Customizar JS-->
+	<script src="js/custom.js"></script>
+
+	<script src="js/favButton.js"></script>
+	
+	<script src="js/scrollScript.js"></script>
+
 </html>
