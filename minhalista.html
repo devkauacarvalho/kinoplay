@@ -15,6 +15,7 @@
 	<script src="https://kit.fontawesome.com/cb4778956c.js" crossorigin="anonymous"></script>
 	<title>Kinoplay</title>
 	<style>
+<<<<<<< HEAD
 	.minhaLista{
     color: #a600d8;
 	}
@@ -74,6 +75,25 @@
 		border: 2px solid white;
 		border-radius: 5px;
 	}
+=======
+		@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800;900&display=swap');
+		
+		body{
+			background: linear-gradient(90deg, rgb(25, 0, 48),rgb(68, 0, 107));
+		}
+		main
+		{
+			text-align: center;
+			width: 100%;
+			height: 100%;
+		}
+		.favs{
+			position: relative;
+			top: 300px;
+			margin-bottom: 700px;
+			color: #bf51ff;
+		}
+>>>>>>> origin/master5.1
 	</style>
 </head>
 <body>
@@ -85,12 +105,17 @@
 			</a>
 			<a class="name">KINO<span>play</span></a>
 		</div>
-		<div class="nav-links">
-			<a href="/index.html" class="inicio">Inicio</a>
-			<a href="/filmes.html" class="films">Filmes</a>
-			<a href="/series.html" class="series">Séries</a>
-			<a href="/minhalista.html" class="minhaLista">Minha lista</a>
+		<div class="nav-links responsive">
+			<a href="index.html" class="inicio">Inicio</a>
+			<a href="filmes.html" class="films">Filmes</a>
+			<a href="series.html" class="series">Séries</a>
+			<a href="minhalista.html" class="minhaLista">Minha lista</a>
 		</div>
+		<div class="hamburger">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+	 </div>
 	</nav>
 	<section>
 		<div class="box">
@@ -111,7 +136,7 @@
 		</script>
 		<div class="buttons">
 			<a href="#" class="button">Entrar</a>
-			<a href="#" class="button2">Cadastrar</a>  <!-- código pika -->
+			<a href="#" class="button2">Cadastrar</a>
 		</div>
 	</section>
 	</header>
@@ -130,10 +155,10 @@ if (favoritos) {
   }
 }
 		</script>
+		<script src="custom.js"></script>
 	</main>
 	<footer>	
 		<div class="link">
-			
 			<div>
 				<ul>
 					<a href="#">Audiodescrição</a>
