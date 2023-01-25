@@ -1,7 +1,3 @@
-<?php
-	require '../reglog/config.php';
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -34,8 +30,27 @@
             scroll-behavior: smooth;
             scroll-padding-top: 2rem;
         }
+        main{
+            width: 100vw;
+        }
+        .navbar{
+            padding: 0;
+            position: relative;
+            background-color: #0a051f;
+            color: #8400ff;
+        }
+        .nav-item{
+            position: absolute;
+            top: 0px;
+            right: 5vw;
+            font-size: 2rem;
+            display: flex;
+        }
+        .nav-link{
+            margin: 10px 30px 0;
+        }
         .navbar-brand{
-            margin-left: 10px;
+            margin: 15px 10px 0;
             font-size: 20px;
         }
         .navbar-brand span{
@@ -43,13 +58,28 @@
             font-size: 20px;
             text-transform: uppercase;	
         }
+        .form{
+            position: absolute;
+            top: 100px;
+            left: 350px;
+            width: 50vw;
+        }
+        .capa{
+            width: 250px;
+            height: 350px;
+            margin: 40px;
+        }
+        .capa img{
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">KINO<span>play</span> | DASHBOARD</a>
+            <a class="navbar-brand text-light" href="#">KINO<span>play</span> | DASHBOARD</a>
         </div>
         <ul>
             <li class="nav-item">
@@ -58,6 +88,44 @@
             </li>
         </ul>
     </nav>
+    <main>
+        <div class="capa">
+            <img id="capa-img">
+        </div>
+        <form class="form" method="POST" action="config.php">
+            <div class="mb-3">
+                <label for="imagem" class="form-label">Link para capa</label>
+                <input type="text" name="imagem" class="form-control" id="imagem" placeholder="https://exemploimagem.com/imagem.png">
+            </div>
+            <div class="mb-3">
+                <label for="trailer" class="form-label">Link para trailer</label>
+                <input type="text" name="trailer" class="form-control" id="trailer" placeholder="https://exemplovideo.com/trailer.mp4">
+            </div>
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Título</label>
+                <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Exemplo: Gato de Botas">
+            </div>
+            <div class="mb-3">
+                <label for="sinopse" class="form-label">Sinopse</label>
+                <textarea class="form-control" name="sinopse" id="sinopse" rows="3" placeholder="Era uma vez..."></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="anolancamento" class="form-label">Ano de lançamento</label>
+                <input type="number" name="anolancamento" class="form-control" id="anolancamento" min='1900' max='' placeholder="<script>document.write(ano_atual)</script>">
+            </div>
+            <label for="anolancamento" class="form-label">Classificação indicativa</label>
+            <select class="form-control" name="anolancamento">
+                <option>Livre</option>
+                <option>Não recomendado para menores de 10 anos</option>
+                <option>Não recomendado para menores de 12 anos</option>
+                <option>Não recomendado para menores de 14 anos</option>
+                <option>Não recomendado para menores de 16 anos</option>
+                <option>Não recomendado para menores de 18 anos</option>
+            </select><br>
+                <input type="submit" value="Enviar">
+        </form>
+    </main>
 </body>
+<script src="dashboard.js"></script>
 
 </html>
