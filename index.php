@@ -51,8 +51,8 @@
 	</nav>
 	<section>
 		<div class="box">
-			<form name="search"> 
-				<input type="text" class="input" name="txt">
+			<form method="POST" name="pesquisar" action="pesquisar.php"> 
+				<input type="text" class="input" name="pesquisar">
 			</form>
 			<div class="btn" onclick="document.search.txt.value = ''">
 				<span class="closeBtn"></span>
