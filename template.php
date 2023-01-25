@@ -32,14 +32,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/website-logo/logo.png">
     <title></title>
 </head>
 <style>
-    header {
-        position: initial;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800;900&display=swap');
+
+/* Configurações Gerais */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+:root{
+    --text-font:'Lexend', cursive;
+}
+header.ativo{
+    background-color: #00001f;
+}
+header > section{
+    display: flex;
+    justify-content: flex-end;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.logo{
+    margin-top: 10px;
+    margin-left: 20px;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    color: var(--button-color);
+}
+.imglogo{
+height: 50px;
+}
+.name{
+    font-family: var(--text-font);
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+.name span{
+    font-family: var(--text-font);
+    color: #8400ff;
+    font-size: 20px;
+    text-transform: uppercase;	
+}
+.nav-links{
+    font-family: var(--text-font);
+    list-style-type: none;
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+}
+.nav-links a:hover{
+    color: #c300ff;
+    
+}
+
+.navbar{
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 
     .trailer {
         z-index: -1;
@@ -54,13 +116,16 @@
         overflow-x: hidden;
         background: aliceblue;
     }
-
+    .main{
+        width: 100%;
+        height: 100%;
+    }
     .banner {
         width: 13rem;
         height: 17rem;
         background-color: rgb(180, 180, 180);
         position: absolute;
-        top: 28vw;
+        top: 33vw;
         left: 3vw;
     }
 
@@ -79,17 +144,17 @@
 
     .sinopse {
         position: relative;
-        top: 30rem;
-        left: 18rem;
+        top: 46rem;
+        left: 18vw;
         z-index: 100;
-        width: 60%;
-        height: 10rem;
+        height: auto;
+        height: auto;
         color: blue;
     }
     .elenco{
         height: 270px;
         position: absolute;
-        top: 50rem;
+        top: 70rem;
         display: flex;
     }
     .elenco div{
@@ -130,7 +195,9 @@
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
-        </nav>
+    </header>
+    <main>
+    </nav>
         <div class="banner">
             <img
                  src="<?php echo $imagem; ?>">
@@ -143,25 +210,9 @@
                 <source src="<?php echo $trailer; ?>" type="video/mp4">
             </video>
         </div>
-        <section>
-            <div class="box">
-                <form method="POST" name="pesquisar" action="pesquisar.php">
-                    <input type="text" class="input" name="pesquisar">
-                </form>
-                <div class="btn" onclick="document.search.txt.value = ''">
-                    <span class="closeBtn"></span>
-                    <span class="closeBtn"></span>
-                </div>
-            </div>
-            <div class="buttons">
-                <a href="reglog/logout.php" class="button2">Sair</a>
-            </div>
-        </section>
-    </header>
-    <main>
         <div class="sinopse">
             <p>
-                <?php echo $sinopse; ?>
+                <?php echo $sinopse; ?>FODA
             </p>
         </div>
         <div class="elenco">

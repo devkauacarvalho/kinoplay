@@ -41,9 +41,6 @@ header{
 header.ativo{
     background-color: #00001f;
 }
-.cor-header{
-    background-color: #e20f0f;
-}
 header > section{
     display: flex;
     justify-content: flex-end;
@@ -62,7 +59,7 @@ a{
     color: var(--button-color);
 }
 .imglogo{
-height: 50px;
+    height: 50px;
 }
 .name{
     margin-left: 10px;
