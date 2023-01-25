@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800;900&display=swap');
+
+body{
+    background: linear-gradient(90deg, rgb(25, 0, 48),rgb(68, 0, 107));
+}
+main
+{
+    width: 100%;
+    height: 100%;
+}
+.main-scroll h2{
+margin: 30px;
+color: var(--text-color);
+}
+.main-scroll{
+text-align: center;
+width: 100%;
+height: 100%;
+margin-bottom: 50px;
+}
+.scroll-images{
+
+justify-content: center;
+width:100%;
+height: 100%;
+display: flex;
+flex-wrap:wrap;
+align-items: center;
+position: relative;
+scroll-behavior: smooth;
+}
+.scroll-images::-webkit-scrollbar{
+-webkit-appearance: none;
+}
+.child {
+position: relative;
+width: 202px;
+height:302px;
+margin: 8px;
+cursor: pointer;
+overflow: hidden;
+}
+.heartBtn {
+display: none;
+z-index: 1000;
+font-size: 40px;
+color: rgb(255, 255, 255);
+position: absolute; /* Estabelece posição absoluta para o elemento filho */
+top: 250px; /* Posiciona o elemento no topo do elemento pai */
+left: 150px; /* Posiciona o elemento à esquerda do elemento pai */
+}
+.heartAtive{
+    color: red;
+ }
+.child:hover .heartBtn{
+display: block;
+}
+.child-img{
+filter: brightness(0.8);
+width: 200px;
+height: 300px;
+}
+.child-img:hover{
+filter: brightness(1);
+border: 2px solid white;
+border-radius: 5px;
+}

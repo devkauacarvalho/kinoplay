@@ -26,12 +26,14 @@ var swiper = new Swiper(".menu", {
 
   window.addEventListener('scroll',ativarScroll);
 
-  const filmes = [
-{
-  id: 1,
-  nome: "Avatar",
-  img: "../banner/banner3.jpg"
-  
-},
+/*menu sandwiche*/
 
-  ]
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.responsive');
+const box = document.querySelector('.box');
+
+hamburger.addEventListener('click', () => {
+navLinks.classList.toggle('active');
+box.classList.toggle('active');
+hamburger.classList.toggle('active');
+});
