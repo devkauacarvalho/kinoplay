@@ -6,7 +6,7 @@ $imagem = $_POST['imagem'];
 $trailer = $_POST['trailer'];
 $titulo = $_POST['titulo'];
 $sinopse = $_POST['sinopse'];
-$anolancamento = $_POST['anolancamento'];
+$anolancamento = $_POST['anoLancamento'];
 $classificacao = $_POST['classificacao'];
 
 // Valida as informações
@@ -31,7 +31,7 @@ $anolancamento = mysqli_real_escape_string($conn, $anolancamento);
 $classificacao = mysqli_real_escape_string($conn, $classificacao);
 
 // Insere as informações no banco de dados
-$query = "INSERT INTO filmes (id, nomebr, NomeEN, anoLançamento, idDiretor, idGenero, sinopse, Imagem) VALUES ('', '$titulo', '', '$anolancamento', '', '','$sinopse','$imagem')";
+$query = "INSERT INTO filmes (id, titulo, NomeEN, anoLancamento, idDiretor, idGenero, sinopse, Imagem) VALUES ('', '$titulo', '', '$anolancamento', '', '','$sinopse','$imagem')";
 
 if(!mysqli_query($conn, $query)){
     die("Erro ao inserir no banco de dados");

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -58,9 +59,28 @@
             font-size: 20px;
             text-transform: uppercase;	
         }
-        .form{
+        .form1{
             position: absolute;
             top: 100px;
+            left: 350px;
+            width: 50vw;
+        }
+        .form2{
+            position: absolute;
+            top: 700px;
+            left: 350px;
+            width: 50vw;
+        }
+
+        .form3{
+            position: absolute;
+            top: 1500px;
+            left: 350px;
+            width: 50vw;
+        }
+        .form4{
+            position: absolute;
+            top: 2500px;
             left: 350px;
             width: 50vw;
         }
@@ -88,11 +108,10 @@
             </li>
         </ul>
     </nav>
-    <main>
         <div class="capa">
             <img id="capa-img">
         </div>
-        <form class="form" method="POST" action="config.php">
+        <form class="form1" method="POST" action="config.php">
             <div class="mb-3">
                 <label for="imagem" class="form-label">Link para capa</label>
                 <input type="text" name="imagem" class="form-control" id="imagem" placeholder="https://exemploimagem.com/imagem.png">
@@ -110,11 +129,11 @@
                 <textarea class="form-control" name="sinopse" id="sinopse" rows="3" placeholder="Era uma vez..."></textarea>
             </div>
             <div class="mb-3">
-                <label for="anolancamento" class="form-label">Ano de lançamento</label>
-                <input type="number" name="anolancamento" class="form-control" id="anolancamento" min='1900' max='' placeholder="<script>document.write(ano_atual)</script>">
+                <label for="anoLancamento" class="form-label">Ano de lançamento</label>
+                <input type="date" name="anoLancamento" class="form-control" id="anoLancamento" min='1900' max='' placeholder="<script>document.write(ano_atual)</script>">
             </div>
-            <label for="anolancamento" class="form-label">Classificação indicativa</label>
-            <select class="form-control" name="anolancamento">
+            <label for="anoLancamento" class="form-label">Classificação indicativa</label>
+            <select class="form-control" name="anoLancamento">
                 <option>Livre</option>
                 <option>Não recomendado para menores de 10 anos</option>
                 <option>Não recomendado para menores de 12 anos</option>
@@ -122,9 +141,100 @@
                 <option>Não recomendado para menores de 16 anos</option>
                 <option>Não recomendado para menores de 18 anos</option>
             </select><br>
-                <input type="submit" value="Enviar">
-        </form>
-    </main>
+</form>
+
+<form class="form2" method="POST" action="update.php">
+                <!--ATUALIZAR LISTA DE FILMES -->
+            <h2>ATUALIZAR</h2>
+            <div class="mb-3">
+                <label for="id" class="form-label">ID do filme</label>
+                <input type="number" name="id" class="form-control" id="id">
+            </div>
+            <div class="mb-3">
+                <label for="imagem" class="form-label">Link para capa</label>
+                <input type="text" name="imagem" class="form-control" id="imagem" placeholder="https://exemploimagem.com/imagem.png">
+            </div>
+            <div class="mb-3">
+                <label for="trailer" class="form-label">Link para trailer</label>
+                <input type="text" name="trailer" class="form-control" id="trailer" placeholder="https://exemplovideo.com/trailer.mp4">
+            </div>
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Título</label>
+                <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Exemplo: Gato de Botas">
+            </div>
+            <div class="mb-3">
+                <label for="sinopse" class="form-label">Sinopse</label>
+                <textarea class="form-control" name="sinopse" id="sinopse" rows="3" placeholder="Era uma vez..."></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="anoLancamento" class="form-label">Ano de lançamento</label>
+                <input type="date" name="anoLancamento" class="form-control" id="anoLancamento" min='1900' max='' placeholder="">
+            </div>
+            <label for="anoLancamento" class="form-label">Classificação indicativa</label>
+            <select class="form-control" name="classificacao">
+                <option>Livre</option>
+                <option>Não recomendado para menores de 10 anos</option>
+                <option>Não recomendado para menores de 12 anos</option>
+                <option>Não recomendado para menores de 14 anos</option>
+                <option>Não recomendado para menores de 16 anos</option>
+                <option>Não recomendado para menores de 18 anos</option>
+            </select><br>
+            <button type="submit" class="btn btn-primary">Atualizar</button>
+</form>
+
+<form class="form3" method="POST" action="delete.php">
+            <h2>DELETAR</h2>
+            <div class="mb-3">
+                <label for="id" class="form-label">ID do filme</label>
+                <input type="number" name="id" class="form-control" id="id">
+            </div>
+            <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir este filme?');">Excluir</button>
+</form>
+
+<div class="form4">
+<?php
+
+$conn = new PDO("mysql:host=localhost;dbname=kinoflix", "root", "");
+
+$query = "SELECT * FROM filmes";
+
+$stmt = $conn->prepare($query);
+$stmt->execute();
+
+$result = $stmt->fetchAll();
+
+echo "<table class='table'>";
+echo "<thead>";
+echo "<tr>";
+echo "<th>ID</th>";
+echo "<th>Titulo</th>";
+echo "<th>Ano de lançamento</th>";
+echo "<th>Sinopse</th>";
+echo "<th>Imagem</th>";
+echo "<th>Classificação indicativa</th>";
+echo "<th>Trailer</th>";
+echo "</tr>";
+echo "</thead>";
+echo "<tbody>";
+
+foreach($result as $row) {
+    echo "<tr>";
+    echo "<td>" . $row['id'] . "</td>";
+    echo "<td>" . $row['titulo'] . "</td>";
+    echo "<td>" . $row['anoLancamento'] . "</td>";
+    echo "<td>" . $row['sinopse'] . "</td>";
+    echo "<td>" . $row['imagem'] . "</td>";
+    echo "<td>" . $row['classificacao'] . "</td>";
+    echo "<td>" . $row['trailer'] . "</td>";
+    echo "</tr>";
+}
+
+echo "</tbody>";
+echo "</table>";
+
+?>
+                </div>
+<br>
 </body>
 <script src="dashboard.js"></script>
 
