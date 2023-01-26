@@ -42,7 +42,7 @@ overflow: hidden;
 }
 .heartBtn {
 display: none;
-z-index: 1000;
+z-index: 999;
 font-size: 40px;
 color: rgb(255, 255, 255);
 position: absolute; /* Estabelece posição absoluta para o elemento filho */

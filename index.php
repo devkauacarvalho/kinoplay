@@ -7,6 +7,13 @@
 	}else{
 		header("Location: reglog/login-cadastro.php");
 	}
+
+	$bannerid = $_GET['id'];
+
+	$sql_banner = "SELECT Imagem FROM filmes WHERE id = $bannerid";
+	$result_banner = mysqli_query($conn, $sql_banner);
+	$row2 = mysqli_fetch_assoc($result_banner);
+	$imagem = $row2['Imagem'];
 ?>
 
 <!DOCTYPE html>
@@ -120,7 +127,7 @@
 						<button class="icon1" data-target="list1" onclick="scroll_left(this)"><i class="ri-arrow-left-s-line"></i></button>
 						<button class="icon2" data-target="list1" onclick="scroll_right(this)"><i class="ri-arrow-right-s-line"></i></button>
 						<div class="scroll-images" id="list1">
-							<div class="child"><a href="template.php?id=1"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></a></div>
+							<div class="child"><a href="template.php?id=1"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="src="<?php echo $bannerid=1; ?>" alt="Avatar: O Caminho da Água"></a></div>
 							<div class="child"><a href="template.php?id=2"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></a></div>
 							<div class="child"><a href="template.php?id=3"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></a></div>
 							<div class="child"><a href="template.php?id=4"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></a></div>

@@ -143,13 +143,13 @@ height: 50px;
     }
 
     .sinopse {
-        position: relative;
-        top: 46rem;
-        left: 18vw;
+        position: absolute;
+        top: 50rem;
+        left: 15vw;
         z-index: 100;
+        width: 50vw;
         height: auto;
-        height: auto;
-        color: blue;
+        color: black;
     }
     .elenco{
         height: 270px;
@@ -212,11 +212,12 @@ height: 50px;
         </div>
         <div class="sinopse">
             <p>
-                <?php echo $sinopse; ?>FODA
+                <?php echo $sinopse; ?>
             </p>
         </div>
         <div class="elenco">
             <h2>Elenco</h2>
+            <div></div>
             <div></div>
             <div></div>
             <div></div>
