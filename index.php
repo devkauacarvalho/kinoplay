@@ -318,7 +318,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <!-- Customizar JS-->
-<script src="/js/custom.js"></script>
+<script src="js/custom.js"></script>
 
 <script src="js/favButton.js"></script>
 
