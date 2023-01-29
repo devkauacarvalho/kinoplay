@@ -7,7 +7,6 @@
 	}else{
 		header("Location: reglog/login-cadastro.php");
 	}
-	
 ?>
 
 <!DOCTYPE html>
@@ -19,12 +18,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="img/website-logo/logo.png">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/index-main.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 	<title>Kinoplay</title>
 	<style>
-		.inicio {
+		#inicio {
 			color: #a600d8;
 		}
 	</style>
@@ -40,10 +39,11 @@
 				<a class="name">KINO<span>play</span></a>
 			</div>
 			<div class="nav-links responsive">
-				<li><a href="index.php" class="inicio">Inicio</a></li>
-				<li><a href="filmes.php" class="films">Filmes</a></li>
-				<li><a href="series.php" class="series">Séries</a></li>
-				<li><a href="minhalista.php" class="minhaLista">Minha lista</a></li>
+				<li><a href="index.php" id="inicio">Inicio</a></li>
+				<li><a href="filmes.php" id="films">Filmes</a></li>
+				<li><a href="series.php" id="series">Séries</a></li>
+				<li><a href="minhalista.php" id="minhaLista">Minha lista</a></li>
+				<li><a href="reglog/logout.php" id="button1">Sair</a></li>
 			</div>
 			<div class="hamburger">
 				<div class="line"></div>
@@ -61,9 +61,7 @@
 					<span class="closeBtn"></span>
 				</div>
 			</div>
-			<div class="buttons">
-				<a href="reglog/logout.php" class="button2">Sair</a>
-			</div>
+			<i class="ri-map-pin-user-line"></i>
 		</section>
 	</header>
 	<main>
@@ -126,70 +124,64 @@
 						<div class="scroll-images" id="list1">
 							<div class="child"><a href="template.php?id=1"><i
 										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="1" src=""
-										alt="Avatar: O Caminho da Água"></a></div>
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=2"><i
 										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="2" src=""
-										alt="As Aventuras de PI"></a></div>
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=3"><i
 										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="3" src=""
-										alt="Capitão América 2: O Soldado invernal"></a></div>
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=4"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="4" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg"
-										alt="Doutor Estranho no Multiverso da Loucura"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="4" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=5"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="5"
-										src="img/film-cards/hancock.jpg" alt="Hancock"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="5" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=6"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="6"
-										src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="6" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=7"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="7"
-										src="img/film-cards/wifi-ralph-quebrando-a-internet.png"
-										alt="Wifi Ralph: Quebrando a Internet"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="7" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=8"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="8"
-										src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="8" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=9"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="9"
-										src="img/film-cards/avatar-o-caminho-da-agua.jpg"
-										alt="Avatar: O Caminho da Água"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="9" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=10"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="10"
-										src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="10" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=11"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="11"
-										src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg"
-										alt="Capitão América 2: O Soldado invernal"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="11" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=12"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="12"
-										src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg"
-										alt="Doutor Estranho no Multiverso da Loucura"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="12" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=13"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="13"
-										src="img/film-cards/hancock.jpg" alt="Hancock"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="13" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=14"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="14"
-										src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="14" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=15"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="15"
-										src="img/film-cards/wifi-ralph-quebrando-a-internet.png"
-										alt="Wifi Ralph: Quebrando a Internet"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="15" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=16"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="16"
-										src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="16" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=17"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="17"
-										src="img/film-cards/avatar-o-caminho-da-agua.jpg"
-										alt="Avatar: O Caminho da Água"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="17" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=18"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="18"
-										src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="18" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=18"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="19"
-										src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="19" src=""
+										alt=""></a></div>
 							<div class="child"><a href="template.php?id=18"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="20"
-										src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></a></div>
+										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="20" src=""
+										alt=""></a></div>
 						</div>
 					</div>
 				</div>
@@ -203,43 +195,37 @@
 						<button class="icon2" data-target="list2" onclick="scroll_right(this)"><i
 								class="ri-arrow-right-s-line"></i></button>
 						<div class="scroll-images" id="list2">
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="21"
-									src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="22"
-									src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg"
-									alt="Capitão América 2: O Soldado invernal"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="23"
-									src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg"
-									alt="Doutor Estranho no Multiverso da Loucura"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="24"
-									src="img/film-cards/hancock.jpg" alt="Hancock"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="25"
-									src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="26"
-									src="img/film-cards/wifi-ralph-quebrando-a-internet.png"
-									alt="Wifi Ralph: Quebrando a Internet"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="27"
-									src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="28"
-									src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água">
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="21" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="22" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="23" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="24" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="25" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="26" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="27" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="28" src="" alt="">
 							</div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="29"
-									src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="30"
-									src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg"
-									alt="Capitão América 2: O Soldado invernal"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="31"
-									src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg"
-									alt="Doutor Estranho no Multiverso da Loucura"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="32"
-									src="img/film-cards/hancock.jpg" alt="Hancock"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="33"
-									src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="34"
-									src="img/film-cards/wifi-ralph-quebrando-a-internet.png"
-									alt="Wifi Ralph: Quebrando a Internet"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="35"
-									src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="29" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="30" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="31" src="" alt=""></div>
+							<div class="child"><i class=""></i><img class="child-img"
+									dataid="32" src="" alt="Hancock"></div>
+							<div class="child"><i class=""></i><img class="child-img"
+									dataid="33" src="" alt="Terrifier 2"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="34" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="35" src="" alt=""></div>
 						</div>
 					</div>
 				</div>
@@ -253,44 +239,37 @@
 						<button class="icon2" data-target="list3" onclick="scroll_right(this)"><i
 								class="ri-arrow-right-s-line"></i></button>
 						<div class="scroll-images" id="list3">
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="36"
-									src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água">
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="36" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="37" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="38" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="39" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="40" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="41" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="42" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="43" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="44" src="" alt="">
 							</div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="37"
-									src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="38"
-									src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg"
-									alt="Capitão América 2: O Soldado invernal"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="39"
-									src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg"
-									alt="Doutor Estranho no Multiverso da Loucura"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="40"
-									src="img/film-cards/hancock.jpg" alt="Hancock"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="41"
-									src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="42"
-									src="img/film-cards/wifi-ralph-quebrando-a-internet.png"
-									alt="Wifi Ralph: Quebrando a Internet"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="43"
-									src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="44"
-									src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água">
-							</div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="45"
-									src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="46"
-									src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg"
-									alt="Capitão América 2: O Soldado invernal"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="47"
-									src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg"
-									alt="Doutor Estranho no Multiverso da Loucura"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="48"
-									src="img/film-cards/hancock.jpg" alt="Hancock"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="49"
-									src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="50"
-									src="img/film-cards/wifi-ralph-quebrando-a-internet.png"
-									alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="45" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="46" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="47" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="48" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="49" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
+									dataid="50" src="" alt=""></div>
 						</div>
 					</div>
 				</div>
@@ -339,7 +318,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <!-- Customizar JS-->
-<script src="js/custom.js"></script>
+<script src="/js/custom.js"></script>
 
 <script src="js/favButton.js"></script>
 

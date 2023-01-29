@@ -6,56 +6,55 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="/img/website-logo/logo.png">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/filmes-series-main.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 	<title>Kinoplay</title>
 	<style>
-		.films{
-		color: #a600d8;
+		#films{
+			color: #a600d8;
+		}
+		main{
+			margin-top: 200px;
 		}
 	</style>
 </head>
 <body>
 	<header>
-		 <nav class="navbar">
+	<nav class="navbar">
 			<div class="logo">
-			<a  href="#" >
+				<a  href="index.php" >
 				<img class="imglogo" src="img/website-logo/logo.png" height="50px" alt="logo">
-			</a>
-			<a class="name">KINO<span>play</span></a>
-		</div>
-		<ul class="nav-links">
-			<li><a href="index.php" class="inicio">Inicio</a></li>
-			<li><a href="filmes.php" class="films">Filmes</a></li>
-			<li><a href="series.php" class="series">Séries</a></li>
-			<li><a href="minhalista.php" class="minhaLista">Minha lista</a></li>
-		</ul>
-		<div class="hamburger">
-			<div class="line"></div>
-			<div class="line"></div>
-			<div class="line"></div>
-	 	</div>
+				</a>
+				<a class="name">KINO<span>play</span></a>
+			</div>
+			<div class="nav-links responsive">
+				<li><a href="index.php" id="inicio">Inicio</a></li>
+				<li><a href="filmes.php" id="films">Filmes</a></li>
+				<li><a href="series.php" id="series">Séries</a></li>
+				<li><a href="minhalista.php" id="minhaLista">Minha lista</a></li>
+				<li><a href="reglog/logout.php" id="button1">Sair</a></li>
+			</div>
+			<div class="hamburger">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+	 		</div>
 	</nav>
 	<section>
 		<div class="box">
-			<form name="search"> 
-				<input type="text" class="input" name="txt">
-			</form>
+			<form method="POST" name="pesquisar" action="pesquisar.php"> 
+                <input type="text" class="input" name="pesquisar">
+            </form>
 			<div class="btn" onclick="document.search.txt.value = ''">
 				<span class="closeBtn"></span>
 				<span class="closeBtn"></span>
 			</div>
 		</div>
-		<div class="buttons">
-			<a href="#" class="button">Entrar</a>
-			<a href="#" class="button2">Cadastrar</a>
-		</div>
+			<i class="ri-map-pin-user-line"></i>
 	</section>
 	</header>
 	<main>
-		<section class="menu swiper">
-		</section>
 		<section class="catalogos">
 			<div class="main-scroll">
 					<h2>A escolha é sua!</h2>

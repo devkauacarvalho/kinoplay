@@ -21,7 +21,7 @@ var swiper = new Swiper(".menu", {
   const menu = document.querySelector('header');
 
   function ativarScroll(){
-    menu.classList.toggle('ativo', scrollY > 400)
+    menu.classList.toggle('ativo', scrollY > 400);
   }
 
   window.addEventListener('scroll',ativarScroll);
@@ -31,9 +31,11 @@ var swiper = new Swiper(".menu", {
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.responsive');
 const box = document.querySelector('.box');
+const user = document.querySelector('.ri-map-pin-user-line');
 
 hamburger.addEventListener('click', () => {
 navLinks.classList.toggle('active');
 box.classList.toggle('active');
 hamburger.classList.toggle('active');
+user.classList.toggle('active');
 });
