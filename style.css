@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800;900&display=swap');
+
 /* Configurações Gerais */
 *{
     font-family: Arial, Helvetica, sans-serif;
@@ -17,6 +19,14 @@
     --swiper-theme-color: #ffffff  !important;
 }
 
+
+body{
+    background: linear-gradient(to right, rgb(19, 0, 37),rgb(92, 0, 145));
+}
+main{
+    width: 100%;
+    height: 100%;
+}
 /* Header */
 header{
     height: 90px;
@@ -51,6 +61,9 @@ a{
     height: 100%;
     color: var(--button-color);
 }
+.imglogo{
+height: 50px;
+}
 .name{
     margin-left: 10px;
     color: var(--text-color);
@@ -63,6 +76,7 @@ a{
     text-transform: uppercase;	
 }
 .nav-links{
+    list-style-type: none;
     justify-content: center;
     display: flex;
     gap: 40px;
@@ -77,29 +91,14 @@ a{
     align-items: center;
     gap: 40px;
 }
-/* Botões de entrar e Cadastrar */
-.buttons{
-    width:300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+/* Botão  */
+.nav-links li:last-child{
+    position: absolute;
+    right: 150px;
+    
 }
-/* Botão de Entrar */
-.button{
-    background-color: var(--button-color);
-    color: var(--text-color);
-    font-family: var(--text-font);
-    border: 2px solid white;
-    border-radius:40px;
-    padding:15px;
-    transition: 0.5s;
-}
-.button:hover{
-    color: #8400ff;
-}
-/* Botão de Cadastrar */
-.button2{
+/* Botão de Sair */
+#button1{
     background-color:#6300c0;
     color: rgb(255, 255, 255);
     font-family: var(--text-font);
@@ -108,8 +107,12 @@ a{
     padding:15px;
     transition: 0.6s;
 }
-.button2:hover{
-    background-color:#9d00ff
+.ri-map-pin-user-line{
+    color: white;
+    position: relative;
+    right: 40px;
+    top: 23px;
+    font-size: 41px;
 }
 /* Barra de pesquisa */
 .box{
@@ -335,7 +338,8 @@ footer a:hover{
     text-decoration: underline;
 }
 
-footer ul{
+footer li{
+    list-style-type: none;
     margin: 0 2rem 0 2rem;
     display: flex;
     flex-direction: column;
@@ -366,7 +370,7 @@ html::-webkit-scrollbar-thumb{
     background:#560a7e; /*cor da barra usada*/
 }
 
-@media (min-width:2200px){  
+@media (min-width:1991px){  
     .menu-home{
         height: 1200px;
     }
@@ -391,7 +395,8 @@ html::-webkit-scrollbar-thumb{
 
     .box{
         position: relative;
-        transform: translate(0%,40%);
+        transform: translate(-24%,40%);
+        width: 300px;
     }
     .input { /*cabeça do search*/
         position: absolute;
@@ -460,43 +465,18 @@ html::-webkit-scrollbar-thumb{
         opacity: 1;
         background: #a83068;
     }
-
-    .button{
-        background-color: var(--button-color);
-        color: var(--text-color);
-        font-family: var(--text-font);
-        border: 2px solid white;
-        border-radius:50px;
-        transition: 0.5s;
-        height: 80px;
-        width: 120px;
-        position: absolute;
-        right: 260px;
+    #button1{
+        border-radius: 40px;
     }
-    .button2{
-        position: absolute;
-        background-color:#6300c0;
-        color: rgb(255, 255, 255);
-        font-family: var(--text-font);
-        border-radius:50px;
-        border: none;
-        height: 80px;
-        width: 180px;
-        padding:15px;
-        transition: 0.6s;
-        right: 50px;
+    .ri-map-pin-user-line{
+        font-size: 80px;
+        top: 55px;
     }
     footer a{
         font-size: 1.9rem;
     }
     footer h5{
         font-size: 1.5rem;
-    }
-    .buttons a{
-        font-size: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     #venom{
         top: 500px;
@@ -537,17 +517,8 @@ html::-webkit-scrollbar-thumb{
         left: 20px;
     }
 }
-@media (max-width:2199px){
-    .info{
-        width: 210px;
-    }
-    .info a span{
-        font-size: 25px;
-        position: relative;
-        left: 10px;
-    }
-}
-@media (max-width: 1801px) {
+@media (max-width: 1981px) {    
+    
     .menu-home{
         height: 1200px;
     }
@@ -596,8 +567,8 @@ html::-webkit-scrollbar-thumb{
         
     font-size: 25px;
     position: relative;
-    bottom: 5px ;
-    left: -18px;
+    bottom: 4px ;
+    right: 19px;
     }
     .ri-information-fill{
         top: 11px;
@@ -610,16 +581,24 @@ html::-webkit-scrollbar-thumb{
     border-radius: 50%;
     border: 4px solid rgb(2,3,7,0.4);
     }
-    
+    .input{
+        position: relative;
+        right: 160px;
+    }
+    .nav-links li:last-child{
+        right: 105px;
+    }
+    .btn{
+        right: 160px;
+    }
+    .box{
+        transform: translateY(40%);
+    }
 }
 @media(max-width: 1091px){
-.nav-links {
-display: none;
-}
-  .buttons{
+    .nav-links {
     display: none;
-  }
-
+}
   /* menu-hamburguer */
     
   .hamburger {
@@ -645,11 +624,12 @@ display: none;
     top: 0px;
     right: 0;
     background-color:#221b3d;
-    width: 20%;
-    height: 350px;
+    width: 19%;
+    height: 400px;
     align-items: center;
     box-sizing: border-box;
     border: 2px solid #ababff; 
+    border-right: none;
     transition: all 0.6s ease-in-out;
     transform: translateX(100%);
     padding-top: 20px;
@@ -670,9 +650,11 @@ display: none;
   }
   .box{
     top: 28px;
+    left: 185px;
+    transform: translateY(22%);
   }
   .box.active{
-    right: 100px;
+   left: 40px;
   }
   .btn{
     height: 19px;
@@ -693,11 +675,11 @@ display: none;
    .hamburger.active .line:last-child {
     transform: rotate(-45deg) translate(5px, -5px);
     background-color: #a83068;
-  }
+    }
 
-.hamburger.active .line{
+    .hamburger.active .line{
     background-color: #b168f5;
-}
+    }
 
     .ri-menu-line{
     color: #a83068;
@@ -735,7 +717,17 @@ display: none;
         height: 200px;
         width: 350px;
         top: 650px;
-
+    }
+    .nav-links li:last-child{
+        position: initial;
+    }
+    .ri-map-pin-user-line{
+        right: -50px;
+        top: 26px;
+        font-size: 35px;
+    }
+    .ri-map-pin-user-line.active {
+        right: 78px;
     }
 
 }
@@ -745,7 +737,7 @@ display: none;
         right: 8.5%;
       }
       .responsive{
-        width: 24%;
+        width: 22%;
       }
     .menu-home{
         height: 600px;
@@ -806,17 +798,17 @@ display: none;
     border: 4px solid rgb(2,3,7,0.4);
     }
     
-    footer div:nth-child(2){
+    footer ul:nth-child(2){
        margin-left: 45px;
        margin-bottom:20px ;
 
     }
-    footer div:nth-child(3){
+    footer ul:nth-child(3){
        margin-right: 35px;
        margin-left: 20px;
 
     }
-    footer div:nth-child(4){
+    footer ul:nth-child(4){
        margin-left: 65px;
        margin-bottom: 20px;
 
@@ -830,8 +822,14 @@ display: none;
     footer h5{
         background-color: var(--footer);
     }
+    .box{
+        left: 165px;
+    }
     .box.active{
-        right: 120px;
+        left: 50px;
+    }
+    .ri-map-pin-user-line{
+        right: -28px;
     }
 }
 @media(max-width:426px){
@@ -893,51 +891,52 @@ display: none;
     border: 4px solid rgb(2,3,7,0.4);
     }
     
-    footer div:nth-child(1){
+    footer ul:nth-child(1){
        margin-top: 10px;
 
     }
-    footer div:nth-child(2){
+    footer ul:nth-child(2){
        margin-left: 0px;
        margin-bottom:0px ;
 
     }
-    footer div:nth-child(3){
+    footer ul:nth-child(3){
        margin-right: 0px;
        margin-left: 0px;
 
     }
-    footer div:nth-child(4){
+    footer ul:nth-child(4){
        margin-left: 0px;
        margin-bottom: 10px;
-
-    }
-    footer div.link{
-        flex-wrap: wrap;
-        height: 100%;
-        background-color: var(--footer);
 
     }
     footer h5{
         background-color: var(--footer);
 }    
     .responsive.active{
-        width: 28%;
+        width: 31%;
+
     }
     .hamburger.active{
-        right: 7.5%;
+        right: 10.5%;
     }
     .box{
-        right: 30px;
+        left: 120px;
     }
     .box.active{
-        right: 90px;
+        left: 49px;
     }
     .input.click{
         width: 165px;
     }
     .name{
         display: none;
+    }
+    .ri-map-pin-user-line{
+        right: 12px;
+    }
+    .ri-map-pin-user-line.active{
+        right: 88px;
     }
 }
 @media(max-width:376px){
@@ -958,13 +957,19 @@ display: none;
         left: 150px;
     }
     .hamburger.active{
-        right: 45px;
+        right: 47px;
     }
     .responsive.active{
         width:37%
     }
     .box.active{
-        right: 115px;
+       left: 42px;
+    }
+    .ri-map-pin-user-line{
+        right: 16px;
+    }
+    .ri-map-pin-user-line.active{
+        right: 100px;
     }
 }
 @media(max-width:321px){
@@ -985,24 +990,30 @@ display: none;
         left: 126px;
     }
     .hamburger.active{
-        right: 31px;
+        right: 36px;
     }
     .responsive.active{
-        width: 35%;
+        width: 37%;
     }
     .imglogo{
         height: 40px;
     }
     .input.click{
-        left: 2px;
+        width: 120px;
     }
     .box{
-        right: 30px;
+        left: 122px;
     }
     .box.active{
-        right: 95px;
+        left: 55px;
     }
     .closeBtn:nth-child(2).click,.closeBtn:nth-child(1).click{
         left: 70%;
+    }
+    .ri-map-pin-user-line{
+        right: 17px;
+    }
+    .ri-map-pin-user-line.active{
+        right: 86px;
     }
 }
