@@ -21,7 +21,7 @@ var swiper = new Swiper(".menu", {
   const menu = document.querySelector('header');
 
   function ativarScroll(){
-    menu.classList  .toggle('ativo', scrollY > 400)
+    menu.classList.toggle('ativo', scrollY > 400)
   }
 
   window.addEventListener('scroll',ativarScroll);

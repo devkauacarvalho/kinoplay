@@ -6,7 +6,7 @@
     // Consulta SQL para buscar os itens esperados
     $sql_trailer = "SELECT trailer FROM filmes WHERE id = $id";
     $sql_banner = "SELECT Imagem FROM filmes WHERE id = $id";
-    $sql_titulo = "SELECT nomebr FROM filmes WHERE id = $id";
+    $sql_titulo = "SELECT titulo FROM filmes WHERE id = $id";
     $sql_sinopse = "SELECT sinopse FROM filmes WHERE id = $id";
 
     $result_trailer = mysqli_query($conn, $sql_trailer);
@@ -21,7 +21,7 @@
 
     $trailer = $row1['trailer'];
     $imagem = $row2['Imagem'];
-    $titulo = $row3['nomebr'];
+    $titulo = $row3['titulo'];
     $sinopse = $row4['sinopse'];
 ?>
 

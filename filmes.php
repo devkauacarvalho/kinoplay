@@ -60,24 +60,56 @@
 			<div class="main-scroll">
 					<h2>A escolha é sua!</h2>
 						<div class="scroll-images">
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/hancock.jpg" alt="Hancock"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/hancock.jpg" alt="Hancock"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="1" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="2" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="3" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="4" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="5" src="img/film-cards/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="6" src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="7" src="img/film-cards/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="8" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="9" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="10" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="11" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="12" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="13" src="img/film-cards/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="14" src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="15" src="img/film-cards/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="16" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="17" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="18" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="19" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="20" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="21" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="22" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="23" src="img/film-cards/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="24" src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="25" src="img/film-cards/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="26" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="27" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="28" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="29" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="30" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="31" src="img/film-cards/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="32" src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="33" src="img/film-cards/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="34" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="35" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="36" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="37" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="38" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="39" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="40" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="41" src="img/film-cards/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="42" src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="43" src="img/film-cards/wifi-ralph-quebrando-a-internet.png" alt="Wifi Ralph: Quebrando a Internet"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="44" src="img/film-cards/ate-o-ultimo-homem.jpg" alt="Até o Ultimo Homem"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="45" src="img/film-cards/avatar-o-caminho-da-agua.jpg" alt="Avatar: O Caminho da Água"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="46" src="img/film-cards/aventuras-de-pi.jpg" alt="As Aventuras de PI"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="47" src="img/film-cards/capitao-america-2-o-soldado-invernal.jpg" alt="Capitão América 2: O Soldado invernal"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="48" src="img/film-cards/doutor-estranho-no-multiverso-da-loucura.jpeg" alt="Doutor Estranho no Multiverso da Loucura"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="49" src="img/film-cards/hancock.jpg" alt="Hancock"></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="50" src="img/film-cards/terrifier-2.jpg" alt="Terrifier 2"></div>
 					</div>
 				</div>
 		</section>
@@ -130,5 +162,7 @@
 	<script src="js/favButton.js"></script>
 	
 	<script src="js/scrollScript.js"></script>
+
+	<script src="js/cards.js"></script>
 
 </html>
