@@ -8,7 +8,7 @@ $dbname = "kinoflix";
 $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
 
 $pesquisar = $_POST['pesquisar'];
-$result_filmes = "SELECT * FROM filmes WHERE nomebr LIKE '%$pesquisar%' LIMIT 2";
+$result_filmes = "SELECT * FROM filmes WHERE titulo LIKE '%$pesquisar%' LIMIT 2";
 $resultado_filmes = mysqli_query($conn, $result_filmes);
 
 /*while($rows_filmes = mysqli_fetch_array($resultado_filmes)){
