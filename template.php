@@ -38,70 +38,80 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800;900&display=swap');
 
-/* Configurações Gerais */
-*{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
-}
-:root{
-    --text-font:'Lexend', cursive;
-}
-header.ativo{
-    background-color: #00001f;
-}
-header > section{
-    display: flex;
-    justify-content: flex-end;
-}
-a{
-    color: white;
-    text-decoration: none;
-}
-.logo{
-    margin-top: 10px;
-    margin-left: 20px;
-    align-items: center;
-    display: flex;
-    height: 100%;
-    color: var(--button-color);
-}
-.imglogo{
-height: 50px;
-}
-.name{
-    font-family: var(--text-font);
-    margin-left: 10px;
-    color: white;
-    font-size: 20px;
-}
-.name span{
-    font-family: var(--text-font);
-    color: #8400ff;
-    font-size: 20px;
-    text-transform: uppercase;	
-}
-.nav-links{
-    font-family: var(--text-font);
-    list-style-type: none;
-    justify-content: center;
-    display: flex;
-    gap: 40px;
-}
-.nav-links a:hover{
-    color: #c300ff;
-    
-}
+    /* Configurações Gerais */
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+    }
 
-.navbar{
-    justify-content: space-around;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
+    :root {
+        --text-font: 'Lexend', cursive;
+    }
+
+    header.ativo {
+        background-color: #00001f;
+    }
+
+    header>section {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .logo {
+        margin-top: 10px;
+        margin-left: 20px;
+        align-items: center;
+        display: flex;
+        height: 100%;
+        color: var(--button-color);
+    }
+
+    .imglogo {
+        height: 50px;
+    }
+
+    .name {
+        font-family: var(--text-font);
+        margin-left: 10px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .name span {
+        font-family: var(--text-font);
+        color: #8400ff;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    .nav-links {
+        font-family: var(--text-font);
+        list-style-type: none;
+        justify-content: center;
+        display: flex;
+        gap: 40px;
+    }
+
+    .nav-links a:hover {
+        color: #c300ff;
+
+    }
+
+    .navbar {
+        justify-content: space-around;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
 
     .trailer {
         z-index: -1;
@@ -116,10 +126,12 @@ height: 50px;
         overflow-x: hidden;
         background: aliceblue;
     }
-    .main{
+
+    .main {
         width: 100%;
         height: 100%;
     }
+
     .banner {
         width: 13rem;
         height: 17rem;
@@ -133,8 +145,9 @@ height: 50px;
         width: 100%;
         height: 100%;
     }
+
     h2 {
-        font-size:30px;
+        font-size: 30px;
         color: white;
         position: absolute;
         z-index: 1;
@@ -151,13 +164,15 @@ height: 50px;
         height: auto;
         color: black;
     }
-    .elenco{
+
+    .elenco {
         height: 270px;
         position: absolute;
         top: 70rem;
         display: flex;
     }
-    .elenco div{
+
+    .elenco div {
         position: relative;
         top: 50px;
         left: 1rem;
@@ -167,10 +182,11 @@ height: 50px;
         height: 200px;
         background: black;
     }
-    .elenco h2{
+
+    .elenco h2 {
         color: black;
         position: absolute;
-        top:0;
+        top: 0;
         left: 2.5rem;
     }
 </style>
@@ -197,18 +213,19 @@ height: 50px;
             </div>
     </header>
     <main>
-    </nav>
+        </nav>
         <div class="banner">
-            <img
-                 src="<?php echo $imagem; ?>">
+            <img src="<?php echo $imagem; ?>">
         </div>
         <div class="trailer">
             <h2>
                 <?php echo $titulo; ?>
             </h2>
-            <video width='100%' height='100%' controls>
-                <source src="<?php echo $trailer; ?>" type="video/mp4">
-            </video>
+            <iframe width='100%' height='100%' src="<?php echo $trailer; ?>"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
         </div>
         <div class="sinopse">
             <p>
