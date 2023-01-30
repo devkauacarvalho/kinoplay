@@ -122,66 +122,46 @@
 						<button class="icon2" data-target="list1" onclick="scroll_right(this)"><i
 								class="ri-arrow-right-s-line"></i></button>
 						<div class="scroll-images" id="list1">
-							<div class="child"><a href="template.php?id=1"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="1" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=2"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="2" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=3"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="3" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=4"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="4" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=5"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="5" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=6"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="6" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=7"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="7" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=8"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="8" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=9"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="9" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=10"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="10" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=11"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="11" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=12"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="12" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=13"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="13" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=14"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="14" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=15"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="15" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=16"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="16" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=17"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="17" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=18"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="18" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=18"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="19" src=""
-										alt=""></a></div>
-							<div class="child"><a href="template.php?id=18"><i
-										class="heartBtn ri-heart-add-line"></i><img class="child-img" dataid="20" src=""
-										alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="1" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=2"><img class="child-img"
+									dataid="2" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=3"><img class="child-img"
+									dataid="3" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=4"><img class="child-img"
+									dataid="4" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=5"><img class="child-img"
+									dataid="5" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=6"><img class="child-img"
+									dataid="6" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=7"><img class="child-img"
+									dataid="7" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=8"><img class="child-img"
+									dataid="8" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=9"><img class="child-img"
+									dataid="9" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=10"><img class="child-img"
+									dataid="10" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=11"><img class="child-img"
+									dataid="11" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=12"><img class="child-img"
+									dataid="12" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=13"><img class="child-img"
+									dataid="13" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=14"><img class="child-img"
+									dataid="14" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=15"><img class="child-img"
+									dataid="15" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=16"><img class="child-img"
+									dataid="16" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=17"><img class="child-img"
+									dataid="17" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=18"><img class="child-img"
+									dataid="18" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=19"><img class="child-img"
+									dataid="19" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=20"><img class="child-img"
+								 	dataid="20" src="" alt=""></a></div>
 						</div>
 					</div>
 				</div>
@@ -195,37 +175,36 @@
 						<button class="icon2" data-target="list2" onclick="scroll_right(this)"><i
 								class="ri-arrow-right-s-line"></i></button>
 						<div class="scroll-images" id="list2">
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="21" src="" alt=""></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="22" src="" alt=""></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="23" src="" alt=""></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="24" src="" alt=""></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="25" src="" alt=""></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="26" src="" alt=""></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="27" src="" alt=""></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="28" src="" alt="">
-							</div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="29" src="" alt=""></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="30" src="" alt=""></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="31" src="" alt=""></div>
-							<div class="child"><i class=""></i><img class="child-img"
-									dataid="32" src="" alt="Hancock"></div>
-							<div class="child"><i class=""></i><img class="child-img"
-									dataid="33" src="" alt="Terrifier 2"></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="34" src="" alt=""></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="35" src="" alt=""></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="21" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="22" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="23" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="24" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="25" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="26" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="27" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="28" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="29" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="30" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="31" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="32" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="33" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="34" src="" alt=""></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="template.php?id=1"><img class="child-img"
+									dataid="35" src="" alt=""></a></div>
 						</div>
 					</div>
 				</div>
@@ -240,36 +219,35 @@
 								class="ri-arrow-right-s-line"></i></button>
 						<div class="scroll-images" id="list3">
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="36" src="" alt=""></div>
+									dataid="36" src="" alt=""></a></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="37" src="" alt=""></div>
+									dataid="37" src="" alt=""></a></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="38" src="" alt=""></div>
+									dataid="38" src="" alt=""></a></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="39" src="" alt=""></div>
+									dataid="39" src="" alt=""></a></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="40" src="" alt=""></div>
+									dataid="40" src="" alt=""></a></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="41" src="" alt=""></div>
+									dataid="41" src="" alt=""></a></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="42" src="" alt=""></div>
+									dataid="42" src="" alt=""></a></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="43" src="" alt=""></div>
+									dataid="43" src="" alt=""></a></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="44" src="" alt="">
-							</div>
+									dataid="44" src="" alt=""></a></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="45" src="" alt=""></div>
+									dataid="45" src="" alt=""></a></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="46" src="" alt=""></div>
+									dataid="46" src="" alt=""></a></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="47" src="" alt=""></div>
+									dataid="47" src="" alt=""></a></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="48" src="" alt=""></div>
+									dataid="48" src="" alt=""></a></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="49" src="" alt=""></div>
+									dataid="49" src="" alt=""></a></div>
 							<div class="child"><i class="heartBtn ri-heart-add-line"></i><img class="child-img"
-									dataid="50" src="" alt=""></div>
+									dataid="50" src="" alt=""></a></div>
 						</div>
 					</div>
 				</div>
