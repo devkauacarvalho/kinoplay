@@ -4,11 +4,11 @@
 
     $sql = "delete from filmes where id = ".$id;
 
-    if(mysqli_query($sql,$conn)){
-        $msg = "Deletado com sucesso!";
+    if(mysqli_query($conn, $sql)){
+        header("Location: indexfilmes.php?msg=Registro deletado com sucesso!");
     }else{
         $msg = "Erro ao deletar!";
     }
-    mysql_close($conn);
+    mysqli_close($conn);
 
     ?>
