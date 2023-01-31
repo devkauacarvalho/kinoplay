@@ -13,7 +13,8 @@ if(isset($_POST['submit'])) {
 
     $sql = "INSERT INTO `filmes`(`id`,`titulo`,`anoLancamento`, `idDiretor`, `idGenero`, `sinopse`, `Imagem`, `Classificacao`, `trailer`) 
     VALUES ('','$titulo','$anoLancamento','$idDiretor','$idGenero','$sinopse','$Imagem','$Classificacao','$trailer')";
-
+echo $sql;
+exit;
     $result = mysqli_query($conn, $sql);
 
     if($result) {

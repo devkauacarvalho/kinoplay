@@ -1,25 +1,26 @@
 <?php
-INCLUDE 'configfilmes.php';
+include 'configfilmes.php';
 $id = $_GET['id'];
-if(isset($_POST['submit'])) {
-    $id = mysqli_real_escape_string($conn, $_POST['id']);
-    $titulo = mysqli_real_escape_string($conn, $_POST['titulo']);
-    $anoLancamento = mysqli_real_escape_string($conn, $_POST['anoLancamento']);
-    $idDiretor = mysqli_real_escape_string($conn, $_POST['idDiretor']);
-    $idGenero = mysqli_real_escape_string($conn, $_POST['idGenero']); 
-    $sinopse = mysqli_real_escape_string($conn, $_POST['sinopse']);
-    $Imagem = mysqli_real_escape_string($conn, $_POST['Imagem']);
-    $Classificacao = mysqli_real_escape_string($conn, $_POST['Classificacao']);
-    $trailer = mysqli_real_escape_string($conn, $_POST['trailer']);
 
-    $sql = "UPDATE `filmes` SET `titulo`='$titulo',`anoLancamento`='$anoLancamento',
-    `idDiretor`='$idDiretor',`idGenero`='$idGenero',`sinopse`='$sinopse',`Imagem`='$Imagem',
-    `Classificacao`='$Classificacao',`trailer`='$trailer' WHERE id=$id";
+if(isset($_POST['submit'])) {
+    
+    $titulo = ($_POST['titulo']);
+    $anoLancamento = ($_POST['anoLancamento']);
+    $idDiretor = ($_POST['idDiretor']);
+    $idGenero = ($_POST['idGenero']); 
+    $sinopse = ($_POST['sinopse']);
+    $Imagem = ($_POST['Imagem']);
+    $Classificacao = ($_POST['Classificacao']);
+    $trailer = ($_POST['trailer']);
+
+    $sql = "UPDATE filmes SET titulo='$titulo', anoLancamento='$anoLancamento',
+    idDiretor='$idDiretor',idGenero='$idGenero',sinopse='$sinopse',Imagem='$Imagem',
+    Classificacao=$Classificacao,trailer='$trailer' WHERE id='$id' ";
 
     $result = mysqli_query($conn, $sql);
 
     if($result) {
-        header("Location: indexfilmes.php?msg=registro atualizado com sucesso");
+       header("Location: indexfilmes.php?msg=registro atualizado com sucesso");
     }
     else {
       echo "Erro. Algo falhou" . mysqli_error($conn); 
@@ -62,13 +63,13 @@ if(isset($_POST['submit'])) {
 </div>
 </div>  
 <?php 
-$sql = "SELECT * FROM filmes WHERE id = $id LIMIT 1";
+$sql = "SELECT * FROM filmes WHERE id =".$id;
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 ?>
 
 <div class="container d-flex justify-content-center"> 
-<form action="create.php" method="post">
+<form action="" method="post">
   <div class="form-group">
     <label for="titulo">Título</label>
     <input type="text" class="form-control" id="titulo" name="titulo" value="<?php echo $row['titulo']?>">
@@ -87,11 +88,11 @@ $row = mysqli_fetch_assoc($result);
   </div>
   <div class="form-group">
     <label for="sinopse">Sinopse</label>
-    <textarea class="form-control" id="sinopse" name="sinopse" value="<?php echo $row['sinopse']?>"></textarea>
+    <textarea class="form-control" id="sinopse" name="sinopse"><?php echo $row['sinopse']?></textarea>
   </div>
   <div class="form-group">
     <label for="Imagem">Imagem</label>
-    <textarea class="form-control" id="Imagem" name="Imagem" value="<?php echo $row['Imagem']?>"></textarea>
+    <input class="form-control" id="Imagem" name="Imagem" value="<?php echo $row['Imagem']?>">
   </div>
   <div class="form-group">
     <label for="Classificacao">Classificação</label>
@@ -99,7 +100,7 @@ $row = mysqli_fetch_assoc($result);
   </div>
   <div class="form-group">
     <label for="trailer">Trailer</label>
-    <textarea class="form-control" id="trailer" name="trailer" value="<?php echo $row['trailer']?>"></textarea>
+    <input class="form-control" id="trailer" name="trailer" value="<?php echo $row['trailer']?>">
   </div>
   <button type="submit"  name="submit" class="btn btn-primary">Atualizar</button>
 </form>
