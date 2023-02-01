@@ -56,6 +56,7 @@ Teste
             <th scope="col">ID Gênero</th>
             <th scope="col">Sinopse</th>
             <th scope="col">Classificação</th>
+            <th scope="col">Nota</th>
             <th scope="col">Imagem</th>
             <th scope="col">Trailer</th>
             <th scope="col">Editar/Deletar</th>
@@ -77,6 +78,7 @@ Teste
       <th><?php echo $row['idGenero'] ?></th>
       <th><?php echo $row['sinopse'] ?></th>
       <th><?php echo $row['Classificacao'] ?></th>
+      <th><?php echo $row['nota'] ?></th>
       <th><?php echo $row['Imagem'] ?></th>
       <th><?php echo $row['trailer'] ?></th>
       <td>

@@ -52,11 +52,11 @@ Teste
             <th scope="col">ID</th>
             <th scope="col">Título</th>
             <th scope="col">Ano de Lançamento</th>
-            <th scope="col">ID Diretor</th>
             <th scope="col">ID Gênero</th>
             <th scope="col">Sinopse</th>
             <th scope="col">Classificação</th>
             <th scope="col">Imagem</th>
+            <th scope="col">Nota</th>
             <th scope="col">Trailer</th>
             <th scope="col">Editar/Deletar</th>
         </tr>
@@ -73,11 +73,11 @@ Teste
       <th><?php echo $row['id'] ?></th>
       <th><?php echo $row['titulo'] ?></th>
       <th><?php echo $row['anoLancamento'] ?></th>
-      <th><?php echo $row['idDiretor'] ?></th>
       <th><?php echo $row['idGenero'] ?></th>
       <th><?php echo $row['sinopse'] ?></th>
       <th><?php echo $row['Classificacao'] ?></th>
       <th><?php echo $row['Imagem'] ?></th>
+      <th><?php echo $row['nota'] ?></th>
       <th><?php echo $row['trailer'] ?></th>
       <td>
         <a href="editarfilme.php?id=<?php echo $row['id'] ?>" class="link-dark"><i class="fa-solid 

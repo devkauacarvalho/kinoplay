@@ -4,18 +4,17 @@ $id = $_GET['id'];
 
 if(isset($_POST['submit'])) {
     
-    $titulo = ($_POST['titulo']);
-    $anoLancamento = ($_POST['anoLancamento']);
-    $idDiretor = ($_POST['idDiretor']);
-    $idGenero = ($_POST['idGenero']); 
-    $sinopse = ($_POST['sinopse']);
-    $Imagem = ($_POST['Imagem']);
-    $Classificacao = ($_POST['Classificacao']);
-    $trailer = ($_POST['trailer']);
+  $titulo = mysqli_real_escape_string($conn, $_POST['titulo']);
+  $anoLancamento = mysqli_real_escape_string($conn, $_POST['anoLancamento']);
+  $idGenero = mysqli_real_escape_string($conn, $_POST['idGenero']); 
+  $sinopse = mysqli_real_escape_string($conn, $_POST['sinopse']);
+  $Imagem = mysqli_real_escape_string($conn, $_POST['Imagem']);
+  $Classificacao = mysqli_real_escape_string($conn, $_POST['Classificacao']);
+  $trailer = mysqli_real_escape_string($conn, $_POST['trailer']);
+  $nota = mysqli_real_escape_string($conn, $_POST['nota']);
 
-    $sql = "UPDATE filmes SET titulo='$titulo', anoLancamento='$anoLancamento',
-    idDiretor='$idDiretor',idGenero='$idGenero',sinopse='$sinopse',Imagem='$Imagem',
-    Classificacao=$Classificacao,trailer='$trailer' WHERE id='$id' ";
+    $sql = "UPDATE filmes SET titulo='$titulo', anoLancamento='$anoLancamento',idGenero='$idGenero',sinopse='$sinopse',Imagem='$Imagem',
+    Classificacao=$Classificacao,trailer='$trailer',nota='$nota' WHERE id='$id' ";
 
     $result = mysqli_query($conn, $sql);
 
@@ -79,10 +78,6 @@ $row = mysqli_fetch_assoc($result);
     <input type="date" class="form-control" id="anoLancamento" name="anoLancamento" value="<?php echo $row['anoLancamento']?>">
   </div>
   <div class="form-group">
-    <label for="idDiretor">ID Diretor</label>
-    <input type="number" class="form-control" id="idDiretor" name="idDiretor" value="<?php echo $row['idDiretor']?>">
-  </div>
-  <div class="form-group">
     <label for="idGenero">ID Gênero</label>
     <input type="number" class="form-control" id="idGenero" name="idGenero" value="<?php echo $row['idGenero']?>">
   </div>
@@ -97,6 +92,10 @@ $row = mysqli_fetch_assoc($result);
   <div class="form-group">
     <label for="Classificacao">Classificação</label>
     <input type="number" class="form-control" id="Classificacao" name="Classificacao" value="<?php echo $row['Classificacao']?>">
+  </div>
+  <div class="form-group">
+    <label for="nota">Nota</label>
+    <input class="form-control" id="nota" name="nota" value="<?php echo $row['nota']?>">
   </div>
   <div class="form-group">
     <label for="trailer">Trailer</label>

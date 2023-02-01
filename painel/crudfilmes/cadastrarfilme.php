@@ -4,15 +4,15 @@ INCLUDE 'configfilmes.php';
 if(isset($_POST['submit'])) {
     $titulo = mysqli_real_escape_string($conn, $_POST['titulo']);
     $anoLancamento = mysqli_real_escape_string($conn, $_POST['anoLancamento']);
-    $idDiretor = mysqli_real_escape_string($conn, $_POST['idDiretor']);
     $idGenero = mysqli_real_escape_string($conn, $_POST['idGenero']); 
     $sinopse = mysqli_real_escape_string($conn, $_POST['sinopse']);
     $Imagem = mysqli_real_escape_string($conn, $_POST['Imagem']);
     $Classificacao = mysqli_real_escape_string($conn, $_POST['Classificacao']);
+    $nota = mysqli_real_escape_string($conn, $_POST['nota']);
     $trailer = mysqli_real_escape_string($conn, $_POST['trailer']);
 
-    $sql = "INSERT INTO `filmes`(`id`,`titulo`,`anoLancamento`, `idDiretor`, `idGenero`, `sinopse`, `Imagem`, `Classificacao`, `trailer`) 
-    VALUES ('','$titulo','$anoLancamento','$idDiretor','$idGenero','$sinopse','$Imagem','$Classificacao','$trailer')";
+    $sql = "INSERT INTO `filmes`(`id`,`titulo`,`anoLancamento`,`idGenero`, `sinopse`, `Imagem`, `Classificacao`,`nota`, `trailer`) 
+    VALUES ('','$titulo','$anoLancamento','$idGenero','$sinopse','$Imagem','$Classificacao','$nota','$trailer')";
 
     $result = mysqli_query($conn, $sql);
 
@@ -62,10 +62,6 @@ if(isset($_POST['submit'])) {
     <input type="date" class="form-control" id="anoLancamento" name="anoLancamento" required>
   </div>
   <div class="form-group">
-    <label for="idDiretor">ID Diretor</label>
-    <input type="number" class="form-control" id="idDiretor" name="idDiretor" required>
-  </div>
-  <div class="form-group">
     <label for="idGenero">ID Gênero</label>
     <input type="number" class="form-control" id="idGenero" name="idGenero" required>
   </div>
@@ -84,6 +80,10 @@ if(isset($_POST['submit'])) {
   <div class="form-group">
     <label for="trailer">Trailer</label>
     <textarea class="form-control" id="trailer" name="trailer" required></textarea>
+  </div>
+  <div class="form-group">
+    <label for="nota">Nota</label>
+    <textarea class="form-control" id="nota" name="nota" required></textarea>
   </div>
   <button type="submit"  name="submit" class="btn btn-primary">Adicionar Filme</button>
 </form>

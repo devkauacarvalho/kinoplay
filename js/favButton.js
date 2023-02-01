@@ -8,6 +8,7 @@ for (let i = 0; i < heartBtns.length; i++) {
     this.classList.toggle('ri-heart-fill');
     if (this.classList.contains('ri-heart-fill')) {
       this.classList.add('heartAtive');
+      
     } else {
       this.classList.remove('heartAtive');
     }
