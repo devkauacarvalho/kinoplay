@@ -72,6 +72,15 @@
 		border: 2px solid white;
 		border-radius: 5px;
 	}
+	footer{
+			width:100%;
+		}
+		#warning{
+    color: var(--text-color);
+	text-align:center;
+	position: relative;
+	top:150px;
+}
 	</style>
 </head>
 <body>
@@ -110,9 +119,27 @@
 	</section>
 	</header>
 	<main>
-		<div class="favoritos-container" style="display: flex;margin: 1000px;">
-			
-		</div>
+	<section>
+			<div class="scroll-images">
+					<?php
+        include "paineladm/configfilmes.php";
+
+        $sql2 = "SELECT * FROM `favoritos`";
+        $result2 = mysqli_query($conn, $sql2);
+        while ($row = mysqli_fetch_assoc($result2)) {
+            ?>
+			<div class="child">
+				<i class="heartBtn ri-heart-add-line"></i>
+				<a href="filmetemplate.php?id=<?php echo $row['id']?>">
+					<img class="child-img" dataid="<?php echo $row['id'] ?>">
+				</a>
+			</div>
+            <?php
+        }
+
+        ?>
+	</div>
+		</section>
 	</main>
 	<footer>	
 		<div class="link">
@@ -162,5 +189,7 @@
 	<script src="js/favButton.js"></script>
 	
 	<script src="js/scrollScript.js"></script>
+
+	<script src="js/footer.js"></script>
 
 </html>

@@ -50,13 +50,359 @@ INSERT INTO `cliente` (`id`, `username`, `email`, `nome`, `senha`, `data_nasc`) 
 --
 
 CREATE TABLE `elenco` (
-  `IdDiretor` int(11) NOT NULL,
-  `Diretor` text NOT NULL,
-  `Atores` int(11) NOT NULL,
-  `Image_Diretor` int(11) NOT NULL,
-  `image_Atores` int(11) NOT NULL,
-  `Estudio` int(11) NOT NULL
+  `IdElenco` int(11) NOT NULL,
+  `Ator` text NOT NULL,
+  `image_Ator` text NOT NULL,
+  `Aparecem` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `elenco`
+--
+
+INSERT INTO `elenco` (`IdElenco`, `Ator`, `image_Ator`, `Aparecem`) VALUES
+(1, 'Yoon Chan-Young', 'img/ator-cards/Yoon Chan-Young.jpg', 'All of us are Dead\r\n'),
+(2, 'Yoo in-soo', 'img/ator-cards/Yoo in-soo.jpg', 'All of us are Dead'),
+(3, 'Park Solomon', 'img/ator-cards/Park Solomon.jpg\r\n', 'All of us Are Dead'),
+(4, 'Park Ji-hoo', 'img/ator-cards/Park Ji-hoo.jpg', 'All of us are dead'),
+(5, 'Cho Yi-Hyun', 'img/ator-cards/Cho Yi-Hyun.jpg', 'All of us Are Dead'),
+(6, 'Emily Browning', 'img/ator-cards/Emily Browning.jpg', 'American Gods'),
+(7, 'Ian McShane', 'img/ator-cards/Ian McShane.jpg', 'American Gods'),
+(8, 'Orlando jones', 'img/ator-cards/Orlando jones.jpg', 'American Gods'),
+(9, 'Ricky Whittle', 'img/ator-cards/Ricky Whittle.jpg', 'American Gods'),
+(10, 'Yetide Badaki', 'img/ator-cards/Yetide Badaki.jpg', 'American Gods'),
+(11, 'Emma Roberts.jpg', 'img/ator-cards/Emma Roberts.jpg', 'American Horror Story'),
+(12, 'Evans Peters', 'img/ator-cards/Evans Peters.jpg', 'American Horror Story'),
+(13, 'Jessina Lange', 'img/ator-cards/Jessina Lange.jpg', 'American Horror Story'),
+(14, 'Sarah Paulson', 'img/ator-cards/Sarah Paulson.jpg', 'American Horror Story'),
+(15, 'Taissa Farmiga.', 'img/ator-cards/Taissa Farmiga.jpeg', 'American Horror Story'),
+(16, 'Bob Odenikirk', 'img/ator-cards/Bob Odenikirk.jpg', 'Better Call Saul'),
+(17, 'Jonathan Banks', 'img/ator-cards/Jonathan Banks', 'Better Call Saul'),
+(18, 'Michael Mando', 'img/ator-cards/Michael Mando.jpg', 'Better Call Saul'),
+(19, 'Patrick Fabian', 'img/ator-cards/Patrick Fabian.jpg', 'Better Call Saul'),
+(20, 'Rhea Seehorn', 'img/ator-cards/Rhea Seehorn.jpg', 'Better Call Saul'),
+(21, 'Aaron Paul', 'img/ator-cards/Aaron Paul.jpg', 'Breaking Bad'),
+(22, 'Anna Gunn', 'img/ator-cards/Anna Gunn.jpg', 'Breaking Bad'),
+(23, 'Bryan Cranston', 'img/ator-cards/Bryan Cranston.jpg', 'Breaking Bad'),
+(24, 'Dean Norris', 'img/ator-cards/Dean Norris.jpg', 'Breaking Bad'),
+(25, 'RJ Mitte', 'img/ator-cards/RJ Mitte.jpg', 'Breaking Bad'),
+(26, 'Andy Samberg', 'img/ator-cards/Andy Samberg.jpg', 'Brooklyn Nine Nine'),
+(27, 'Chelsea Peretti', 'img/ator-cards/Chelsea Peretti.jpg', 'Brooklyn Nine Nine'),
+(28, 'Melissa Fumero', 'img/ator-cards/Melissa Fumero.jpg', 'Brooklyn Nine Nine'),
+(29, 'Sthephanie Beatriz', 'img/ator-cards/Sthephanie Beatriz.jpg', 'Brooklyn Nine Nine'),
+(30, 'Terry Crews', 'img/ator-cards/Terry Crews.jpg', 'Brooklyn Nine Nine'),
+(31, 'Adrian Grenier', 'img/ator-cards/Adrian Grenier.png', 'ClickBait'),
+(32, 'Betty Gabriel', 'img/ator-cards/Betty Gabriel.png', 'ClickBait'),
+(33, 'Jessie Collins', 'img/ator-cards/Jessie Collins.png', 'ClickBait'),
+(34, 'Phenix Raei', 'img/ator-cards/Phenix Raei.png', 'ClickBait'),
+(35, 'Zoe Kazan', 'img/ator-cards/Zoe Kazan.png', 'ClickBait\r\nYoung Sheldon'),
+(36, 'Eric Szmanda', 'img/ator-cards/Eric Szmanda.jpg', 'Csi'),
+(37, 'George Eads', 'img/ator-cards/George Eads.jpg', 'Csi'),
+(38, 'Jarja Fox', 'img/ator-cards/Jarja Fox.jpg', 'Csi'),
+(39, 'Marg Helgenberger', 'img/ator-cards/Marg Helgenberger.jpg', 'Csi'),
+(40, 'William Petersen', 'img/ator-cards/William Petersen.jpg', 'Csi'),
+(41, 'Frank Todaro', 'img/ator-cards/Frank Todaro.jpg', 'Cuphead'),
+(42, 'Grey Delisle', 'img/ator-cards/Grey Delisle.jpg', 'Cuphead'),
+(43, 'Luke Millington Drake', 'img/ator-cards/Luke Millington Drake.jpg', 'Cuphead'),
+(44, 'Natasia Demetriou', 'img/ator-cards/Natasia Demetriou.jpg', 'Cuphead'),
+(45, 'Tru Valentino', 'img/ator-cards/Tru Valentino.jpg', 'Cuphead'),
+(46, 'Gina Stiebitz', 'img/ator-cards/Gina Stiebitz.jpg', 'Dark'),
+(47, 'Lisa Vicari', 'img/ator-cards/Lisa Vicari.jpg', 'Dark'),
+(48, 'Louins Hoffmann', 'img/ator-cards/Louins Hoffmann.jpg', 'Dark'),
+(49, 'Moritz Jahn', 'img/ator-cards/Moritz Jahn.jpg', 'Dark'),
+(50, 'Oliver Masucci', 'img/ator-cards/Oliver Masucci.jpg', 'Dark'),
+(51, 'Elfo - Gustavo Nader', 'img/ator-cards/Elfo - Gustavo Nader.jpg', 'Des(encanto)'),
+(52, 'Luci - Francisco Junior', 'img/ator-cards/Luci - Francisco Junior.jpg', 'Des(encanto)'),
+(53, 'Princesa Bean - Luisa Palomanes', 'img/ator-cards/Princesa Bean - Luisa Palomanes.jpg', 'Des(encanto)'),
+(54, 'Rainha Oona - Mariangela Cantú', 'img/ator-cards/Rainha Oona - Mariangela Cantú.jpg', 'Des(encanto)'),
+(55, 'Rei Zog - Guilherme Lopes', 'img/ator-cards/Rei Zog - Guilherme Lopes.jpg', 'Des(encanto)'),
+(56, 'Hugh Laurie', 'img/ator-cards/Hugh Laurie.jpg', 'DR House'),
+(57, 'Jeniffer Morrison', 'img/ator-cards/Jeniffer Morrison.jpg', 'DR House'),
+(58, 'Lisa Edelsten', 'img/ator-cards/Lisa Edelsten.jpg', 'DR House'),
+(59, 'Omar Epps', 'img/ator-cards/Omar Epps.jpg', 'DR House'),
+(60, 'Robert Sean Leonard', 'img/ator-cards/Robert Sean Leonard.jpg', 'DR House'),
+(61, 'Arón Piper', 'img/ator-cards/Arón Piper.jpg', 'Elite'),
+(62, 'Ester Expósito', 'img/ator-cards/Ester Expósito.jpg', 'Elite'),
+(63, 'Itzan Escamila.jpg', 'img/ator-cards/Itzan Escamila.jpg', 'Elite'),
+(64, 'Miguel Bernardeau', 'img/ator-cards/Miguel Bernardeau.jpg', 'Elite'),
+(65, 'Mina El Hammani', 'img/ator-cards/Mina El Hammani.jpg', 'Elite'),
+(66, 'Angus Cloud', 'img/ator-cards/Angus Cloud.jpg', 'Euphoria'),
+(67, 'Hunter Schafer', 'img/ator-cards/Hunter Schafer.jpg', 'Euphoria'),
+(68, 'Jacob Elordi', 'img/ator-cards/Jacob Elordi.jpg', 'Euphoria'),
+(69, 'Sydney Sweeney', 'img/ator-cards/Sydney Sweeney.jpg', 'Euphoria'),
+(70, 'Zendaya', 'img/ator-cards/Zendaya.jpg', 'Euphoria'),
+(71, 'Carol Daronch.jpg', 'img/ator-cards/Carol Daronch.jpg', 'Falando com um serial killer teddy bundy'),
+(72, 'Hugh Ayneswoth', 'img/ator-cards/Hugh Ayneswoth.jpg', 'Falando com um serial killer teddy bundy'),
+(73, 'stephen michaud', 'img/ator-cards/stephen michaud.jpg', 'Falando com um serial killer teddy bundy'),
+(74, 'Teddy Bundy', 'img/ator-cards/Teddy Bundy.jpg', 'Falando com um serial killer teddy bundy'),
+(75, 'Ward lucas', 'img/ator-cards/Ward lucas.jpg', 'Falando com um serial killer teddy bundy'),
+(76, 'David Schwimmer.jpg', 'img/ator-cards/David Schwimmer.jpg', 'Friends'),
+(77, 'Jennifer anniston', 'img/ator-cards/Jennifer anniston.jpg', 'Friends'),
+(78, 'Lisa Kudrow', 'img/ator-cards/Lisa Kudrow.jpg', 'Friends'),
+(79, 'Matt LeBlanc', 'img/ator-cards/Matt LeBlanc.jpg', 'Friends'),
+(80, 'Matthew Perry', 'img/ator-cards/Matthew Perry.jpg', 'Friends'),
+(81, 'Emilia Clarke', 'img/ator-cards/Emilia Clarke.jpg', 'Game of thrones'),
+(82, 'Jason Momoa', 'img/ator-cards/Jason Momoa.jpg', 'Game of thrones'),
+(83, 'Kit Harrington', 'img/ator-cards/Kit Harrington.jpg', 'Game of thrones'),
+(84, 'Pedro Pascal', 'img/ator-cards/Pedro Pascal.png', 'Game of thrones\r\nNarcos\r\nthe last of us'),
+(85, 'Sophie Turner', 'img/ator-cards/Sophie Turner.jpg', 'Game of thrones'),
+(86, 'Benedict Cumberbatch', 'img/ator-cards/Benedict Cumberbatch.jpg', 'Good Omens'),
+(87, 'David Tennant', 'img/ator-cards/David Tennant.jpg', 'Good Omens'),
+(88, 'Jom Hamm', 'img/ator-cards/Jom Hamm.jpg', 'Good Omens'),
+(89, 'Michael Sheen', 'img/ator-cards/Michael Sheen.jpg', 'Good Omens'),
+(90, 'Sam Taylor Buck', 'img/ator-cards/Sam Taylor Buck.jpg', 'Good Omens'),
+(91, 'Chandra Wilson', 'img/ator-cards/Chandra Wilson.jpg', 'Grey_s Anatomy'),
+(92, 'Ellen Pompeo', 'img/ator-cards/Ellen Pompeo.jpg', 'Grey_s Anatomy'),
+(93, 'Justin Chambers', 'img/ator-cards/Justin Chambers.jpg', 'Grey_s Anatomy'),
+(94, 'Patrick Dempsey', 'img/ator-cards/Patrick Dempsey.jpg', 'Grey_s Anatomy'),
+(95, 'Sandra Oh', 'img/ator-cards/Sandra Oh.jpg', 'Grey_s Anatomy'),
+(96, 'Emma Darcy', 'img/ator-cards/Emma Darcy.jpg', 'House of the Dragon'),
+(97, 'Matt Smith', 'img/ator-cards/Matt Smith.jpg', 'House of the Dragon'),
+(98, 'Milly Alcock', 'img/ator-cards/Milly Alcock.jpg', 'House of the Dragon'),
+(99, 'Olivia Cooke', 'img/ator-cards/Olivia Cooke.jpg', 'House of the Dragon'),
+(100, 'Paddy Considini', 'img/ator-cards/Paddy Considini.jpg', 'House of the Dragon'),
+(101, 'Domhnall Gleeson', 'img/ator-cards/Domhnall Gleeson.jpg', 'Invencivel'),
+(102, 'Finn Wittrock', 'img/ator-cards/Finn Wittrock.jpg', 'Invencivel\r\nRatched'),
+(103, 'Garrett Hedlund', 'img/ator-cards/Garrett Hedlund.jpg', 'Invencivel'),
+(104, 'John Magaro', 'img/ator-cards/John Magaro.jpg', 'Invencivel'),
+(105, 'Miyavi', 'img/ator-cards/Miyavi.jpg', 'Invencivel'),
+(109, 'John Magaro', 'img/ator-cards/John Magaro.jpg', 'Invencivel'),
+(110, 'Miyavi', 'img/ator-cards/Miyavi.jpg', 'Invencivel'),
+(111, 'Alba Flores', 'img/ator-cards/Alba Flores.jpg', 'La casa de papel'),
+(112, 'Álvaro Morte', 'img/ator-cards/Álvaro Morte.jpg', 'La casa de papel'),
+(113, 'Esther Acebo', 'img/ator-cards/Esther Acebo.jpg', 'La casa de papel'),
+(114, 'Pedro Alonso', 'img/ator-cards/Pedro Alonso.jpg', 'La casa de papel'),
+(115, 'Úrsula Corberó', 'img/ator-cards/Úrsula Corberó.png', 'La casa de papel'),
+(121, 'Daniel Dae Kim', 'img/ator-cards/Daniel Dae Kim.jpg', 'Lost'),
+(122, 'Evangeline Lily', 'img/ator-cards/Evangeline Lily.jpg', 'Lost'),
+(123, 'Jorge Garcia', 'img/ator-cards/Jorge Garcia.jpg', 'Lost'),
+(124, 'Josh Holloway', 'img/ator-cards/Josh Holloway.jpg', 'Lost'),
+(125, 'Matthew Fox', 'img/ator-cards/Matthew Fox.jpg', 'Lost'),
+(128, 'Jorge Garcia', 'img/ator-cards/Jorge Garcia.jpg', 'Lost'),
+(129, 'Josh Holloway', 'img/ator-cards/Josh Holloway.jpg', 'Lost'),
+(130, 'Matthew Fox', 'img/ator-cards/Matthew Fox.jpg', 'Lost'),
+(131, 'D.B Woodside', 'img/ator-cards/D.B Woodside.jpg', 'Lucifer'),
+(132, 'Kevin Alejandro', 'img/ator-cards/Kevin Alejandro.jpg', 'Lucifer'),
+(133, 'Lauren German', 'img/ator-cards/Lauren German.jpg', 'Lucifer'),
+(134, 'Lesley-Ann Brandt', 'img/ator-cards/Lesley-Ann Brandt.jpg', 'Lucifer'),
+(135, 'Tom Ellis', 'img/ator-cards/Tom Ellis.jpg', 'Lucifer'),
+(136, 'Clotilde Hesme', 'img/ator-cards/Clotilde Hesme.png', 'Lupin'),
+(137, 'Ludivine Sagnier', 'img/ator-cards/Ludivine Sagnier.png', 'Lupin'),
+(138, 'Ludmila Makowski', 'img/ator-cards/Ludmila Makowski.jpg', 'Lupin'),
+(139, 'Omar Sy', 'img/ator-cards/Omar Sy.png', 'Lupin'),
+(140, 'Shirine Boutella', 'img/ator-cards/Shirine Boutella.png', 'Lupin'),
+(141, 'Eric Stonestreet', 'img/ator-cards/Eric Stonestreet.jpg', 'Modern Family'),
+(142, 'Julie Bowen', 'img/ator-cards/Julie Bowen.jpg', 'Modern Family'),
+(143, 'Nolan Gould', 'img/ator-cards/Nolan Gould.jpg', 'Modern Family'),
+(144, 'Sarah Hyland', 'img/ator-cards/Sarah Hyland.jpg', 'Modern Family'),
+(145, 'Ty Burrell', 'img/ator-cards/Ty Burrell.jpg', 'Modern Family'),
+(146, 'Agnes Gobbleblobber - Barbara Goodson', 'img/ator-cards/Agnes Gobbleblobber - Barbara Goodson.jpg', 'Mr. Pickles'),
+(147, 'Mrs. Goodman - Brooke Shields', 'img/ator-cards/Mrs. Goodman - Brooke Shields.jpg', 'Mr. Pickles'),
+(148, 'Stanley Goodman - Jay Johnston', 'img/ator-cards/Stanley Goodman - Jay Johnston.jpg', 'Mr. Pickles'),
+(149, 'Superhero Guy - Will Carsola', 'img/ator-cards/Superhero Guy - Will Carsola.jpg', 'Mr. Pickles'),
+(150, 'Tommy Goodman - Kaitlyn Robrock', 'img/ator-cards/Tommy Goodman - Kaitlyn Robrock.jpg', 'Mr. Pickles'),
+(151, 'Alberto Ammann', 'img/ator-cards/Alberto Ammann.jpg', 'Narcos'),
+(152, 'Boyd Holbrook', 'img/ator-cards/Boyd Holbrook.jpg', 'Narcos'),
+(153, 'Paulina Gaitán', 'img/ator-cards/Paulina Gaitán.jpg', 'Narcos'),
+(155, 'Wagner Moura', 'img/ator-cards/Wagner Moura.jpg', 'Narcos'),
+(156, 'Alison Araya', 'img/ator-cards/Alison Araya.png', 'O Pacificador'),
+(157, 'Danielle Brooks', 'img/ator-cards/Danielle Brooks.png', 'O Pacificador\r\nOrange is the new black'),
+(158, 'Freddie Stroma', 'img/ator-cards/Freddie Stroma.png', 'O Pacificador'),
+(159, 'Jennifer Holland', 'img/ator-cards/Jennifer Holland.png', 'O Pacificador'),
+(160, 'John Cena', 'img/ator-cards/John Cena.png', 'O Pacificador'),
+(161, 'Choi Buyung-Chan', 'img/ator-cards/Choi Buyung-Chan.png', 'O rei de porcelana'),
+(162, 'Jung Chae-yeon', 'img/ator-cards/Jung Chae-yeon.png', 'O rei de porcelana'),
+(163, 'Nam Yoon-su', 'img/ator-cards/Nam Yoon-su.png', 'O rei de porcelana'),
+(164, 'Park Eun-Bin', 'img/ator-cards/Park Eun-Bin.png', 'O rei de porcelana'),
+(165, 'Ro Woon', 'img/ator-cards/Ro Woon.png', 'O rei de porcelana'),
+(166, 'Danai Gurira', 'img/ator-cards/Danai Gurira.jpg', 'Orage is the new black'),
+(168, 'Natasha Lyonne', 'img/ator-cards/Natasha Lyonne.jpg', 'Orage is the new black'),
+(169, 'Taylor Schilling', 'img/ator-cards/Taylor Schilling.jpg', 'Orage is the new black'),
+(170, 'Uzo Aduba', 'img/ator-cards/Uzo Aduba2.jpg', 'Orage is the new black'),
+(171, 'Caitriona Balde', 'img/ator-cards/Caitriona Balde.jpg', 'Outlander'),
+(172, 'Richard Rankin', 'img/ator-cards/Richard Rankin.jpg', 'Outlander'),
+(173, 'Sam Heughan', 'img/ator-cards/Sam Heughan.jpg', 'Outlander'),
+(174, 'Sophie Skelton', 'img/ator-cards/Sophie Skelton.jpg', 'Outlander'),
+(175, 'Tobia Menizies', 'img/ator-cards/Tobia Menizies.jpg', 'Outlander'),
+(176, 'Cillian Murphy', 'img/ator-cards/Cillian Murphy.png', 'Peaky Blinders'),
+(177, 'Finn Cole', 'img/ator-cards/Finn Cole.png', 'Peaky Blinders'),
+(178, 'Joe Cole', 'img/ator-cards/Joe Cole.png', 'Peaky Blinders'),
+(179, 'Paul Anderson', 'img/ator-cards/Paul Anderson.png', 'Peaky Blinders'),
+(180, 'Tom Hardy', 'img/ator-cards/Tom Hardy.png', 'Peaky Blinders'),
+(181, 'Cynthia Nixon', 'img/ator-cards/Cynthia Nixon.jpg', 'Ratched'),
+(183, 'Judy Davis', 'img/ator-cards/Judy Davis.jpg', 'Ratched'),
+(184, 'Sarah Pauson', 'img/ator-cards/Sarah Pauson.jpg', 'Ratched'),
+(185, 'Sharon Stone', 'img/ator-cards/Sharon Stone.jpg', 'Ratched'),
+(188, 'Judy Davis', 'img/ator-cards/Judy Davis.jpg', 'Ratched'),
+(191, 'Chris Parnell', 'img/ator-cards/Chris Parnell.png', 'Rick e Morty'),
+(192, 'Dar Harmon', 'img/ator-cards/Dar Harmon.png', 'Rick e Morty'),
+(193, 'Justin Riland', 'img/ator-cards/Justin Riland.png', 'Rick e Morty'),
+(194, 'Sarah Chalke', 'img/ator-cards/Sarah Chalke.png', 'Rick e Morty'),
+(195, 'Spencer Grammer', 'img/ator-cards/Spencer Grammer.png', 'Rick e Morty'),
+(196, 'Max Baldry', 'img/ator-cards/Max Baldry.png', 'Senhor dos Anéis Os Anéis do poder'),
+(197, 'Morfydd Clark', 'img/ator-cards/Morfydd Clark.png', 'Senhor dos Anéis Os Anéis do poder'),
+(198, 'Robert Aramayo', 'img/ator-cards/Robert Aramayo.png', 'Senhor dos Anéis Os Anéis do poder'),
+(199, 'Sophia Nomvete', 'img/ator-cards/Sophia Nomvete.png', 'Senhor dos Anéis Os Anéis do poder'),
+(200, 'Tyroe Muhafidin', 'img/ator-cards/Tyroe Muhafidin.png', 'Senhor dos Anéis Os Anéis do poder'),
+(201, 'Asa Buttlerfield', 'img/ator-cards/Asa Buttlerfield.jpg', 'Sex Education'),
+(202, 'Emma Mackey', 'img/ator-cards/Emma Mackey.jpg', 'Sex Education'),
+(203, 'Gillian Anderson', 'img/ator-cards/Gillian Anderson.jpg', 'Sex Education'),
+(204, 'Ncuti Gatwa', 'img/ator-cards/Ncuti Gatwa.jpg', 'Sex Education'),
+(205, 'Tanya Reynolds', 'img/ator-cards/Tanya Reynolds.jpg', 'Sex Education'),
+(206, 'Jung ho-yeon', 'img/ator-cards/Jung ho-yeon.png', 'Squid Game - Round 6'),
+(207, 'Lee Jung-Jae', 'img/ator-cards/Lee Jung-Jae.png', 'Squid Game - Round 6'),
+(208, 'Lee Yoo-mi', 'img/ator-cards/Lee Yoo-mi.png', 'Squid Game - Round 6'),
+(209, 'Park Hae-soo', 'img/ator-cards/Park Hae-soo.png', 'Squid Game - Round 6'),
+(210, 'Wi Ha-joon', 'img/ator-cards/Wi Ha-joon.png', 'Squid Game - Round 6'),
+(211, 'Caleb McLaughlin', 'img/ator-cards/Caleb McLaughlin.png', 'Strange Things'),
+(212, 'David-Harbour', 'img/ator-cards/David-Harbour.png', 'Strange Things'),
+(213, 'Finn Wolfhard', 'img/ator-cards/Finn Wolfhard.png', 'Strange Things'),
+(214, 'Gaten Matarazzo', 'img/ator-cards/Gaten Matarazzo.png', 'Strange Things'),
+(215, 'Joe Keery', 'img/ator-cards/Joe Keery.png', 'Strange Things'),
+(216, 'Millie Bobby Brown', 'img/ator-cards/Millie Bobby Brown.png', 'Strange Things'),
+(217, 'Noah Schanpp', 'img/ator-cards/Noah Schanpp.png', 'Strange Things'),
+(218, 'Sadie Sink', 'img/ator-cards/Sadie Sink.png', 'Strange Things'),
+(219, 'Jim Parson', 'img/ator-cards/Jim Parson.jpg', 'The big bang theory'),
+(220, 'Jonnhny Galecki', 'img/ator-cards/Jonnhny Galecki.jpg', 'The big bang theory'),
+(221, 'Kaley Cuoco', 'img/ator-cards/Kaley Cuoco.jpg', 'The big bang theory'),
+(222, 'Kunal Knayyar', 'img/ator-cards/Kunal Knayyar.jpg', 'The big bang theory'),
+(223, 'Simmon Helberg', 'img/ator-cards/Simmon Helberg.jpg', 'The big bang theory'),
+(224, 'Antony Starr', 'img/ator-cards/Antony Starr.jpg', 'The boys'),
+(225, 'Erin Moriaty', 'img/ator-cards/Erin Moriaty.jpg', 'The boys'),
+(226, 'Jack Quaid', 'img/ator-cards/Jack Quaid.jpg', 'The boys'),
+(227, 'Karen Fukuhara', 'img/ator-cards/Karen Fukuhara.jpg', 'The boys'),
+(228, 'Karl Urban', 'img/ator-cards/Karl Urban.jpg', 'The boys'),
+(229, 'Claire Foy', 'img/ator-cards/Claire Foy.png', 'The crown'),
+(230, 'Elieen Atkins', 'img/ator-cards/Elieen Atkins.png', 'The crown'),
+(231, 'John Lithgow', 'img/ator-cards/John Lithgow.png', 'The crown'),
+(232, 'Matt Smith', 'img/ator-cards/Matt Smith.png', 'The crown'),
+(233, 'Vanessa Kirby', 'img/ator-cards/Vanessa Kirby.png', 'The crown'),
+(234, 'Emma Corrin', 'img/ator-cards/Emma Corrin2.jpg', 'The crown'),
+(235, 'Helena Bohan Carter', 'img/ator-cards/Helena Bohan Carter.jpg', 'The crown'),
+(236, 'Olivia Coleman.jpg', 'img/ator-cards/Olivia Coleman.jpg', 'The crown'),
+(237, 'Tobias Meniezes', 'img/ator-cards/Tobias Meniezes.jpg', 'The crown'),
+(238, 'Claudia Harrison', 'img/ator-cards/Claudia Harrison .jpg', 'The crown'),
+(239, 'Imelda Staunton', 'img/ator-cards/Imelda Staunton.jpg', 'The crown'),
+(240, 'Jonathan Pryce', 'img/ator-cards/Jonathan Pryce.jpg', 'The crown'),
+(241, 'Lesley Manville', 'img/ator-cards/Lesley Manville.jpg', 'The crown'),
+(242, 'Marcia Warren.jpg', 'img/ator-cards/Marcia Warren.jpg', 'The crown'),
+(243, 'Pedro Pascal', 'img/ator-cards/Pedro Pascal.png', 'the last of us'),
+(244, 'Anna Torv', 'img/ator-cards/Anna Torv.jpg', 'the last of us'),
+(245, 'Ashley Johnson', 'img/ator-cards/Ashley Johnson.jpg', 'the last of us'),
+(246, 'Bella Ramsey', 'img/ator-cards/Bella Ramsey.jpg', 'the last of us'),
+(247, 'Gabriel Luna', 'img/ator-cards/Gabriel Luna.jpg', 'the last of us'),
+(249, 'Carl Weathers', 'img/ator-cards/Carl Weathers.png', 'The mandalorian'),
+(250, 'Dane Filoni', 'img/ator-cards/Dane Filoni.jpg', 'The mandalorian'),
+(251, 'GianCarlo Esposito', 'img/ator-cards/GianCarlo Esposito.jpg', 'The mandalorian'),
+(252, 'Gina Carano', 'img/ator-cards/Gina Carano.jpg', 'The mandalorian'),
+(253, 'Aidan Gallagher', 'img/ator-cards/Aidan Gallagher.jpg', 'The Umbrella Academy'),
+(254, 'Elliot Page', 'img/ator-cards/Elliot Page.jpg', 'The Umbrella Academy'),
+(255, 'Javon Walton', 'img/ator-cards/Javon Walton.jpg', 'The Umbrella Academy'),
+(256, 'Ritu Arya', 'img/ator-cards/Ritu Arya.jpg', 'The Umbrella Academy'),
+(257, 'Tom Horpper', 'img/ator-cards/Tom Horpper.jpg', 'The Umbrella Academy'),
+(258, 'Andrew Lincon', 'img/ator-cards/Andrew Lincon.jpg', 'The walking dead'),
+(259, 'Jeffrey Dean Morgan', 'img/ator-cards/Jeffrey Dean Morgan.jpg', 'The walking dead'),
+(260, 'Laura Prepon', 'img/ator-cards/Laura Prepon.jpg', 'The walking dead'),
+(261, 'Lauren Cohan', 'img/ator-cards/Lauren Cohan.jpg', 'The walking dead'),
+(262, 'Norman Reedus', 'img/ator-cards/Norman Reedus.jpg', 'The walking dead'),
+(263, 'Anya Charlotra', 'img/ator-cards/Anya Charlotra.jpg', 'The witcher'),
+(264, 'Freya Allan', 'img/ator-cards/Freya Allan.jpg', 'The witcher'),
+(265, 'Henry Cavil', 'img/ator-cards/Henry Cavil.jpg', 'The witcher'),
+(266, 'Joey Batey', 'img/ator-cards/Joey Batey.jpg', 'The witcher'),
+(267, 'MyAnna Buring', 'img/ator-cards/MyAnna Buring.jpg', 'The witcher'),
+(268, 'Alexander Ludwig', 'img/ator-cards/Alexander Ludwig.jpg', 'Vikings'),
+(269, 'Clive Standen', 'img/ator-cards/Clive Standen.jpg', 'Vikings'),
+(270, 'Gustaf Skarsgard', 'img/ator-cards/Gustaf Skarsgard2.jpg', 'Vikings'),
+(271, 'Katheryn Winnick', 'img/ator-cards/Katheryn Winnick.jpg', 'Vikings'),
+(272, 'Travis Fimmel', 'img/ator-cards/Travis Fimmel.jpg', 'Vikings'),
+(273, 'Catherine Zeta-Jones', 'WandinhaCatherine Zeta-Jones.jpg', 'Wandinha'),
+(274, 'Christina Ricci', 'img/ator-cards/Christina Ricci.jpg', 'Wandinha'),
+(275, 'Gwendoline Christie', 'img/ator-cards/Gwendoline Christie.jpg', 'Wandinha'),
+(276, 'Jenna Ortega', 'img/ator-cards/Jenna Ortega.jpg', 'Wandinha'),
+(277, 'Luis Guzmán', 'img/ator-cards/Luis Guzmán.jpg', 'Wandinha'),
+(278, 'Annie Potts', 'img/ator-cards/Annie Potts.jpg', 'Young Sheldon'),
+(279, 'Ian Armitage', 'img/ator-cards/Ian Armitage.jpg', 'Young Sheldon'),
+(280, 'Lance Barber', 'img/ator-cards/Lance Barber.jpg', 'Young Sheldon'),
+(281, 'Montana Jordan', 'img/ator-cards/Montana Jordan.jpg', 'Young Sheldon'),
+(283, 'Dan Castellaneta', 'img/ator-cards/Dan Castellaneta.png', 'A procura da Felicidade'),
+(284, 'Brian Howe', 'img/ator-cards/Brian Howe.png', 'A procura da Felicidade'),
+(285, 'Thandie Newton', 'img/ator-cards/Thandie Newton.png', 'A procura da Felicidade'),
+(286, 'Jaden Smith', 'img/ator-cards/Jaden Smith.png', 'A procura da Felicidade'),
+(287, 'Will Smith', 'img/ator-cards/Will Smith.png', 'A procura da Felicidade'),
+(288, 'Amerigo Fontani', 'img/ator-cards/Amerigo Fontani.png', 'a Vida é bela'),
+(289, 'Horst Buchholz', 'img/ator-cards/Horst Buchholz.png', 'a Vida é bela'),
+(290, 'Giorgio Cantarini', 'img/ator-cards/Giorgio Cantarini.png', 'a Vida é bela'),
+(291, 'Nicoletta Braschi', 'img/ator-cards/Nicoletta Braschi.png', 'a Vida é bela'),
+(292, 'Roberto Benigni', 'img/ator-cards/Roberto Benigni.png', 'a Vida é bela'),
+(293, 'Shailene Woodley', 'img/ator-cards/Shailene Woodley.png', 'A culpa é das estrelas'),
+(294, 'Nat Wolff', 'img/ator-cards/Nat Wolff.png', 'A culpa é das estrelas'),
+(295, 'John Green', 'img/ator-cards/John Green.png', 'A culpa é das estrelas'),
+(296, 'Ansel Elgort', 'img/ator-cards/Ansel Elgort.png', 'A culpa é das estrelas'),
+(297, 'Willem Dafoe', 'img/ator-cards/Willem Dafoe.png', 'A culpa é das estrelas'),
+(298, 'Alfre Woodard', 'img/ator-cards/Alfre Woodard.png', '12 anos de escravidão'),
+(299, 'Benedict Cumberbatch', 'img/ator-cards/Benedict Cumberbatch.png', '12 anos de escravidão'),
+(300, 'Brad Pitt', 'img/ator-cards/Brad Pitt.png', '12 anos de escravidão'),
+(301, 'Chiwetel Ejiofor', 'img/ator-cards/Chiwetel Ejiofor.png', '12 anos de escravidão'),
+(302, 'Lupita Nyong_o', 'img/ator-cards/Lupita Nyong_o.png', '12 anos de escravidão'),
+(303, 'David Morse', 'img/ator-cards/David Morse.png', 'A espera de um milagre'),
+(304, 'Michael Clarke Duncan', 'img/ator-cards/Michael Clarke Duncan.png', 'A espera de um milagre'),
+(305, 'Michael Jeter', 'img/ator-cards/Michael Jeter.png', 'A espera de um milagre'),
+(306, 'Sam Rockwell', 'img/ator-cards/Sam Rockwell.png', 'A espera de um milagre'),
+(307, 'Tom Hanks', 'img/ator-cards/Tom Hanks.png', 'A espera de um milagre'),
+(308, 'Ben Kingsley', 'img/ator-cards/Ben Kingsley.png', 'A lista de schindler'),
+(309, 'Caroline Goodall', 'img/ator-cards/Caroline Goodall.png', 'A lista de schindler'),
+(310, 'Embeth Davidtz', 'img/ator-cards/Embeth Davidtz.png', 'A lista de schindler'),
+(311, 'Liam Neeson', 'img/ator-cards/Liam Neeson.png', 'A lista de schindler'),
+(312, 'Ralph Fiennes', 'img/ator-cards/Ralph Fiennes.png', 'A lista de schindler'),
+(313, 'Alicia Hunt', 'img/ator-cards/Alicia Hunt.png', 'A proposta'),
+(314, 'Betty White', 'img/ator-cards/Betty White.png', 'A proposta'),
+(315, 'Oscar Nunes', 'img/ator-cards/Oscar Nunes.png', 'A proposta'),
+(316, 'Ryan Reynolds', 'img/ator-cards/Ryan Reynolds.png', 'A proposta'),
+(317, 'Sandra Bullock', 'img/ator-cards/Sandra Bullock.png', 'A proposta'),
+(318, 'Abigail Cowen', 'img/ator-cards/Abigail Cowen.png', 'Amor de redenção'),
+(319, 'Eric Dane', 'img/ator-cards/Eric Dane.png', 'Amor de redenção'),
+(320, 'Livi Birch', 'img/ator-cards/Livi Birch.png', 'Amor de redenção'),
+(321, 'Nina Dobrev', 'img/ator-cards/Nina Dobrev.png', 'Amor de redenção'),
+(322, 'Tom Lewis', 'img/ator-cards/Tom Lewis.png', 'Amor de redenção'),
+(323, 'Christian Bale', 'img/ator-cards/Christian Bale.png', 'Batman O cavaleiro das trevas'),
+(324, 'Gary Oldman', 'img/ator-cards/Gary Oldman.png', 'Batman O cavaleiro das trevas'),
+(325, 'Heath Ledger', 'img/ator-cards/Heath Ledger.png', 'Batman O cavaleiro das trevas'),
+(326, 'Maggie Gyllenhaal', 'img/ator-cards/Maggie Gyllenhaal.png', 'Batman O cavaleiro das trevas'),
+(327, 'Morgan Freeman', 'img/ator-cards/Morgan Freeman.png', 'Batman O cavaleiro das trevas'),
+(328, 'Charles Dance', 'img/ator-cards/Charles Dance.png', 'Como eu era antes de você'),
+(329, 'Emilia Clarke', 'img/ator-cards/Emilia Clarke.png', 'Como eu era antes de você'),
+(330, 'Jenna Coleman', 'img/ator-cards/Jenna Coleman.png', 'Como eu era antes de você'),
+(331, 'Matthew Lewis', 'img/ator-cards/Matthew Lewis.png', 'Como eu era antes de você'),
+(332, 'Sam Claflin', 'img/ator-cards/Sam Claflin.png', 'Como eu era antes de você'),
+(333, 'Mauricio Fiore.png', 'img/ator-cards/', 'Cracolândia'),
+(334, 'Alinne Moraes', 'img/ator-cards/Alinne Moraes.png', 'Heleno'),
+(335, 'Angie Cepeda', 'img/ator-cards/Angie Cepeda.png', 'Heleno'),
+(336, 'Erom Cordeiro', 'img/ator-cards/Erom Cordeiro.png', 'Heleno'),
+(337, 'Herson Capri', 'img/ator-cards/Herson Capri.png', 'Heleno'),
+(338, 'Rodrigo Santoro', 'img/ator-cards/Rodrigo Santoro.png', 'Heleno'),
+(339, 'Matheus Cirilo', 'img/ator-cards/Carlos Alberto Riccelli.png', 'Maradona a mão de Deus'),
+(340, 'Carlos Alberto Riccelli', 'img/ator-cards/Matheus Cirilo.png', 'Maradona a mão de Deus'),
+(341, 'Bradley cooper', 'img/ator-cards/Bradley cooper.png', 'Nasce uma estrela'),
+(342, 'Dave Chappelle', 'img/ator-cards/Dave Chappelle.png', 'Nasce uma estrela'),
+(343, 'Lady Gaga', 'img/ator-cards/Lady Gaga.png', 'Nasce uma estrela'),
+(344, 'Rafi Gavron', 'img/ator-cards/Rafi Gavron.png', 'Nasce uma estrela'),
+(345, 'Sam Elliott', 'img/ator-cards/Sam Elliott.png', 'Nasce uma estrela'),
+(346, 'Bradley cooper', 'img/ator-cards/Bradley cooper.png', 'O lado bom da vida'),
+(347, 'Chris Tucker', 'img/ator-cards/Chris Tucker.png', 'O lado bom da vida'),
+(348, 'Jacki Weaver', 'img/ator-cards/Jacki Weaver.png', 'O lado bom da vida'),
+(349, 'Jennifer Lawrence', 'img/ator-cards/Jennifer Lawrence.png', 'O lado bom da vida'),
+(350, 'Robert de Niro', 'img/ator-cards/Robert de Niro.png', 'O lado bom da vida'),
+(351, 'Domhnall Gleeson', 'img/ator-cards/Domhnall Gleeson.png', 'O Regresso'),
+(352, 'Leonardo DiCaprio', 'img/ator-cards/Leonardo DiCaprio.png', 'O Regresso'),
+(353, 'Paul Anderson', 'img/ator-cards/Paul Anderson.png', 'O Regresso'),
+(354, 'Tom Hardy', 'img/ator-cards/Tom Hardy.png', 'O Regresso'),
+(355, 'Will Poulter.png', 'img/ator-cards/Will Poulter.png', 'O Regresso'),
+(356, 'Evan Milton', 'img/ator-cards/Evan Milton.png', 'O reino perdido dos piratas'),
+(357, 'Mia Tomlinson', 'img/ator-cards/Mia Tomlinson.png', 'O reino perdido dos piratas'),
+(358, 'Miles Yekinni', 'img/ator-cards/Miles Yekinni.png', 'O reino perdido dos piratas'),
+(359, 'Sam Callis', 'img/ator-cards/Sam Callis.png', 'O reino perdido dos piratas'),
+(360, 'Sinead Macinnes', 'img/ator-cards/Sinead Macinnes.png', 'O reino perdido dos piratas'),
+(361, 'Patrick Forbes', 'img/ator-cards/Patrick Forbes.png', 'Putin Poder sem limites');
 
 -- --------------------------------------------------------
 
@@ -65,8 +411,22 @@ CREATE TABLE `elenco` (
 --
 
 CREATE TABLE `faixa etaria` (
-  `ID` int(11) NOT NULL,
+  `Id` int(11) NOT NULL,
   `classificação` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `favoritos`
+--
+
+CREATE TABLE `favoritos` (
+  `id` int(11) NOT NULL,
+  `id_filme` int(11) NOT NULL,
+  `id_cliente` int(11) NOT NULL,
+  `id_serie` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -78,8 +438,8 @@ CREATE TABLE `faixa etaria` (
 CREATE TABLE `filmes` (
   `id` int(5) NOT NULL,
   `titulo` varchar(150) NOT NULL,
-  `anoLancamento` date NOT NULL,
-  `idDiretor` int(3) NOT NULL,
+  `anoLancamento` text NOT NULL,
+  `idDiretor` int(11) NOT NULL,
   `idGenero` int(3) NOT NULL,
   `sinopse` varchar(800) NOT NULL,
   `Imagem` text NOT NULL,
@@ -108,7 +468,7 @@ INSERT INTO `filmes` (`id`, `titulo`, `anoLancamento`, `idDiretor`, `idGenero`, 
 (14, 'Putin poder sem limites', '0000-00-00', 0, 0, 'Como um menino de São Petersburgo se tornou um poderoso líder mundial? A história da impressionante ascensão de Vladimir Putin ao poder - de coronel da KGB a presidente.', 'img/film-cards/Putin.jpeg', 12, 'https://www.youtube.com/embed/euqDGUq2yFg'),
 (15, 'Cracolândia', '0000-00-00', 0, 0, 'A partir de uma intensa pesquisa, o filme abre um debate a respeito da maior e mais impactante cena de uso aberto de crack do mundo: a \"Cracolândia\" de São Paulo. A obra analisa as causas desse mal e suas progressões, além das táticas de combate já realizadas em São Paulo, abrindo um paralelo com as estratégias usadas em outros países.', 'img/film-cards/Cracolandia.jpeg', 12, 'https://www.youtube.com/embed/CBBPbzJyeag'),
 (16, 'A culpa é das estrelas', '0000-00-00', 0, 0, 'Hazel Grace Lancaster e Augustus Waters são dois adolescentes que se conhecem em um grupo de apoio para pacientes com câncer. Por causa da doença, Hazel sempre descartou a ideia de se envolver amorosamente, mas acaba cedendo ao se apaixonar por Augustus. Juntos, eles viajam para Amsterdã, onde embarcam em uma jornada inesquecível.', 'img/film-cards/Estrelas.jpeg', 12, 'https://www.youtube.com/embed/lFOOZJ1UChg'),
-(17, 'O Regresso', '0000-00-00', 0, 0, 'Após ser atacado por um urso, o caçador Hugh Glass é abandonado na floresta por seu companheiro John Fitzgerald. Apesar de muito ferido, Glass consegue sobreviver e vai em busca de vingança.', 'img/film-cards/Regresso.jpeg', 16, 'https://www.youtube.com/embed/S4PpYv9n0ko'),
+(17, 'O Regresso', '0000-00-00', 0, 0, 'Após ser atacado por um urso, o caçador Hugh Glass é abandonado na floresta por seu companheiro John Fitzgerald. Apesar de muito ferido, Glass consegue sobreviver e vai em busca de vingança.', 'img/film-cards/Regresso.jpeg', 16, 'https://www.youtube.com/embed/'),
 (18, 'À Espera de um milagre', '0000-00-00', 0, 0, 'Um carcereiro tem um relacionamento incomum e comovente com um preso que está no corredor na morte: Coffey, um negro enorme, condenado por ter matado brutalmente duas gêmeas de nove anos. Ele tem tamanho e força para matar qualquer um, mas seu comportamento é completamente oposto à sua aparência. Além de ser simples, ingênuo e ter pavor do escuro, ele possui um dom sobrenatural. Com o passar do tempo, o carcereiro aprende que, às vezes, os milagres acontecem nos lugares mais inesperados.', 'img/film-cards/Milagre.jpeg', 14, 'https://www.youtube.com/embed/EIc_wJtm6AU'),
 (19, 'Heleno', '0000-00-00', 0, 0, 'O jogador de futebol Heleno de Freitas (Rodrigo Santoro) era considerado o príncipe do Rio de Janeiro dos anos 40, numa época em que a cidade era um cenário de sonhos e promessas. Sendo ao mesmo tempo um gênio explosivo e apaixonado nos campos de futebol, além de galã charmoso nos salões da sociedade carioca, tinha certeza de que seria o maior jogador brasileiro de todos os tempos. Mas seu comportamento arredio, sua indisciplina e a doença (sífilis) foram minando o que poderia ser uma grande jornada de glória, transformando-a numa trágica história. Baseado no livro “Nunca Houve um Homem como Heleno”, de Marcos Eduardo Novaes.', 'img/film-cards/Heleno.jpeg', 14, 'https://www.youtube.com/embed/tIZy1QbBipY'),
 (20, 'Maradona a Mão de Deus', '0000-00-00', 0, 0, 'Indicado ao Oscar de melhor filme internacional, o autobiográfico \'A Mão de Deus\', do italiano Paolo Sorrentino, acompanha a tumultuada jornada de um adolescente e sua família, tomando a passagem de Diego Maradona por Nápoles como pano de fundo histórico.', 'img/film-cards/Maradona.jpeg', 0, 'https://www.youtube.com/embed/9q0vJ3betXw'),
@@ -161,22 +521,22 @@ CREATE TABLE `genero` (
 --
 
 CREATE TABLE `series` (
-  `Id` int(11) NOT NULL,
-  `NomeBR` text NOT NULL,
-  `DataLancamento` text NOT NULL,
-  `Diretor_idDiretor` text NOT NULL,
-  `genero_idGenero` text NOT NULL,
-  `sinopse` text NOT NULL,
-  `imagem` text NOT NULL,
-  `Classificação` text NOT NULL,
-  `Trailer` text NOT NULL
+  `id` int(5) NOT NULL,
+  `titulo` varchar(150) NOT NULL,
+  `anoLancamento` text NOT NULL,
+  `idDiretor` int(11) NOT NULL,
+  `idGenero` int(3) NOT NULL,
+  `sinopse` varchar(800) NOT NULL,
+  `Imagem` text NOT NULL,
+  `Classificacao` int(2) NOT NULL,
+  `trailer` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `series`
 --
 
-INSERT INTO `series` (`Id`, `NomeBR`, `DataLancamento`, `Diretor_idDiretor`, `genero_idGenero`, `sinopse`, `imagem`, `Classificação`, `Trailer`) VALUES
+INSERT INTO `series` (`id`, `titulo`, `anoLancamento`, `idDiretor`, `idGenero`, `sinopse`, `Imagem`, `Classificacao`, `trailer`) VALUES
 (1, 'Clickbait', '2021', '', '', 'Uma coleção de histórias que explora as maneiras pelas quais nossos impulsos mais perigosos e descontrolados são alimentados na era das mídias sociais e revela as fraturas cada vez maiores que encontramos entre nossas personalidades da vida virtual e da vida real.', 'img/series-cards/clickbait.jpeg', '16', 'https://www.youtube.com/embed/_-jXBimnRd4'),
 (2, 'Falando com um serial killer: teddy bundy', '2019', '', '', 'Entrevistas atuais, material de arquivo e gravações de áudio feitas no corredor da morte traçam o perfil do notório serial killer Ted Bundy.', 'img/series-cards/Serial.jpeg', '14', 'https://www.youtube.com/embed/YbkB9hjJviI'),
 (3, 'O Rei de Porcelana', '2021', '', '', 'Conta a história de um rei esquecido que não existe em nenhum lugar da história. Este trágico rei tem que esconder o fato de que ele é na verdade uma mulher. O drama retratará o romance apaixonado entre o rei, que é uma mulher, e os belos personagens que a cercam no contexto do perigoso e rígido palácio. Adaptado do manhwa \"Yeonmo\" de Lee So Young.', 'img/series-cards/Rei.png', '14', 'https://www.youtube.com/embed/oWfxsT2K-2A'),
@@ -206,26 +566,26 @@ INSERT INTO `series` (`Id`, `NomeBR`, `DataLancamento`, `Diretor_idDiretor`, `ge
 (27, 'Orange is the new black', '2013', '', '', 'Da mesma criadora de \"Weeds\" chega uma nova série sobre a vida em uma prisão feminina e seus momentos hilários e de cortar o coração. O passado de Piper Chapman bate à porta. Ela é detida e condenada a cumprir pena numa penitenciária federal. Para pagar por seus crimes, Piper troca uma vida confortável em Nova York pela prisão, onde encontra tensão e companheirismo num grupo de detentas desbocadas.', 'img/series-cards/Orange.jpeg', '18', 'https://www.youtube.com/embed/vY0qzXi5oJg'),
 (28, 'Grey`s Anatomy', '2005', '', '', 'Grey`s Anatomy é um drama médico norte-americano . O folhetim é protagonizado Dra. Meredith Grey, residente do fictício hospital cirúrgico Seattle Grace, em Seattle, Washington, o mais rígido programa cirúrgico de Harvard. A série é focada nela e seus colegas, também internos: Cristina, Izzie, George e Alex, mostrando suas vidas amorosas e as dificuldades pelas quais passam no trabalho.\r\nA temporada mostra os primeiros meses das personagens como internos e como é seu dia-a-dia. Entre as tramas, destacam-se os esforços de Meredith para manter em segredo seu relacionamento com o Dr. Shepherd e o fato de que sua mãe possui Alzheimer, assim como a rivalidade entre Burke e Shepherd pela futura direção do hospital.', 'img/series-cards/GreysAnatomy.jpeg', '14', 'https://www.youtube.com/embed/2wqzcLyaU8c'),
 (29, 'Csi', '2000', '', '', 'CSI é uma série dramática muito popular do canal norte-americano CBS. A série é centrada nas investigações do grupo de cientistas forenses do departamento de criminalística da polícia de Las Vegas, Nevada. Estes cientistas, designados CSI`s (Crime Scene Investigators), desvendam crimes e mortes em circunstâncias misteriosas e pouco comuns.\r\nA série, criada por Anthony E. Zuiker, estreou em Outubro de 2000 nos Estados Unidos e em Abril de 2001 no Brasil. Foram criados dois spin-offs da série: CSI: Miami e CSI: NY.\r\nÉ a série dramática de maior sucesso nos Estados Unidos. Seus roteiros inteligentes e casos sensacionais fazem com que CSI seja para muitos a melhor série do género policial.\r\nA abertura da décima temporada foi a mais cara da história da TV, custando cerca de 400 mil dolares.', 'img/series-cards/Csi.jpeg', '16', 'https://www.youtube.com/embed/Y8IYh8pzXGo'),
-(30, 'Lost', '2004', '', '', 'O vôo 815 da companhia aérea Oceanic Airlines, cai na costa do que aparenta ser uma ilha tropical deserta, forçando o grupo de estranhos a trabalhar em conjunto para se manterem vivos. No entanto, a sua sobrevivência é ameaçada por vários mistérios, incluindo uma escotilha metálica enterrada no solo, uma criatura que vagueia pela selva e os habitantes da ilha conhecidos como \"Os Outros\". Os sobreviventes descobrem que um dos seus não é quem parece ser e encontram uma mulher francesa chamada Danielle Rousseau, cuja equipe naufragou há 16 anos.', 'img/series-cards/Lost.jpeg', '16', 'https://www.youtube.com/embed/S4PpYv9n0kooOCaBPbm7KE'),
-(31, 'Friends', '1995', '', '', 'Ross, Rachel, Mônica, Chandler, Joey e Phoebe formam um grupo de seis amigos que lutam para se sobressair e progredir na competitiva vida de Manhattan. Seu humor inteligente e apoio mútuo incondicional fazem com sua amizade seja cada vez mais forte, superando assim todos os obstáculos que a vida lhes apresenta.', 'img/series-cards/Friends.jpeg', '12', 'https://www.youtube.com/embed/S4PpYv9n0koIEEbUzffzrk'),
-(32, 'Brooklyn Nine-Nine', '2013', '', '', 'Jake Peralta é o talentoso e despreocupado detetive do 99º distrito do Brooklyn que, junto ao seu grupo eclético de colegas, lidava com um capitão relaxado no escritório. Tudo muda quando o novo e cronicamente tenso capitão Ray Holt chega à delegacia disposto a fazer com que esse grupo disfuncional de detetives se torne o que há de melhor no Brooklyn.', 'img/series-cards/B99.jpeg', '14', 'https://www.youtube.com/embed/S4PpYv9n0kosEOuJ4z5aTc'),
-(33, 'Dark', '2017', '', '', 'O desaparecimento de duas crianças expõe as vidas duplas e as relações fraturadas entre quatro famílias da pequena cidade alemã de Winden. A busca por respostas e por um culpado revela os pecados e os segredos da comunidade, enquanto uma reviravolta sobrenatural remonta o caso à mesma cidade em 1986. A questão não é quem sequestrou as crianças… mas quando.', 'img/series-cards/Dark.jpeg', '16', 'https://www.youtube.com/embed/S4PpYv9n0koJCCssUOtn2E'),
-(34, 'Narcos', '2015', '', '', '\"Narcos\" é a história real dos esforços dos Estados Unidos e Colômbia para combater o temido cartel de Medellín, uma das organizações criminosas mais ricas e impiedosas da história. A trama gira em torno no traficante Pablo Escobar (Wagner Moura), retratando a ascensão dele de um criminoso comum para um dos homens mais perigosos, procurados e ricos do mundo.', 'img/series-cards/narcos.jpeg', '16', 'https://www.youtube.com/embed/S4PpYv9n0koxl8zdCY-abw'),
-(35, 'Outlander', '2014', '', '', 'Claire Randall é uma enfermeira em combate em 1945. Ela é misteriosamente transportada através do tempo e mandada para 1743, e sua vida passa a correr riscos que ela desconhece. Forçada a se casar com Jamie Fraser, um cortês e nobre guerreiro escocês. Um relacionamento apaixonado se acende, e deixa o coração de Claire dividido entre dois homens completamente diferentes, em duas vidas que não podem ser conciliadas.', 'img/series-cards/Outlander.jpeg', '16', 'https://www.youtube.com/embed/S4PpYv9n0koXJdWOkyXdXs'),
-(36, 'Better call saul', '2015', '', '', 'Em maio de 2002, James Morgan McGill (Bob Odenkirk), ou Jimmy, como é mais conhecido, é um defensor público com dificuldades em Albuquerque, Novo México. De multas de estacionamento a assassinatos, de acidentes de carro a fraudes públicas, o advogado faz de tudo ao mesmo tempo em que cuida do irmão Chuck (Michael McKean), um importante advogado sócio de uma das maiores empresas da cidade que atualmente sofre de hipersensibilidade eletromagnética.\r\nEsse é o início da carreira de Saul Goodman, anos antes de ser contratado por Walter White nos acontecimentos da série Breaking Bad (AMC, 2008-2013).', 'img/series-cards/Saul.jpeg', '14', 'https://www.youtube.com/embed/S4PpYv9n0kozzy6wWjFONY'),
-(37, 'Cuphead Show', '2022', '', '', 'Acompanhe as desventuras do impulso Xicrinho e seu ingênuo irmão Caneco nesta série animação baseada no famoso videogame', 'img/series-cards/Cuphead.jpeg', '10', 'https://www.youtube.com/embed/S4PpYv9n0koSel3fjl6uyo'),
-(38, 'The Boys', '2019', '', '', 'Hughie Campbell (Jack Quaid) fica traumatizado depois que sua namorada Robin (Jess Salgueiro) é morta em um impacto de alta velocidade com o super-herói Trem-Bala (Jessie Usher). Quando conhece Billy Bruto (Karl Urban), um vigilante que odeia qualquer um com poderes, Hughie vê a chance de expor a corrupção dos super-heróis, mas, para isso, ele precisará plantar uma escuta na torre da Vought - a empresa responsável pelos Sete, o principal time de super-heróis dos Estados Unidos, do qual Trem-Bala faz parte.\r\nO plano sai de controle quando Hughie é descoberto por Translúcido (Alex Hassell), que resolve segui-lo e confrontá-lo; assim, Hughie e Billy são obrigados a sequestrar e manter o herói em cativeiro. Para isso, os rapazes vão contar com a ajuda de Leitinho (Laz Alonso) e Francês (Tomer Kapon), dois antigos companheiros de Billy que sabem de sua obsessão em combater super-heróis e, sobretudo, em se vingar daquele que é o mais amado pela população: Capitão Pátria (Antony Starr), o líder dos Sete que, 8 anos antes, estuprou sua esposa Becca (Shantel VanSanten) - de quem Billy nunca mais teve notícias desde então.\r\nBaseada na HQ homônima de Garth Ennis.', 'img/series-cards/Boys.jpeg', '18', 'https://www.youtube.com/embed/S4PpYv9n0koBxmSk_pv8tE'),
-(39, 'Invencivel', '2021', '', '', 'A trama gira em torno de Mark Grayson (Steven Yeun), um adolescente de 17 anos que é exatamente como qualquer outro garoto da sua idade – exceto que seu pai é o super-herói mais poderoso do planeta, Omni-Man (J.K. Simmons). Mas quando Mark descobre que tem seus próprios poderes, ele percebe que o legado do seu pai não é tão heroico quanto parece.', 'img/series-cards/Invencivel.jpeg', '18', 'https://www.youtube.com/embed/S4PpYv9n0kochcPVeszoUo'),
-(40, 'Des(encanto)', '0000-00-00', '', '', 'Esta série de animação de Matt Groenign acompanha as malucas aventuras de uma princesa boa de copo em um reino medieval repleto de criaturas míticas.', 'img/series-cards/Des(encanto).jpeg', '10', 'https://www.youtube.com/embed/S4PpYv9n0koDkgw8A-XiO0'),
-(41, 'All of us are Dead', '2022', '', '', 'All of Us Are Dead é sobre um grupo de estudantes do ensino médio que enfrentam uma situação extrema de crise quando ficam presos na escola, enquanto um vírus zumbi se espalha como um incêndio. Adaptado do webtoon coreano chamado Now at Our School', 'img/series-cards/Dead.jpeg', '16', 'https://www.youtube.com/embed/S4PpYv9n0kobmbl65oiUgA'),
-(42, 'The Umbrella Academy', '2019', '', '', 'Baseada na premiada série de quadrinhos com roteiro de Gerard Way e arte do brasileiro Gabriel Bá. A série acompanha um grupo superpoderoso de integrantes criados quando crianças para se tornarem heróis, pelo enigmático Sir Reginald Hargreeves. Nos dias de hoje, adultos, eles se encontram divididos e têm que se reunir para enfrentar um dos seus.', 'img/series-cards/Academy.jpeg', '16', 'https://www.youtube.com/embed/S4PpYv9n0ko5_4SW8HHfUs'),
-(43, 'Sex Education', '2019', '', '', 'Otis Thompson (Asa Butterfield) é um virgem com ansiedade social que é filho de uma terapeuta sexual (Gillian Anderson). Por ter crescido cercado por manuais, vídeos e conversas abertas sobre sexualidade, ele torna-se um expert no assunto - mesmo que contra sua vontade. Com a ajuda de Maeve (Emma Mackey), ele inicia uma clínica clandestina dentro da escola, ajudando os colegas com problemas sexuais em troca de dinheiro.', 'img/series-cards/Sex Education.jpeg', '16', 'https://www.youtube.com/embed/S4PpYv9n0koJv46AlQUto4'),
-(44, 'American Gods', '2017', '', '', 'Baseada no romance homônimo (Deus Americanos, no Brasil) de Neil Gaiman, a série será produzida para o canal a cabo Starz por Bryan Fuller (Pushing Daisies) e Michael Green (Heroes).\r\nCentrado em uma guerra entre os velhos e os novos deuses. Os seres bíblicos e mitológicos estão perdendo cada vez mais fiéis para novos deuses, que refletem o amor da sociedade por dinheiro, tecnologia, celebridades e drogas. Shadow Moon é um ex-vigarista que agora serve como segurança e companheiro de viagem para o Sr. Wednesday, um homem fraudulento que é, na verdade, um dos velhos deuses, e está na Terra em uma missão: reunir forças para lutar contra as novas entidades.', 'img/series-cards/Gods.jpeg', '16', 'https://www.youtube.com/embed/S4PpYv9n0koSHozrkt4Yt8'),
-(45, 'Ratched', '2020', '', '', 'Em 1947, Mildred Ratched (Sarah Paulson) chega na Califórnia do Norte em busca de emprego em um crescente hospital psiquiátrico que lidera com novas experiências na mente humana. Numa missão clandestina, Mildred se apresenta como a enfermeira perfeita, mas à medida que ela se infiltra no sistema de saúde mental, o exterior carismático de Mildred começa a esconder uma escuridão, provando que monstros reais são feitos.', 'img/series-cards/Ratched.jpeg', '16', 'https://www.youtube.com/embed/S4PpYv9n0koeE8HtX0GwfI'),
-(46, 'Good Omens', '2019', '', '', 'No ano de 2018, a humanidade está à beira de um apocalipse e pronta para enfrentar o julgamento final quando Aziraphale (Michael Sheen), um anjo um tanto inquieto, e Crowley (David Tennant), um demônio, não tão entusiasmados com o fim do mundo, decidem encontrar o Anticristo.', 'img/series-cards/Good Omens.jpeg', '14', 'https://www.youtube.com/embed/S4PpYv9n0ko7pAMFMabzSo\n'),
-(47, 'The Witcher', '2019', '', '', 'Geralt de Rívia (Henry Cavill), um solitário caçador de monstros, luta para achar seu lugar num mundo onde pessoas se provam mais perversas do que criaturas. Mas quando o destino o leva à uma poderosa feiticeira (Anya Chalotra) e uma jovem princesa (Freya Allan) com um segredo perigoso, os três precisam aprender a navegar pelo Continente juntos.', 'img/series-cards/Witcher.jpeg', '16', 'https://www.youtube.com/embed/S4PpYv9n0kotjujvMkqWe4'),
-(48, 'Breaking Bad', '2008', '', '', 'Bryan Cranston, premiado com o Emmy®, é a estrela da série no papel de Walter White, um professor de química que leva uma vida difícil e luta para pagar as contas sustentando a esposa (Anna Gunn) e o filho, que tem dificuldades físicas (RJ Mitte). Sua vida inteira muda diante de um diagnóstico perturbador: câncer do pulmão sem possibilidade de cura. Com poucos anos de vida e nada mais a perder, Walter usa seus conhecimentos de química para fazer e vender metanfetamina com um dos seus ex-alunos (Aaron Paul). Seus negócios crescem e as mentiras também, mas nada detém Walter em sua missão de assegurar o futuro da família após a sua morte, mesmo que ele tenha que arriscar a vida da família toda.\r\n\r\nMenos ', 'img/series-cards/BB.jpeg', '16', 'https://www.youtube.com/embed/S4PpYv9n0ko2-W6_6gJda0'),
-(49, 'The Last of Us', '2023', '', '', 'Vinte anos após a destruição da civilização moderna, Joel, um sobrevivente, é contratado para contrabandear Ellie, uma garota de 14 anos, para fora de uma zona opressiva de quarentena. O que começa como um pequeno trabalho logo se torna uma jornada brutal e de partir o coração, já que ambos devem atravessar os EUA e dependem um do outro para sobreviver.', 'img/series-cards/TLOU.jpeg\r\n', '16', 'https://www.youtube.com/embed/S4PpYv9n0kouLtkt8BonwM'),
+(30, 'Lost', '2004', '', '', 'O vôo 815 da companhia aérea Oceanic Airlines, cai na costa do que aparenta ser uma ilha tropical deserta, forçando o grupo de estranhos a trabalhar em conjunto para se manterem vivos. No entanto, a sua sobrevivência é ameaçada por vários mistérios, incluindo uma escotilha metálica enterrada no solo, uma criatura que vagueia pela selva e os habitantes da ilha conhecidos como \"Os Outros\". Os sobreviventes descobrem que um dos seus não é quem parece ser e encontram uma mulher francesa chamada Danielle Rousseau, cuja equipe naufragou há 16 anos.', 'img/series-cards/Lost.jpeg', '16', 'https://www.youtube.com/embed/oOCaBPbm7KE'),
+(31, 'Friends', '1995', '', '', 'Ross, Rachel, Mônica, Chandler, Joey e Phoebe formam um grupo de seis amigos que lutam para se sobressair e progredir na competitiva vida de Manhattan. Seu humor inteligente e apoio mútuo incondicional fazem com sua amizade seja cada vez mais forte, superando assim todos os obstáculos que a vida lhes apresenta.', 'img/series-cards/Friends.jpeg', '12', 'https://www.youtube.com/embed/IEEbUzffzrk'),
+(32, 'Brooklyn Nine-Nine', '2013', '', '', 'Jake Peralta é o talentoso e despreocupado detetive do 99º distrito do Brooklyn que, junto ao seu grupo eclético de colegas, lidava com um capitão relaxado no escritório. Tudo muda quando o novo e cronicamente tenso capitão Ray Holt chega à delegacia disposto a fazer com que esse grupo disfuncional de detetives se torne o que há de melhor no Brooklyn.', 'img/series-cards/B99.jpeg', '14', 'https://www.youtube.com/embed/sEOuJ4z5aTc'),
+(33, 'Dark', '2017', '', '', 'O desaparecimento de duas crianças expõe as vidas duplas e as relações fraturadas entre quatro famílias da pequena cidade alemã de Winden. A busca por respostas e por um culpado revela os pecados e os segredos da comunidade, enquanto uma reviravolta sobrenatural remonta o caso à mesma cidade em 1986. A questão não é quem sequestrou as crianças… mas quando.', 'img/series-cards/Dark.jpeg', '16', 'https://www.youtube.com/embed/JCCssUOtn2E'),
+(34, 'Narcos', '2015', '', '', '\"Narcos\" é a história real dos esforços dos Estados Unidos e Colômbia para combater o temido cartel de Medellín, uma das organizações criminosas mais ricas e impiedosas da história. A trama gira em torno no traficante Pablo Escobar (Wagner Moura), retratando a ascensão dele de um criminoso comum para um dos homens mais perigosos, procurados e ricos do mundo.', 'img/series-cards/narcos.jpeg', '16', 'https://www.youtube.com/embed/xl8zdCY-abw'),
+(35, 'Outlander', '2014', '', '', 'Claire Randall é uma enfermeira em combate em 1945. Ela é misteriosamente transportada através do tempo e mandada para 1743, e sua vida passa a correr riscos que ela desconhece. Forçada a se casar com Jamie Fraser, um cortês e nobre guerreiro escocês. Um relacionamento apaixonado se acende, e deixa o coração de Claire dividido entre dois homens completamente diferentes, em duas vidas que não podem ser conciliadas.', 'img/series-cards/Outlander.jpeg', '16', 'https://www.youtube.com/embed/XJdWOkyXdXs'),
+(36, 'Better call saul', '2015', '', '', 'Em maio de 2002, James Morgan McGill (Bob Odenkirk), ou Jimmy, como é mais conhecido, é um defensor público com dificuldades em Albuquerque, Novo México. De multas de estacionamento a assassinatos, de acidentes de carro a fraudes públicas, o advogado faz de tudo ao mesmo tempo em que cuida do irmão Chuck (Michael McKean), um importante advogado sócio de uma das maiores empresas da cidade que atualmente sofre de hipersensibilidade eletromagnética.\r\nEsse é o início da carreira de Saul Goodman, anos antes de ser contratado por Walter White nos acontecimentos da série Breaking Bad (AMC, 2008-2013).', 'img/series-cards/Saul.jpeg', '14', 'https://www.youtube.com/embed/zzy6wWjFONY'),
+(37, 'Cuphead Show', '2022', '', '', 'Acompanhe as desventuras do impulso Xicrinho e seu ingênuo irmão Caneco nesta série animação baseada no famoso videogame', 'img/series-cards/Cuphead.jpeg', '10', 'https://www.youtube.com/embed/Sel3fjl6uyo'),
+(38, 'The Boys', '2019', '', '', 'Hughie Campbell (Jack Quaid) fica traumatizado depois que sua namorada Robin (Jess Salgueiro) é morta em um impacto de alta velocidade com o super-herói Trem-Bala (Jessie Usher). Quando conhece Billy Bruto (Karl Urban), um vigilante que odeia qualquer um com poderes, Hughie vê a chance de expor a corrupção dos super-heróis, mas, para isso, ele precisará plantar uma escuta na torre da Vought - a empresa responsável pelos Sete, o principal time de super-heróis dos Estados Unidos, do qual Trem-Bala faz parte.\r\nO plano sai de controle quando Hughie é descoberto por Translúcido (Alex Hassell), que resolve segui-lo e confrontá-lo; assim, Hughie e Billy são obrigados a sequestrar e manter o herói em cativeiro. Para isso, os rapazes vão contar com a ajuda de Leitinho (Laz Alonso) e Francês (Tomer Kapon), dois antigos companheiros de Billy que sabem de sua obsessão em combater super-heróis e, sobretudo, em se vingar daquele que é o mais amado pela população: Capitão Pátria (Antony Starr), o líder dos Sete que, 8 anos antes, estuprou sua esposa Becca (Shantel VanSanten) - de quem Billy nunca mais teve notícias desde então.\r\nBaseada na HQ homônima de Garth Ennis.', 'img/series-cards/Boys.jpeg', '18', 'https://www.youtube.com/embed/BxmSk_pv8tE'),
+(39, 'Invencivel', '2021', '', '', 'A trama gira em torno de Mark Grayson (Steven Yeun), um adolescente de 17 anos que é exatamente como qualquer outro garoto da sua idade – exceto que seu pai é o super-herói mais poderoso do planeta, Omni-Man (J.K. Simmons). Mas quando Mark descobre que tem seus próprios poderes, ele percebe que o legado do seu pai não é tão heroico quanto parece.', 'img/series-cards/Invencivel.jpeg', '18', 'https://www.youtube.com/embed/chcPVeszoUo'),
+(40, 'Des(encanto)', '0000-00-00', '', '', 'Esta série de animação de Matt Groenign acompanha as malucas aventuras de uma princesa boa de copo em um reino medieval repleto de criaturas míticas.', 'img/series-cards/Des(encanto).jpeg', '10', 'https://www.youtube.com/embed/Dkgw8A-XiO0'),
+(41, 'All of us are Dead', '2022', '', '', 'All of Us Are Dead é sobre um grupo de estudantes do ensino médio que enfrentam uma situação extrema de crise quando ficam presos na escola, enquanto um vírus zumbi se espalha como um incêndio. Adaptado do webtoon coreano chamado Now at Our School', 'img/series-cards/Dead.jpeg', '16', 'https://www.youtube.com/embed/bmbl65oiUgA'),
+(42, 'The Umbrella Academy', '2019', '', '', 'Baseada na premiada série de quadrinhos com roteiro de Gerard Way e arte do brasileiro Gabriel Bá. A série acompanha um grupo superpoderoso de integrantes criados quando crianças para se tornarem heróis, pelo enigmático Sir Reginald Hargreeves. Nos dias de hoje, adultos, eles se encontram divididos e têm que se reunir para enfrentar um dos seus.', 'img/series-cards/Academy.jpeg', '16', 'https://www.youtube.com/embed/5_4SW8HHfUs'),
+(43, 'Sex Education', '2019', '', '', 'Otis Thompson (Asa Butterfield) é um virgem com ansiedade social que é filho de uma terapeuta sexual (Gillian Anderson). Por ter crescido cercado por manuais, vídeos e conversas abertas sobre sexualidade, ele torna-se um expert no assunto - mesmo que contra sua vontade. Com a ajuda de Maeve (Emma Mackey), ele inicia uma clínica clandestina dentro da escola, ajudando os colegas com problemas sexuais em troca de dinheiro.', 'img/series-cards/Sex Education.jpeg', '16', 'https://www.youtube.com/embed/Jv46AlQUto4'),
+(44, 'American Gods', '2017', '', '', 'Baseada no romance homônimo (Deus Americanos, no Brasil) de Neil Gaiman, a série será produzida para o canal a cabo Starz por Bryan Fuller (Pushing Daisies) e Michael Green (Heroes).\r\nCentrado em uma guerra entre os velhos e os novos deuses. Os seres bíblicos e mitológicos estão perdendo cada vez mais fiéis para novos deuses, que refletem o amor da sociedade por dinheiro, tecnologia, celebridades e drogas. Shadow Moon é um ex-vigarista que agora serve como segurança e companheiro de viagem para o Sr. Wednesday, um homem fraudulento que é, na verdade, um dos velhos deuses, e está na Terra em uma missão: reunir forças para lutar contra as novas entidades.', 'img/series-cards/Gods.jpeg', '16', 'https://www.youtube.com/embed/SHozrkt4Yt8'),
+(45, 'Ratched', '2020', '', '', 'Em 1947, Mildred Ratched (Sarah Paulson) chega na Califórnia do Norte em busca de emprego em um crescente hospital psiquiátrico que lidera com novas experiências na mente humana. Numa missão clandestina, Mildred se apresenta como a enfermeira perfeita, mas à medida que ela se infiltra no sistema de saúde mental, o exterior carismático de Mildred começa a esconder uma escuridão, provando que monstros reais são feitos.', 'img/series-cards/Ratched.jpeg', '16', 'https://www.youtube.com/embed/eE8HtX0GwfI'),
+(46, 'Good Omens', '2019', '', '', 'No ano de 2018, a humanidade está à beira de um apocalipse e pronta para enfrentar o julgamento final quando Aziraphale (Michael Sheen), um anjo um tanto inquieto, e Crowley (David Tennant), um demônio, não tão entusiasmados com o fim do mundo, decidem encontrar o Anticristo.', 'img/series-cards/Good Omens.jpeg', '14', 'https://www.youtube.com/embed/7pAMFMabzSo\n'),
+(47, 'The Witcher', '2019', '', '', 'Geralt de Rívia (Henry Cavill), um solitário caçador de monstros, luta para achar seu lugar num mundo onde pessoas se provam mais perversas do que criaturas. Mas quando o destino o leva à uma poderosa feiticeira (Anya Chalotra) e uma jovem princesa (Freya Allan) com um segredo perigoso, os três precisam aprender a navegar pelo Continente juntos.', 'img/series-cards/Witcher.jpeg', '16', 'https://www.youtube.com/embed/tjujvMkqWe4'),
+(48, 'Breaking Bad', '2008', '', '', 'Bryan Cranston, premiado com o Emmy®, é a estrela da série no papel de Walter White, um professor de química que leva uma vida difícil e luta para pagar as contas sustentando a esposa (Anna Gunn) e o filho, que tem dificuldades físicas (RJ Mitte). Sua vida inteira muda diante de um diagnóstico perturbador: câncer do pulmão sem possibilidade de cura. Com poucos anos de vida e nada mais a perder, Walter usa seus conhecimentos de química para fazer e vender metanfetamina com um dos seus ex-alunos (Aaron Paul). Seus negócios crescem e as mentiras também, mas nada detém Walter em sua missão de assegurar o futuro da família após a sua morte, mesmo que ele tenha que arriscar a vida da família toda.\r\n\r\nMenos ', 'img/series-cards/BB.jpeg', '16', 'https://www.youtube.com/embed/2-W6_6gJda0'),
+(49, 'The Last of Us', '2023', '', '', 'Vinte anos após a destruição da civilização moderna, Joel, um sobrevivente, é contratado para contrabandear Ellie, uma garota de 14 anos, para fora de uma zona opressiva de quarentena. O que começa como um pequeno trabalho logo se torna uma jornada brutal e de partir o coração, já que ambos devem atravessar os EUA e dependem um do outro para sobreviver.', 'img/series-cards/TLOU.jpeg\r\n', '16', 'https://www.youtube.com/embed/uLtkt8BonwM'),
 (50, 'Mr. Pickles', '2013', '', '', 'Mr. Pickles mostra o cotidiano da família Goodman e de seu border Collier demoníaco Mr. Pickles. A série gira em torno do avô que sabe da natureza do cachorro e tenta alertar a sua família, mas suas histórias são tão surreais e estapafúrdias que é dado como gagá, sem falar que o Mr. Pickles sempre arranja um jeito de desacreditar o senhor de idade. A série é focada em um forte humor negro e sem economizar na violência.', 'img/series-cards/Pickles.jpeg', '16', 'https://www.youtube.com/embed/TMF9xgQ_nSU');
 
 --
@@ -242,7 +602,7 @@ ALTER TABLE `cliente`
 -- Índices para tabela `elenco`
 --
 ALTER TABLE `elenco`
-  ADD PRIMARY KEY (`IdDiretor`);
+  ADD PRIMARY KEY (`IdElenco`);
 
 --
 -- Índices para tabela `filmes`
@@ -273,16 +633,43 @@ ALTER TABLE `cliente`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de tabela `elenco`
---
-ALTER TABLE `elenco`
-  MODIFY `IdDiretor` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de tabela `genero`
 --
+
 ALTER TABLE `genero`
   MODIFY `IdGenero` int(3) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+--
+-- Índices de tabela `favoritos`
+--
+ALTER TABLE `favoritos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_filme` (`id_filme`),
+  ADD KEY `id_cliente` (`id_cliente`),
+  ADD KEY `id_serie` (`id_serie`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `favoritos`
+--
+ALTER TABLE `favoritos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restrições para tabelas despejadas
+--
+
+--
+-- Restrições para tabelas `favoritos`
+--
+ALTER TABLE `favoritos`
+  ADD CONSTRAINT `favoritos_ibfk_1` FOREIGN KEY (`id_filme`) REFERENCES `filmes` (`id`),
+  ADD CONSTRAINT `favoritos_ibfk_2` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`),
+  ADD CONSTRAINT `favoritos_ibfk_3` FOREIGN KEY (`id_serie`) REFERENCES `series` (`Id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

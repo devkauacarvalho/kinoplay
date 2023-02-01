@@ -68,7 +68,7 @@
             ?>
 			<div class="child">
 				<i class="heartBtn ri-heart-add-line"></i>
-				<a href="template.php?id=<?php echo $row['id']?>">
+				<a href="filmetemplate.php?id=<?php echo $row['id']?>">
 					<img class="child-img" dataid="<?php echo $row['id'] ?>">
 				</a>
 			</div>

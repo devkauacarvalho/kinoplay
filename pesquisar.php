@@ -35,9 +35,19 @@ $resultado_series = mysqli_query($conn, $result_series);
 	<link rel="stylesheet" href="../package/css/swiper.min.css">
 	<title>Kinoplay</title>
 	<style>
-		#inicio{
-    	color: #a600d8;
+		main{
+			margin-top: 110px;
+			margin-bottom:50px
 		}
+		footer{
+			width:100%;
+		}
+		#warning{
+    color: var(--text-color);
+	text-align:center;
+	position: relative;
+	top:150px;
+}
 	</style>
 </head>
 <body>
@@ -76,29 +86,36 @@ $resultado_series = mysqli_query($conn, $result_series);
 	</section>
 	</header>
 	<main>
-	<section>
-		<h2 class="tituloCatalogo">A escolha é sua</h2>
+		<section>
 			<div class="scroll-images">
-							<?php 
-							while($rows_filmes = mysqli_fetch_array($resultado_filmes)){
-	echo '<img src="'.$rows_filmes['Imagem'].'">';?>
-
-	<div class="child"><i class="heartBtn ri-heart-add-line"></i>
-	<?php
-}
-?>
-</div>
-
-<div class="child"><i class="heartBtn ri-heart-add-line"></i>
-							<?php 
-							while($rows_series = mysqli_fetch_array($resultado_series)){
-	echo '<img src="'.$rows_series['Imagem'].'">';
-}
-?></div>
-						
+				<?php 
+					while($rows_filmes = mysqli_fetch_array($resultado_filmes)){
+						 ?>
+			<div class="child">
+				<i class="heartBtn ri-heart-add-line"></i>
+				<a href="filmetemplate.php?id=<?php echo $rows_filmes['id']?>">
+				<?php
+					echo '<img class="child-img" src="'.$rows_filmes['Imagem'].'">';?>
+				</a>
+			</div>
+				<?php
+			}
+		?>
+				<?php 
+					while($rows_series = mysqli_fetch_array($resultado_series)){
+						?>
+						<div class="child">
+						<i class="heartBtn ri-heart-add-line"></i>
+						<a href="serietemplate.php?id=<?php echo $rows_series['id']?>">
+						<?php
+							echo '<img class="child-img" src="'.$rows_series['Imagem'].'">';?>
+						</a>
+					</div>
+				<?php
+			}
+		?>		
 			</div>
 		</section>
-		</div>
 	</main>
 	
 		<footer>	
@@ -149,4 +166,6 @@ $resultado_series = mysqli_query($conn, $result_series);
 	<script src="js/favButton.js"></script>
 	
 	<script src="js/scrollScript.js"></script>
+
+	<script src="js/footer.js"></script>
 </html>

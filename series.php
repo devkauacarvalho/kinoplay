@@ -61,13 +61,13 @@
 			<?php
         include "paineladm/configfilmes.php";
 
-        $sql = "SELECT * FROM `series`";
-        $result = mysqli_query($conn, $sql);
-        while ($row = mysqli_fetch_assoc($result)) {
+        $sql1 = "SELECT * FROM `series`";
+        $result1 = mysqli_query($conn, $sql1);
+        while ($row = mysqli_fetch_assoc($result1)) {
             ?>
 			<div class="child">
 				<i class="heartBtn ri-heart-add-line"></i>
-				<a href="template.php?id=<?php echo $row['id']?>">
+				<a href="serietemplate.php?id=<?php echo $row['id']?>">
 					<img class="child-img" src="<?php echo $row['Imagem'] ?>">
 				</a>
 			</div>
