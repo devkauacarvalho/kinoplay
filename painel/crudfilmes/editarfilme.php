@@ -1,23 +1,26 @@
 <?php
-INCLUDE 'configfilmes.php';
+include 'configfilmes.php';
+$id = $_GET['id'];
 
 if(isset($_POST['submit'])) {
-    $titulo = mysqli_real_escape_string($conn, $_POST['titulo']);
-    $anoLancamento = mysqli_real_escape_string($conn, $_POST['anoLancamento']);
-    $idDiretor = mysqli_real_escape_string($conn, $_POST['idDiretor']);
-    $idGenero = mysqli_real_escape_string($conn, $_POST['idGenero']); 
-    $sinopse = mysqli_real_escape_string($conn, $_POST['sinopse']);
-    $Imagem = mysqli_real_escape_string($conn, $_POST['Imagem']);
-    $Classificacao = mysqli_real_escape_string($conn, $_POST['Classificacao']);
-    $trailer = mysqli_real_escape_string($conn, $_POST['trailer']);
+    
+    $titulo = ($_POST['titulo']);
+    $anoLancamento = ($_POST['anoLancamento']);
+    $idDiretor = ($_POST['idDiretor']);
+    $idGenero = ($_POST['idGenero']); 
+    $sinopse = ($_POST['sinopse']);
+    $Imagem = ($_POST['Imagem']);
+    $Classificacao = ($_POST['Classificacao']);
+    $trailer = ($_POST['trailer']);
 
-    $sql = "INSERT INTO `filmes`(`id`,`titulo`,`anoLancamento`, `idDiretor`, `idGenero`, `sinopse`, `Imagem`, `Classificacao`, `trailer`) 
-    VALUES ('','$titulo','$anoLancamento','$idDiretor','$idGenero','$sinopse','$Imagem','$Classificacao','$trailer')";
+    $sql = "UPDATE filmes SET titulo='$titulo', anoLancamento='$anoLancamento',
+    idDiretor='$idDiretor',idGenero='$idGenero',sinopse='$sinopse',Imagem='$Imagem',
+    Classificacao=$Classificacao,trailer='$trailer' WHERE id='$id' ";
 
     $result = mysqli_query($conn, $sql);
 
     if($result) {
-        header("Location: indexfilmes.php?msg=Novo registro criado com sucesso");
+       header("Location: indexfilmes.php?msg=registro atualizado com sucesso");
     }
     else {
       echo "Erro. Algo falhou" . mysqli_error($conn); 
@@ -51,42 +54,56 @@ if(isset($_POST['submit'])) {
     <title>CRUD</title>
 </head>
 <body>
-    
-<form action="create.php" method="post">
+
+<div class="container">
+<div class="text-center mb-4">
+<h3>Editar Informações dos Filmes</h3>
+<p class="text-muted">Clique em Atualizar depois de mudar qualquer informação</p>
+
+</div>
+</div>  
+<?php 
+$sql = "SELECT * FROM filmes WHERE id =".$id;
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+?>
+
+<div class="container d-flex justify-content-center"> 
+<form action="" method="post">
   <div class="form-group">
     <label for="titulo">Título</label>
-    <input type="text" class="form-control" id="titulo" name="titulo" required>
+    <input type="text" class="form-control" id="titulo" name="titulo" value="<?php echo $row['titulo']?>">
   </div>
   <div class="form-group">
     <label for="anoLancamento">Ano de Lançamento</label>
-    <input type="date" class="form-control" id="anoLancamento" name="anoLancamento" required>
+    <input type="date" class="form-control" id="anoLancamento" name="anoLancamento" value="<?php echo $row['anoLancamento']?>">
   </div>
   <div class="form-group">
     <label for="idDiretor">ID Diretor</label>
-    <input type="number" class="form-control" id="idDiretor" name="idDiretor" required>
+    <input type="number" class="form-control" id="idDiretor" name="idDiretor" value="<?php echo $row['idDiretor']?>">
   </div>
   <div class="form-group">
     <label for="idGenero">ID Gênero</label>
-    <input type="number" class="form-control" id="idGenero" name="idGenero" required>
+    <input type="number" class="form-control" id="idGenero" name="idGenero" value="<?php echo $row['idGenero']?>">
   </div>
   <div class="form-group">
     <label for="sinopse">Sinopse</label>
-    <textarea class="form-control" id="sinopse" name="sinopse" required></textarea>
+    <textarea class="form-control" id="sinopse" name="sinopse"><?php echo $row['sinopse']?></textarea>
   </div>
   <div class="form-group">
     <label for="Imagem">Imagem</label>
-    <textarea class="form-control" id="Imagem" name="Imagem" required></textarea>
+    <input class="form-control" id="Imagem" name="Imagem" value="<?php echo $row['Imagem']?>">
   </div>
   <div class="form-group">
     <label for="Classificacao">Classificação</label>
-    <input type="number" class="form-control" id="Classificacao" name="Classificacao" required>
+    <input type="number" class="form-control" id="Classificacao" name="Classificacao" value="<?php echo $row['Classificacao']?>">
   </div>
   <div class="form-group">
     <label for="trailer">Trailer</label>
-    <textarea class="form-control" id="trailer" name="trailer" required></textarea>
+    <input class="form-control" id="trailer" name="trailer" value="<?php echo $row['trailer']?>">
   </div>
-  <button type="submit"  name="submit" class="btn btn-primary">Adicionar Filme</button>
+  <button type="submit"  name="submit" class="btn btn-primary">Atualizar</button>
 </form>
-
+</div>
 </body>
 </html>
