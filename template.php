@@ -1,6 +1,9 @@
+
+
+
+
 <?php
     require 'reglog/config.php';
-
     $id = $_GET['id'];
 
     // Consulta SQL para buscar os itens esperados
