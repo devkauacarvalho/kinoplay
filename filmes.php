@@ -69,7 +69,7 @@
 			<div class="child">
 				<i class="heartBtn ri-heart-add-line"></i>
 				<a href="filmetemplate.php?id=<?php echo $row['id']?>">
-					<img class="child-img" dataid="<?php echo $row['id'] ?>">
+					<img class="child-img" src="<?php echo $row['Imagem'] ?>">
 				</a>
 			</div>
             <?php
@@ -126,7 +126,5 @@
 	<script src="js/favButton.js"></script>
 	
 	<script src="js/scrollScript.js"></script>
-
-	<script src="js/cards.js"></script>
 
 </html>

@@ -1,10 +1,10 @@
 var imgs = document.querySelectorAll(".child-img");
 
 imgs.forEach(img => {
-  var iddata = img.getAttribute("dataid");
+  var iddata = img.getAttribute("filmeid");
 
   if (iddata) {
-    fetch("js/load_image.php", {
+    fetch("js/load_filme.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
