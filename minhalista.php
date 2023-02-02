@@ -79,7 +79,7 @@
     color: var(--text-color);
 	text-align:center;
 	position: relative;
-	top:150px;
+	top:70px;
 }
 	</style>
 </head>
@@ -122,7 +122,7 @@
 	<section>
 			<div class="scroll-images">
 					<?php
-        include "paineladm/configfilmes.php";
+        include "reglog/config.php";
 
         $sql2 = "SELECT * FROM `favoritos`";
         $result2 = mysqli_query($conn, $sql2);
@@ -190,6 +190,6 @@
 	
 	<script src="js/scrollScript.js"></script>
 
-	<script src="js/footer.js"></script>
+	<script src="js/minha_lista.js"></script>
 
 </html>

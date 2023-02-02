@@ -4,26 +4,34 @@
     $id = $_GET['id'];
 
     // Consulta SQL para buscar os itens esperados
+
     $filme_trailer = "SELECT trailer FROM filmes WHERE id = $id";
     $filme_banner = "SELECT Imagem FROM filmes WHERE id = $id";
     $filme_titulo = "SELECT titulo FROM filmes WHERE id = $id";
     $filme_sinopse = "SELECT sinopse FROM filmes WHERE id = $id";
+
+/*     $filme_elenco = "SELECT image_Ator FROM elenco WHERE id = $id"; */
 
     $result_ftrailer = mysqli_query($conn, $filme_trailer);
     $result_fbanner = mysqli_query($conn, $filme_banner);
     $result_ftitulo = mysqli_query($conn, $filme_titulo);
     $result_fsinopse = mysqli_query($conn, $filme_sinopse);
 
+/*     $result_felenco = mysqli_query($conn, $filme_elenco); */
+
     $row1 = mysqli_fetch_assoc($result_ftrailer);
     $row2 = mysqli_fetch_assoc($result_fbanner);
     $row3 = mysqli_fetch_assoc($result_ftitulo);
     $row4 = mysqli_fetch_assoc($result_fsinopse);
 
+/*     $row5 = mysqli_fetch_assoc($result_felenco); */
+
     $ftrailer = $row1['trailer'];
     $fimagem = $row2['Imagem'];
     $ftitulo = $row3['titulo'];
     $fsinopse = $row4['sinopse'];
-?>
+
+/*     $felenco = $row5['elenco']; */?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -211,9 +219,9 @@
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
+            </nav>
     </header>
     <main>
-        </nav>
         <div class="banner">
             <img src="<?php echo $fimagem; ?>">
         </div>
@@ -234,14 +242,11 @@
         </div>
         <div class="elenco">
             <h2>Elenco</h2>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div><img src="<?php echo $felenco; ?>"></div>
+            <div><img src="<?php echo $felenco; ?>"></div>
+            <div><img src="<?php echo $felenco; ?>"></div>
+            <div><img src="<?php echo $felenco; ?>"></div>
+            <div><img src="<?php echo $felenco; ?>"></div>
         </div>
     </main>
 </body>

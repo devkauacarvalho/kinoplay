@@ -59,7 +59,7 @@
 		<h2 class="tituloCatalogo">A escolha é sua</h2>
 			<div class="scroll-images">
 			<?php
-        include "paineladm/configfilmes.php";
+        include "reglog/config.php";
 
         $sql1 = "SELECT * FROM `series`";
         $result1 = mysqli_query($conn, $sql1);

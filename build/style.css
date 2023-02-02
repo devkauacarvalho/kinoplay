@@ -4,7 +4,7 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
-    padding: 0px; 
+    padding: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
     scroll-padding-top: 2rem;
@@ -41,6 +41,9 @@ header{
 header.ativo{
     background-color: #00001f;
 }
+.cor-header{
+    background-color: #e20f0f;
+}
 header > section{
     display: flex;
     justify-content: flex-end;
@@ -59,7 +62,7 @@ a{
     color: var(--button-color);
 }
 .imglogo{
-    height: 50px;
+height: 50px;
 }
 .name{
     margin-left: 10px;
@@ -81,9 +84,6 @@ a{
 .nav-links a:hover{
     color: #c300ff;
     
-}
-.minhalista{
-    color: #a600d8;
 }
 .navbar{
     justify-content: space-around;
@@ -141,7 +141,7 @@ a{
     width: 200px;
     height: 30px;
     background: #221b3d;
-    border-radius: 10px;
+    border-radius: 70px;
 }
 .btn{  /*perna do botão*/
     position: absolute;
@@ -514,7 +514,7 @@ html::-webkit-scrollbar-thumb{
         font-size: 25px;
         position: relative;
         bottom: 15px;
-        left: 24px;
+        left: 20px;
     }
 }
 @media (max-width: 1981px) {    
@@ -565,7 +565,7 @@ html::-webkit-scrollbar-thumb{
     }
     .info a span{
         
-    font-size: 22px;
+    font-size: 25px;
     position: relative;
     bottom: 4px ;
     right: 19px;
@@ -635,6 +635,7 @@ html::-webkit-scrollbar-thumb{
     padding-top: 20px;
     border-radius: 30px 0 0 30px;
   }
+
   .hamburger.active{
     right: 7.5%;
     position: fixed;
@@ -783,7 +784,8 @@ html::-webkit-scrollbar-thumb{
         top: 420px;
     }
     .info a span{
-    font-size: 15px;
+        
+    font-size: 18px;
     position: relative;
     bottom: 7px ;
     left: -20px;
@@ -875,6 +877,8 @@ html::-webkit-scrollbar-thumb{
         top: 390px;
     }
     .info a span{
+        
+    font-size: 15px;
     position: relative;
     bottom: 1px ;
     left: -30px;

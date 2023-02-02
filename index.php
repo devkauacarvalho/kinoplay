@@ -73,8 +73,8 @@
 					<div class="menu-home">
 						<img src="img/destaque-logo/venom.png" alt="Título" id="venom">
 						<div class="info">
-							<a href="#">
-								<i class="ri-information-fill"></i> <span>more info</span>
+							<a href="filmetemplate.php?id=51">
+								<i class="ri-information-fill"></i> <span>Saiba mais</span>
 							</a>
 						</div>
 						<a href="#" class="play">
@@ -87,8 +87,8 @@
 					<div class="menu-home">
 						<img id="vingadores" src="img/destaque-logo/avengers.png" alt="vingadores Endgame">
 						<div class="info">
-							<a href="#">
-								<i class="ri-information-fill"></i> <span>more info</span>
+							<a href="filmetemplate.php?id=52">
+								<i class="ri-information-fill"></i> <span>Saiba mais</span>
 							</a>
 						</div>
 						<a href="#" class="play">
@@ -101,8 +101,8 @@
 					<div class="menu-home">
 						<img src="img/destaque-logo/avatar2.png" alt="Título" id="avatar">
 						<div class="info">
-							<a href="#">
-								<i class="ri-information-fill"></i> <span>more info</span>
+							<a href="filmetemplate.php?id=53">
+								<i class="ri-information-fill"></i> <span>Saiba mais</span>
 							</a>
 						</div>
 						<a href="#" class="play">
@@ -121,26 +121,26 @@
 						<button class="icon1" data-target="list1" onclick="scroll_left(this)"><i class="ri-arrow-left-s-line"></i></button>
 						<button class="icon2" data-target="list1" onclick="scroll_right(this)"><i class="ri-arrow-right-s-line"></i></button>
 						<div class="scroll-images" id="list1">
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=1"><img class="child-img" dataid="1"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=2"><img class="child-img" dataid="2"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=3"><img class="child-img" dataid="3"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=4"><img class="child-img" dataid="4"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=5"><img class="child-img" dataid="5"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=6"><img class="child-img" dataid="6"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=7"><img class="child-img" dataid="7"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=8"><img class="child-img" dataid="8"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=9"><img class="child-img" dataid="9"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=10"><img class="child-img" dataid="10"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=11"><img class="child-img" dataid="11"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=12"><img class="child-img" dataid="12"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=13"><img class="child-img" dataid="13"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=14"><img class="child-img" dataid="14"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=15"><img class="child-img" dataid="15"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=16"><img class="child-img" dataid="16"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=17"><img class="child-img" dataid="17"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=18"><img class="child-img" dataid="18"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=19"><img class="child-img" dataid="19"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=20"><img class="child-img" dataid="20"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=1"><img class="child-img" filmeid="1"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=2"><img class="child-img" filmeid="2"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=3"><img class="child-img" filmeid="3"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=4"><img class="child-img" filmeid="4"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=5"><img class="child-img" filmeid="5"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=6"><img class="child-img" filmeid="6"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=7"><img class="child-img" filmeid="7"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=8"><img class="child-img" filmeid="8"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=9"><img class="child-img" filmeid="9"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=10"><img class="child-img" filmeid="10"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=11"><img class="child-img" filmeid="11"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=12"><img class="child-img" filmeid="12"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=13"><img class="child-img" filmeid="13"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=14"><img class="child-img" filmeid="14"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=15"><img class="child-img" filmeid="15"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=16"><img class="child-img" filmeid="16"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=17"><img class="child-img" filmeid="17"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=18"><img class="child-img" filmeid="18"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=19"><img class="child-img" filmeid="19"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=20"><img class="child-img" filmeid="20"></a></div>
 						</div>
 					</div>
 				</div>
@@ -152,21 +152,21 @@
 						<button class="icon1" data-target="list2" onclick="scroll_left(this)"><i class="ri-arrow-left-s-line"></i></button>
 						<button class="icon2" data-target="list2" onclick="scroll_right(this)"><i class="ri-arrow-right-s-line"></i></button>
 						<div class="scroll-images" id="list2">
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=21"><img class="child-img" dataid="21"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=22"><img class="child-img" dataid="22"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=23"><img class="child-img" dataid="23"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=24"><img class="child-img" dataid="24"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=25"><img class="child-img" dataid="25"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=26"><img class="child-img" dataid="26"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=27"><img class="child-img" dataid="27"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=28"><img class="child-img" dataid="28"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=29"><img class="child-img" dataid="29"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=30"><img class="child-img" dataid="30"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=31"><img class="child-img" dataid="31"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=32"><img class="child-img" dataid="32"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=33"><img class="child-img" dataid="33"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=34"><img class="child-img" dataid="34"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=35"><img class="child-img" dataid="35"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=21"><img class="child-img" filmeid="21"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=22"><img class="child-img" filmeid="22"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=23"><img class="child-img" filmeid="23"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=24"><img class="child-img" filmeid="24"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=25"><img class="child-img" filmeid="25"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=26"><img class="child-img" filmeid="26"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=27"><img class="child-img" filmeid="27"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=28"><img class="child-img" filmeid="28"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=29"><img class="child-img" filmeid="29"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=30"><img class="child-img" filmeid="30"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=31"><img class="child-img" filmeid="31"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=32"><img class="child-img" filmeid="32"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=33"><img class="child-img" filmeid="33"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=34"><img class="child-img" filmeid="34"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="filmetemplate.php?id=35"><img class="child-img" filmeid="35"></a></div>
 						</div>
 					</div>
 				</div>
@@ -178,22 +178,23 @@
 						<button class="icon1" data-target="list3" onclick="scroll_left(this)"><i class="ri-arrow-left-s-line"></i></button>
 						<button class="icon2" data-target="list3" onclick="scroll_right(this)"><i class="ri-arrow-right-s-line"></i></button>
 						<div class="scroll-images" id="list3">
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=1"><img class="child-img" src="img/"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=2"><img class="child-img" src="img/"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=3"><img class="child-img" src="img/"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=4"><img class="child-img" src="img/"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=5"><img class="child-img" src="img/"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=6"><img class="child-img" src="img/"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=7"><img class="child-img" src="img/"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=8"><img class="child-img" src="img/"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=9"><img class="child-img" src="img/"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=10"><img class="child-img" src="img/"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=11"><img class="child-img" src="img/"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=12"><img class="child-img" src="img/"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=13"><img class="child-img" src="img/"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=14"><img class="child-img" src="img/"></a></div>
-							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=15"><img class="child-img" src="img/"></a></div>
-						</div>serie	</div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=1"><img class="child-img" serieid="1">></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=2"><img class="child-img" serieid="2"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=3"><img class="child-img" serieid="3"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=4"><img class="child-img" serieid="4"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=5"><img class="child-img" serieid="5"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=6"><img class="child-img" serieid="6"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=7"><img class="child-img" serieid="7"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=8"><img class="child-img" serieid="8"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=9"><img class="child-img" serieid="9"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=10"><img class="child-img" serieid="10"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=11"><img class="child-img" serieid="11"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=12"><img class="child-img" serieid="12"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=13"><img class="child-img" serieid="13"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=14"><img class="child-img" serieid="14"></a></div>
+							<div class="child"><i class="heartBtn ri-heart-add-line"></i><a href="serietemplate.php?id=15"><img class="child-img" serieid="15"></a></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -246,6 +247,8 @@
 
 <script src="js/scrollScript.js"></script>
 
-<script src="js/cards.js"></script>
+<script src="js/filme_cards.js"></script>
+
+<script src="js/serie_cards.js"></script>
 
 </html>
