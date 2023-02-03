@@ -514,7 +514,7 @@ html::-webkit-scrollbar-thumb{
         font-size: 25px;
         position: relative;
         bottom: 15px;
-        left: 20px;
+        left: 24px;
     }
 }
 @media (max-width: 1981px) {    
@@ -565,7 +565,7 @@ html::-webkit-scrollbar-thumb{
     }
     .info a span{
         
-    font-size: 25px;
+    font-size: 22px;
     position: relative;
     bottom: 4px ;
     right: 19px;
@@ -783,8 +783,7 @@ html::-webkit-scrollbar-thumb{
         top: 420px;
     }
     .info a span{
-        
-    font-size: 18px;
+    font-size: 15px;
     position: relative;
     bottom: 7px ;
     left: -20px;
@@ -876,8 +875,6 @@ html::-webkit-scrollbar-thumb{
         top: 390px;
     }
     .info a span{
-        
-    font-size: 18px;
     position: relative;
     bottom: 1px ;
     left: -30px;
