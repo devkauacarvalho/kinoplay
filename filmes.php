@@ -59,7 +59,7 @@
 		<section>
 		<h2 class="tituloCatalogo">A escolha é sua</h2>
 			<div class="scroll-images">
-					<?php
+		<?php
         include "reglog/config.php";
 
         $sql = "SELECT * FROM `filmes`";

@@ -7,7 +7,6 @@ for (let i = 0; i < heartBtns.length; i++) {
     this.classList.toggle('ri-heart-fill');
 
     const id_F = $(this).closest('div.child').find('img').attr('filmeid');
-    console.log("Id Filme: ", id_F);
 
     fetch("js/add_favoritos.php").then(function(response) {
     });

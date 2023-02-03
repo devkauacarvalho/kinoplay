@@ -121,23 +121,48 @@
 	<main>
 	<section>
 			<div class="scroll-images">
-					<?php
-        include "reglog/config.php";
+			<?php
+include "reglog/config.php";
 
-        $sql2 = "SELECT * FROM `favoritos`";
-        $result2 = mysqli_query($conn, $sql2);
-        while ($row = mysqli_fetch_assoc($result2)) {
-            ?>
-			<div class="child">
-				<i class="heartBtn ri-heart-add-line"></i>
-				<a href="filmetemplate.php?id=<?php echo $row['id']?>">
-					<img class="child-img" dataid="<?php echo $row['id'] ?>">
-				</a>
-			</div>
-            <?php
-        }
+$client_id = $_SESSION['id'];
 
-        ?>
+$sql = "SELECT * FROM favoritos WHERE id_cliente = '$client_id'";
+$result = mysqli_query($conn, $sql);
+
+while ($row = mysqli_fetch_assoc($result)) {
+    $id_filme = $row['id_filme'];
+    $id_serie = $row['id_serie'];
+    
+    // Consultar tabela de filmes
+    $sql_filme = "SELECT * FROM filmes WHERE id = '$id_filme'";
+    $result_filme = mysqli_query($conn, $sql_filme);
+    $filme = mysqli_fetch_assoc($result_filme);
+    
+    // Consultar tabela de séries
+    $sql_serie = "SELECT * FROM series WHERE id = '$id_serie'";
+    $result_serie = mysqli_query($conn, $sql_serie);
+    $serie = mysqli_fetch_assoc($result_serie);
+    
+    // Exibir informações adicionais dos filmes e séries favoritos
+    if ($filme) {
+        echo '<div class="child">';
+        echo '<i class="heartBtn ri-heart-add-line"></i>';
+        echo '<a href="filmetemplate.php?id=' . $filme['id'] . '">';
+        echo '<img class="child-img" src="' . $filme['Imagem'] . '">';
+        echo '</a>';
+        echo '</div>';
+    }
+    
+    if ($serie) {
+        echo '<div class="child">';
+        echo '<i class="heartBtn ri-heart-add-line"></i>';
+        echo '<a href="serietemplate.php?id=' . $serie['id'] . '">';
+        echo '<img class="child-img" src="' . $serie['Imagem'] . '">';
+        echo '</a>';
+        echo '</div>';
+    }
+}
+?>
 	</div>
 		</section>
 	</main>
@@ -191,5 +216,7 @@
 	<script src="js/scrollScript.js"></script>
 
 	<script src="js/minha_lista.js"></script>
+
+	<script src="js/filme_cards.js"></script>
 
 </html>
