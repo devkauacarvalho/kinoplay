@@ -672,8 +672,8 @@ ALTER TABLE `series`
 -- Restrições para tabelas `favoritos`
 --
 ALTER TABLE `favoritos`
-  ADD CONSTRAINT `fk_id_filmes` FOREIGN KEY (`id_filmes`) REFERENCES `filmes` (`id`) ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_id_series` FOREIGN KEY (`id_series`) REFERENCES `series` (`Id`) ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_id_filmes` FOREIGN KEY (`id_filme`) REFERENCES `filmes` (`id`) ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_id_series` FOREIGN KEY (`id_serie`) REFERENCES `series` (`Id`) ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_id_usuario` FOREIGN KEY (`id`) REFERENCES `cliente` (`id`) ON UPDATE NO ACTION;
 COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
