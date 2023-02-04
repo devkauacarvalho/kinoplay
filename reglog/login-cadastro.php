@@ -1,5 +1,6 @@
 <?php
 require 'config.php';
+session_start();
 if(isset($_POST["submit"])){
     $nome = $_POST["nome"];
     $username = $_POST["username"];

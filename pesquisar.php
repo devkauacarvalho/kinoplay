@@ -29,7 +29,7 @@ $resultado_series = mysqli_query($conn, $result_series);
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="img/website-logo/logo.png">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/filmes-series-main.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="../package/css/swiper.min.css">
