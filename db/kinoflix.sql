@@ -60,7 +60,7 @@ CREATE TABLE `elenco` (
 
 --
 -- Extraindo dados da tabela `elenco`
---rk
+--
 
 INSERT INTO `elenco` (`id`, `Ator`, `image_Ator`, `Apareceem`, `idFilmes`, `idSeries`) VALUES
 (1, 'Yoon Chan-Young', 'img/ator-cards/Yoon Chan-Young.jpg', 'All of us are Dead', NULL, 41),
