@@ -74,7 +74,7 @@
 					<div class="menu-home">
 						<img src="img/destaque-logo/venom.png" alt="Título" id="venom">
 						<div class="info">
-							<a href="filmetemplate.php?id=51">
+							<a href="filmetemplate.php?id=53">
 								<i class="ri-information-fill"></i> <span>Saiba mais</span>
 							</a>
 						</div>
@@ -88,7 +88,7 @@
 					<div class="menu-home">
 						<img id="vingadores" src="img/destaque-logo/avengers.png" alt="vingadores Endgame">
 						<div class="info">
-							<a href="filmetemplate.php?id=52">
+							<a href="filmetemplate.php?id=51">
 								<i class="ri-information-fill"></i> <span>Saiba mais</span>
 							</a>
 						</div>
@@ -102,7 +102,7 @@
 					<div class="menu-home">
 						<img src="img/destaque-logo/avatar2.png" alt="Título" id="avatar">
 						<div class="info">
-							<a href="filmetemplate.php?id=53">
+							<a href="filmetemplate.php?id=52">
 								<i class="ri-information-fill"></i> <span>Saiba mais</span>
 							</a>
 						</div>
