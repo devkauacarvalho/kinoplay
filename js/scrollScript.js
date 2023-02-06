@@ -16,7 +16,7 @@ for (var i = 0; i < lists.length; i++) {
         }
     });
     if(lists[i].scrollLeft === 0){
-        var icon1 = document.querySelector("[data-target='"+lists[i].id+"']")
+        var icon1 = document.querySelector("[data-target='"+lists[i].id+"']");
         icon1.style.display = "none";
     }
 }

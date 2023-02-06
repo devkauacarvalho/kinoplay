@@ -1,6 +1,7 @@
 <?php
     include 'reglog/config.php';
     session_start();
+    
     $id = $_GET['id'];
 
     // Consulta SQL para buscar os itens esperados

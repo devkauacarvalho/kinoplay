@@ -18,6 +18,9 @@
 			margin-top: 200px;
 			margin-bottom:50px
 		}
+		.ri-heart-fill{
+			color: red;
+		}
 	</style>
 </head>
 <body>
@@ -61,15 +64,27 @@
 			<div class="scroll-images">
 					<?php
         include "reglog/config.php";
-
+		session_start();
         $sql = "SELECT * FROM `filmes`";
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result)) {
+
+			$favorito = false;
+
+			if (isset($_SESSION['id'])) {
+				$id_cliente = $_SESSION['id'];
+	
+				$sql2 = "SELECT * FROM `favoritos` WHERE `id_filme` = ".$row['id']." AND `id_cliente` = ".$id_cliente;
+				$result2 = mysqli_query($conn, $sql2);
+				if (mysqli_num_rows($result2) > 0) {
+					$favorito = true;
+				}
+			}
             ?>
 			<div class="child">
-				<i class="heartBtn ri-heart-add-line"></i>
+			<i class="heartBtn <?php echo ($favorito) ? 'ri-heart-fill' : 'ri-heart-add-line' ?>"></i>
 				<a href="filmetemplate.php?id=<?php echo $row['id']?>">
-					<img class="child-img" src="<?php echo $row['Imagem'] ?>">
+					<img class="child-img" filmeid="<?php echo $row['id']?>" src="<?php echo $row['Imagem'] ?>">
 				</a>
 			</div>
             <?php
@@ -124,7 +139,5 @@
 	<script src="js/custom.js"></script>
 
 	<script src="js/favButton.js"></script>
-	
-	<script src="js/scrollScript.js"></script>
 
 </html>

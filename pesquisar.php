@@ -89,6 +89,7 @@ $resultado_series = mysqli_query($conn, $result_series);
 		<section>
 			<div class="scroll-images">
 				<?php 
+				session_start();
 					while($rows_filmes = mysqli_fetch_array($resultado_filmes)){
 						 ?>
 			<div class="child">

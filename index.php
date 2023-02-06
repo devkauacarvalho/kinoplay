@@ -28,6 +28,9 @@
 		#inicio {
 			color: #a600d8;
 		}
+		.ri-heart-fill{
+			color: red;
+		}
 	</style>
 </head>
 
