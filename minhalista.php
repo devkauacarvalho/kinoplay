@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/img/website-logo/logo.png">
+	<link rel="shortcut icon" href="img/website-logo/logo.png">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/index-main.css">
@@ -81,6 +81,9 @@
 	position: relative;
 	top:70px;
 }
+.ri-heart-fill{
+			color: red;
+		}
 	</style>
 </head>
 <body>
@@ -147,18 +150,18 @@ while ($row = mysqli_fetch_assoc($result)) {
     // Exibir informações adicionais dos filmes e séries favoritos
     if ($filme) {
         echo '<div class="child">';
-        echo '<i class="heartBtn ri-heart-add-line"></i>';
+        echo '<i class="heartBtn ri-heart-fill"></i>';
         echo '<a href="filmetemplate.php?id=' . $filme['id'] . '">';
-        echo '<img class="child-img" src="' . $filme['Imagem'] . '">';
+        echo '<img class="child-img" filmeid="' . $filme['id'] . '" src="' . $filme['Imagem'] . '">';
         echo '</a>';
         echo '</div>';
     }
     
     if ($serie) {
         echo '<div class="child">';
-        echo '<i class="heartBtn ri-heart-add-line"></i>';
+        echo '<i class="heartBtn ri-heart-fill"></i>';
         echo '<a href="serietemplate.php?id=' . $serie['id'] . '">';
-        echo '<img class="child-img" src="' . $serie['Imagem'] . '">';
+        echo '<img class="child-img" serieid="' . $serie['id'] . '" src="' . $serie['Imagem'] . '">';
         echo '</a>';
         echo '</div>';
     }
