@@ -70,7 +70,7 @@ if(isset($_POST["enviarlogin"])){
                     
                 </div>
                 <div class="input-group">
-                    <input type="email"name="email" id="email"  required>
+                    <input type="email"name="email" id="email" required>
                     <label for="email">Email</label>
                     
                 </div>
@@ -84,7 +84,7 @@ if(isset($_POST["enviarlogin"])){
                     <label for="senha">Senha</label>
                 </div>
                 <div class="input-group">
-                    <input type="password" name="confirmesenha" id="confirmesenha"  required>
+                    <input type="password" name="confirmesenha" id="confirmesenha" required>
                     <label for="confirmesenha">Confirme sua senha</label>
                 </div>
                 <button type="submit" name="submit" class="btn">Cadastrar</button>
