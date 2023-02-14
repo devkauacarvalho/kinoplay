@@ -19,6 +19,7 @@ do senac.<br> Tendo como ideia um site de streaming de filmes e series.
 - CRUD filmes e series
 - Imagem de atores buscadas e mostradas por php
 - Busca de filmes e series
+- Design Responsivo
 
 ## Grupo
 
