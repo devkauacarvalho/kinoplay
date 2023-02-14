@@ -1,6 +1,6 @@
-# Kinoflix
+# Kinoplay
 
-Kinoflix é um website feito para o projeto integrador do segundo modulo 
+Kinoplay é um website feito para o projeto integrador do segundo modulo 
 do SENAC.<br> Tendo como ideia um site de streaming de filmes e series.
 
 ## Tecnologias utilizadas
