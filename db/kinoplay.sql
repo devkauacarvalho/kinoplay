@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 13-Fev-2023 às 17:33
--- Versão do servidor: 10.4.24-MariaDB
--- versão do PHP: 8.1.6
+-- Tempo de geração: 14-Fev-2023 às 04:35
+-- Versão do servidor: 10.4.25-MariaDB
+-- versão do PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,14 +35,6 @@ CREATE TABLE `cliente` (
   `senha` varchar(255) NOT NULL,
   `data_nasc` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `cliente`
---
-
-INSERT INTO `cliente` (`id`, `username`, `email`, `nome`, `senha`, `data_nasc`) VALUES
-(1, 'enforca errado', 'nilo@gmail', 'nilo', 'nilo', '2003-05-07'),
-(2, 'jade', 'jade@gmail.com', 'palacio', 'senha', '2003-05-06');
 
 -- --------------------------------------------------------
 
@@ -595,10 +587,11 @@ INSERT INTO `elenco` (`id`, `Ator`, `image_Ator`, `Apareceem`, `idFilmes`, `idSe
 --
 
 CREATE TABLE `favoritos` (
-  `Id` int(11) NOT NULL,
-  `id_cliente` int(11) NOT NULL,
-  `id_filmes` int(11) DEFAULT NULL,
-  `id_series` int(11) DEFAULT NULL
+  `id` int(3) NOT NULL,
+  `id_cliente` int(5) NOT NULL,
+  `id_filme` int(5) DEFAULT NULL,
+  `id_serie` int(5) DEFAULT NULL,
+  `estado` int(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -801,10 +794,10 @@ ALTER TABLE `elenco`
 -- Índices para tabela `favoritos`
 --
 ALTER TABLE `favoritos`
-  ADD PRIMARY KEY (`Id`),
-  ADD KEY `fk_id_filmes` (`id_filmes`),
-  ADD KEY `fk_id_series` (`id_series`),
-  ADD KEY `fk_id_cliente` (`id_cliente`) USING BTREE;
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_id_filmes` (`id_filme`),
+  ADD KEY `fk_id_series` (`id_serie`),
+  ADD KEY `fk_id_cliente` (`id_cliente`);
 
 --
 -- Índices para tabela `filmes`
@@ -846,7 +839,7 @@ ALTER TABLE `elenco`
 -- AUTO_INCREMENT de tabela `favoritos`
 --
 ALTER TABLE `favoritos`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT de tabela `filmes`
@@ -881,9 +874,9 @@ ALTER TABLE `elenco`
 -- Limitadores para a tabela `favoritos`
 --
 ALTER TABLE `favoritos`
-  ADD CONSTRAINT `fk_id_filmes` FOREIGN KEY (`id_filmes`) REFERENCES `filmes` (`id`) ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_id_series` FOREIGN KEY (`id_series`) REFERENCES `series` (`id`) ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_id_usuario` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`) ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_id_cliente` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`) ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_id_filmes` FOREIGN KEY (`id_filme`) REFERENCES `filmes` (`id`) ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_id_series` FOREIGN KEY (`id_serie`) REFERENCES `series` (`id`) ON UPDATE NO ACTION;
 
 --
 -- Limitadores para a tabela `filmes`
