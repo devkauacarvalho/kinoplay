@@ -1,7 +1,7 @@
 # Kinoflix
 
 Kinoflix é um website feito para o projeto integrador do segundo modulo 
-do senac. Tendo como ideia um site de streaming de filmes e series.
+do senac.<br> Tendo como ideia um site de streaming de filmes e series.
 
 ## Tecnologias utilizadas
 
